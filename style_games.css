@@ -1,0 +1,71 @@
+.nm{
+  position: absolute;
+  left: 400px;
+  top: 240px;
+}
+
+.nmTxt{
+  position: absolute;
+  left: 380px;
+  top: 320px;
+  color: white;
+}
+
+.pp{
+  position: absolute;
+  left: 700px;
+  top: 420px;
+}
+
+.ppTxt{
+  position: absolute;
+  left: 660px;
+  top: 510px;
+  color: pink;
+}
+
+.sms{
+  position: absolute;
+  left: 370px;
+  top: 450px;
+}
+
+.smsTxt{
+  position: absolute;
+  left: 320px;
+  top: 540px;
+  text-align: center;
+  color: orange;
+}
+
+.pt{
+  position: absolute;
+  left: 700px;
+  top: 240px;
+}
+
+.ptTxt{
+  position: absolute;
+  left: 700px;
+  top: 330px;
+  text-align: center;
+  color: coral
+}
+
+.nm img:last-child{display:none;}
+.nm:hover img:first-child{display:none;}
+.nm:hover img:last-child{display:inline-block;}
+
+.pp img:last-child{display:none;}
+.pp:hover img:first-child{display:none;}
+.pp:hover img:last-child{display:inline-block;}
+
+.sms img:last-child{display:none;}
+.sms:hover img:first-child{display:none;}
+.sms:hover img:last-child{display:inline-block;}
+
+.window{
+  position: absolute;
+  top:15%;
+  left:12%;
+}

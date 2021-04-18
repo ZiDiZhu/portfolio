@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>2101 Games</title>
+  <link rel = "stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class = "mainLogo" href="main.html">
+    <img src="logos\main_logo.PNG" width="140px;">
+    <img src="logos\main_logo_anim.gif" width="140px;">
+  </a>
+
+  <a href = "https://www.instagram.com/nebularswamp/" target="_blank"><h3 style="top:180px;right:30px;position:absolute;background-color: hotpink; color:white"><i>Instagram </i></h3></a>
+  <a href = "https://www.artstation.com/nebularswamp" target="_blank"><h3 style="top:220px;right:30px;position:absolute;background-color: blue; color:white"><i>Artstation </i></h3></a>
+  <a href = "https://github.com/ZiDiZhu" target="_blank"><h3 style="top:260px;right:30px;position:absolute;background-color: black; color:white"><i>GitHub</i></h3></a>
+  <a href = "https://soundcloud.com/helixsquare" target="_blank"><h3 style="top:300px;right:30px;position:absolute;background-color: orange; color:white"><i>Soundcloud</i></h3></a>
+  <a href = "https://twitter.com/nebularswamp" target="_blank"><h3 style="top:340px;right:30px;position:absolute;background-color: darkcyan; color:white"><i>Twitter</i></h3></a>
+
+  <div class="change">
+    <img style="bottom:20px;right:30px;width: 20%;position:absolute" src = "images\about_window.jpg">
+    <img style="bottom:20px;right:30px;width: 20%;position:absolute" src = "images\about_window.gif">
+  </div>
+
+  <p style="top:160px;left:10px;height:80px; background-color: black;height: 20px;color:blue;position:absolute"><b>categories:</b></p>
+
+  <a class = "change" href="games.html">
+    <img style="top:220px;left:30px;height:80px;position:absolute" src="logos/folder_closed.png">
+    <img style="top:220px;left:30px;height:80px;position:absolute" src="logos/folder_open.png">
+  </a>
+  <h3 style="top:280px;left:50px;position:absolute">games</h3>
+
+  <a href="arts.html">
+    <img style="top:340px;left:30px;height:80px;position:absolute" src="logos/folder_open.png">
+    <h3 style="top:400px;left:25px;position:absolute; color:lightblue">3d gallery</h3>
+    </a>
+
+  <div class = "scrollbox">
+      <marquee scrollamount="13"><h1>Hello visitor! welcome to my digital museum / arcade! Try some games! Have fun! Make sure you're visiting the site on a computer!</h1></marquee>
+  </div>
+
+  <button style="top:140px;left:250px;position:absolute" class="button" onclick="plusDivs(-1)">Prev</button>
+  <button style="top:140px;left:400px;position:absolute" class="button" onclick="plusDivs(+1)">Next</button>
+  <img class="mySlides" src="arts/01.png" style="top:200px;left:150px;position:absolute; width: 60%; display: none;">
+  <img class="mySlides" src="arts/02.png" style="top:200px;left:150px;position:absolute; width: 70%;display: none;">
+  <img class="mySlides" src="arts/03.png" style="top:200px;left:150px;position:absolute; width: 70%;display: block;">
+
+  <script>
+
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+  </script>
+
+
+
+
+</body>
+
+
+</html>

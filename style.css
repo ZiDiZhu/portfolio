@@ -1,0 +1,67 @@
+body{
+  background-color: black;
+  background-image: url("images/bg_robo.jpg");
+  font-family: "Lucida Console", Courier, monospace;
+  color: white;
+}
+
+.bg{
+}
+
+
+.mainLogo{
+  right: 30px;
+  top: 10px;
+  position: absolute;
+}
+
+.scrollbox{
+  width: 88%;
+  height: 60px;
+  right: 200px;
+  top: 20px;
+  position: absolute;
+  background-color: black;
+  color: #42FF00;
+}
+
+.openFolder{
+  position: absolute;
+  height: 80px;
+  top: 200px;
+  left: 30px;
+}
+
+.openFoldertxt{
+  position: absolute;
+  height: 80px;
+  top: 260px;
+  left: 50px;
+  color: yellow;
+}
+
+.change img:last-child{display:none;}
+.change:hover img:first-child{display:none;}
+.change:hover img:last-child{display:inline-block;}
+
+.mainLogo img:last-child{display:none;}
+.mainLogo:hover img:first-child{display:none;}
+.mainLogo:hover img:last-child{display:inline-block;}
+
+
+a{
+  text-decoration: none;
+}
+
+
+.button {
+  background-color: #42FF00;
+  border: none;
+  color: black;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  cursor: pointer;
+}
