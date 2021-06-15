@@ -5,6 +5,12 @@ body{
   color: white;
 }
 
+h3{
+  color: white;
+  right:30px;
+  position: absolute;
+}
+
 .bg{
 }
 

@@ -1,3 +1,9 @@
+.gameicon{
+  position: absolute;
+  width: 100px;
+}
+
+
 .nm{
   position: absolute;
   left: 400px;
