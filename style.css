@@ -11,6 +11,10 @@ h3{
   position: absolute;
 }
 
+p{
+
+}
+
 .bg{
 }
 
@@ -50,13 +54,13 @@ h3{
 .change:hover img:first-child{display:none;}
 .change:hover img:last-child{display:inline-block;}
 
-.mainLogo img:last-child{display:none;}
-.mainLogo:hover img:first-child{display:none;}
-.mainLogo:hover img:last-child{display:inline-block;}
-
-
 a{
-  text-decoration: none;
+  font-style: italic;
+}
+
+.link:hover{
+  text-decoration: underline;
+  color: gold;
 }
 
 
