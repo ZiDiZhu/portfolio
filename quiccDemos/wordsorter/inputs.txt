@@ -1,0 +1,3 @@
+very quick draft? to explain my idea for a word sorter made to collect ALL input typed by EVERYONE who will play the STOG game EVER
+the purpose is to see, given a very open context where little clues are given to what to type, what would players most incline to do (type) and we can keep on designing/improving intuitive puzzles based on the most frequent inputs.
+also this word sorter program by itself could potentially be like a data visualizer thing or sth, idk. this is not a good example text because im not actually playing the game and entering commands but you get the idea
