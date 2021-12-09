@@ -18,7 +18,6 @@ p{
 .bg{
 }
 
-
 #mainLogo{
   right: 30px;
   top: 10px;
@@ -56,6 +55,12 @@ p{
 
 a{
   font-style: italic;
+  color: lime;
+}
+
+.link{
+  font-style: italic;
+  color: whilte;
 }
 
 .link:hover{
