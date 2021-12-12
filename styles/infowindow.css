@@ -9,11 +9,15 @@
 }
 
 #closeWindow{
-  right: 10px;
+  right: 0px;
   top: 0px;
   display: inline-block;
   position: absolute;
   background-color: red;
+  padding: 10px 20px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
 }
 
 #title{
@@ -53,9 +57,26 @@
   top: 250px;
 }
 
+#tools{
+  display: inline-block;
+  position: absolute;
+  left: 80px;
+  top: 500px;
+}
+
+#controls{
+  display: inline-block;
+  position: absolute;
+  left: 80px;
+  top: 530px;
+}
+
 #playbutton{
   display: inline-block;
   position: absolute;
-  left: 650px;
-  top: 450px;
+  left: 700px;
+  top: 500px;
+  padding: 20px 40px;
+  text-align: center;
+  font-size: 26px;
 }

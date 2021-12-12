@@ -8,6 +8,9 @@ function openWindow(myGame){
   $('#year').text(myGame.year);
   $('#genre').text(myGame.genre);
   $('#infoWindow').css("background-color",myGame.bgColor);
+  $('#description').text(myGame.description);
+  $('#tools').text("made with: "+ myGame.tool);
+  $('#controls').text("controls: "+ myGame.controls);
   currentGame = myGame;
 }
 

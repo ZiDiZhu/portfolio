@@ -35,8 +35,10 @@ var pluralPlatformers = {
   link: "https://zidizhu.github.io/cart253/projects/project2/prototype/",
   year: "2020",
   genre: "puzzle / platformer",
+  tool: "p5.js",
+  description:`A platformer where you control multiple avatars at the same time! To win: control the bunnies to get all the strawberries and avoid the triangle spikes.Once a level is clear, left click to go to the next level.`,
+  controls:"arrows: move, shift: jump, click: next level",
   bgColor:"hotpink",
-  tool: "p5.js"
 };
 
 var theHole = {
