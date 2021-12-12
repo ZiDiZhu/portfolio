@@ -1,10 +1,5 @@
-var pluralPlatformers = {
-  title: "plural platformers",
-  year: "2020",
-  genre: "puzzle / platformer",
-  bgColor:"hotpink",
-  tool: "p5.js"
-}
+
+var currentGame;
 
 function openWindow(myGame){
   console.log(myGame.title);
@@ -13,6 +8,7 @@ function openWindow(myGame){
   $('#year').text(myGame.year);
   $('#genre').text(myGame.genre);
   $('#infoWindow').css("background-color",myGame.bgColor);
+  currentGame = myGame;
 }
 
 //currently only used for game info window, but probably reusable.
@@ -22,4 +18,8 @@ function showThing(thing){
 
 function hideThing(thing){
   $(thing).css("display","none");
+}
+
+function openLink() {
+  window.open(currentGame.link);
 }

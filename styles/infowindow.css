@@ -45,3 +45,17 @@
   left: 650px;
   top: 150px;
 }
+
+#description{
+  display: inline-block;
+  position: absolute;
+  left: 650px;
+  top: 250px;
+}
+
+#playbutton{
+  display: inline-block;
+  position: absolute;
+  left: 650px;
+  top: 450px;
+}
