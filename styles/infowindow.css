@@ -1,0 +1,47 @@
+#infoWindow{
+  width: 900px;
+  height: 600px;
+  position: absolute;
+  top:200px;
+  left:200px;
+  background-color: purple;
+  display: none;
+}
+
+#closeWindow{
+  right: 10px;
+  top: 0px;
+  display: inline-block;
+  position: absolute;
+  background-color: red;
+}
+
+#title{
+  display: inline-block;
+  left: 10px;
+  position: absolute;
+}
+
+#screenshot{
+  display: inline-block;
+  position: absolute;
+  top: 80px;
+  left: 30px;
+  background-color: gray;
+  width: 600px;
+  height: 400px;
+}
+
+#year{
+  display: inline-block;
+  position: absolute;
+  left: 650px;
+  top: 100px;
+}
+
+#genre{
+  display: inline-block;
+  position: absolute;
+  left: 650px;
+  top: 150px;
+}

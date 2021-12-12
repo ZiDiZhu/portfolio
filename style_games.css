@@ -10,19 +10,6 @@ h2{
   width: 100px;
 }
 
-#infoWindow{
-  width: 800px;
-  height: 600px;
-  position: absolute;
-  top:200px;
-  left:200px;
-  background-color: purple;
-  display: none;
-}
-
-
-
-
 #nm{
   position: absolute;
   left: 280px;
