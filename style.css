@@ -53,6 +53,10 @@ p{
 .change:hover img:first-child{display:none;}
 .change:hover img:nth-child(2){display:inline-block;}
 
+.change:hover{
+  cursor: pointer;
+}
+
 a{
   font-style: italic;
   color: lime;
