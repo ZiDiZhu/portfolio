@@ -5,6 +5,8 @@ function openWindow(myGame){
   console.log(myGame.title);
   showThing('#infoWindow');
   $('#title').text(myGame.title);
+  $('#icon').attr("src", myGame.icon);
+  $('#screenshot').attr("src", myGame.screenshot);
   $('#year').text(myGame.year);
   $('#genre').text(myGame.genre);
   $('#infoWindow').css("background-color",myGame.bgColor);

@@ -39,6 +39,8 @@ var pluralPlatformers = {
   description:`A platformer where you control multiple avatars at the same time! To win: control the bunnies to get all the strawberries and avoid the triangle spikes.Once a level is clear, left click to go to the next level.`,
   controls:"arrows: move, shift: jump, click: next level",
   bgColor:"hotpink",
+  icon:"logos/logo_pp.png",
+  screenshot:"images/screenshots/pluralPlatformers.JPG"
 };
 
 var theHole = {
