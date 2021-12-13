@@ -49,9 +49,9 @@ p{
   color: yellow;
 }
 
-.change img:last-child{display:none;}
+.change img:nth-child(2){display:none;}
 .change:hover img:first-child{display:none;}
-.change:hover img:last-child{display:inline-block;}
+.change:hover img:nth-child(2){display:inline-block;}
 
 a{
   font-style: italic;

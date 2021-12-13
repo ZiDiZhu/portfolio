@@ -17,17 +17,27 @@ var painTor = {
 var fruitsJam = {
   title: "fruits jam",
   year: "2021",
+  link: "https://zidizhu.github.io/cart263/projects/project2-fruitjam-prototype/",
   genre: "music toy",
-  bgColor:"lime",
-  tool: "p5.js"
+  tool: "p5.js",
+  description:`Jam session with the fruit band!`,
+  controls:`click on buttons!`,
+  bgColor:"purple",
+  icon:"logos/logo_FJ_sp.png",
+  screenshot:"images/screenshots/fruitsJam1.jpg"
 };
 
 var memeSandbox = {
   title: "meme sandbox",
+  link: "https://hybrid.concordia.ca/z_zid/Surreal%20Meme%20Sandbox/surrealMemeSandbox.html",
   year: "2020",
   genre: "meme generator",
+  tool: "javascript",
+  description:`It makes a meme using the classic structure of top text / bottom text over an image! Choose the category of these components and hit “generate”! You can download your meme too.`,
+  controls:"clicks",
   bgColor:"grey",
-  tool: "javascript"
+  icon:"logos/logo_SMS_sp.png",
+  screenshot:"images/screenshots/memeSandbox1.jpg"
 };
 
 var pluralPlatformers = {
