@@ -1,9 +1,15 @@
 var nightMayor = {
   title: "night mayor",
   year: "2020",
+  link:"https://2101.itch.io/night-mayor",
+  description:`You are invited to a little visit to the house of the Author. But the Author is not home…?
+  2 endings. ~10 minutes of play time.`,
   genre: "mystery / puzzle",
   bgColor:"royalblue",
-  tool: "Bitsy"
+  controls:"WASD",
+  tool: "Bitsy",
+  icon:"logos/logo_nm.png",
+  screenshot:"images/screenshots/nightMayor1.jpg"
 };
 
 var painTor = {
@@ -58,13 +64,5 @@ var theHole = {
   year: "2020",
   genre: "survival / horror",
   bgColor:"green",
-  tool: "Unity"
-};
-
-var humanError = {
-  title: "human_error",
-  year: "2021",
-  genre: "puzzle / mystery",
-  bgColor:"blue",
   tool: "Unity"
 };

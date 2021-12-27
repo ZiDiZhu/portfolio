@@ -55,6 +55,8 @@ p{
 
 .change:hover{
   cursor: pointer;
+  color:lime;
+  text-decoration: underline;
 }
 
 a{

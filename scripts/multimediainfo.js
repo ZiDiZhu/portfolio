@@ -23,3 +23,16 @@ var popcart212 = {
   icon:"logos/logo_cartpop212_sp.png",
   screenshot:"https://www.youtube.com/embed/5aKWHU6oRkU"
 };
+
+var humanError = {
+  title: "human_error",
+  year: "2021",
+  link:"https://2101.itch.io/human-error",
+  description:`you are a product tester and you are assigned the task of going through the memory files of a defective "product."`,
+  genre: "puzzle / mystery / interactive fiction",
+  bgColor:"blue",
+  controls:`WASD + Click`,
+  tool: "Unity",
+  icon:"logos/logo_humanerror_sp.png",
+  screenshot:"https://www.youtube.com/embed/Ts-ELdYYUqI"
+};
