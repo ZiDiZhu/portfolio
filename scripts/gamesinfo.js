@@ -15,9 +15,14 @@ var nightMayor = {
 var painTor = {
   title: "PAINter",
   year: "2020",
+  link:"https://zidizhu.github.io/cart253/projects/project1/",
+  description:"A slightly infuriating drawing tool",
+  controls:"mouse + keyboard 1,2,3",
   genre: "drawing tool",
-  bgColor:"gold",
-  tool: "p5.js"
+  bgColor:"sienna",
+  tool: "p5.js",
+  icon:"logos/logo_paintor.png",
+  screenshot:"images/screenshots/painTer1.jpg"
 };
 
 var fruitsJam = {
