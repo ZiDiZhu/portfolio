@@ -68,10 +68,14 @@ var theHole = {
   title: "the hole",
   year: "2020",
   genre: "survival / horror",
+  link:"https://drive.google.com/drive/folders/1oIGMWUQtLCdlYm-tLLpZRugjmEB5Y8UC?usp=sharing",
+  description:`Fan game of the 2019 movie, "The Platform"`,
   bgColor:"green",
-  tool: "Unity"
+  tool: "Unity",
+  icon: "logos/logo_hole.png",
+  controls:"WASD + Click",
+  screenshot:"images/screenshots/theHole1.jpg"
 };
-
 
 var humanError = {
   title: "human_error",
@@ -84,4 +88,30 @@ var humanError = {
   tool: "Unity",
   icon:"logos/logo_humanerror_sp.png",
   screenshot:"images/screenshots/humanError1.jpg"
+};
+
+var stog = {
+  title: "Some Type of God",
+  year: "2021 (design/programming)",
+  link:"https://hybrid.concordia.ca/z_zid/stog/",
+  description:`An unfinished game where the player types text command to perform actions. The goal of the project is to 1.creating an excel-based level-editor tool for text based games and 2.study natural language processing in game design from the player's input data.`,
+  genre: "text adventure",
+  bgColor:"black",
+  controls:`Keyboard`,
+  tool: "p5.js + Rainebow Engine",
+  icon:"logos/logo_stog_sp.png",
+  screenshot:"images/screenshots/stog1.jpg"
+};
+
+var meatCute = {
+  title: "Meat Cute",
+  year: "2021 (sound/music)",
+  link:"https://pipeflowwizard.itch.io/meat-cute",
+  description:`Shoot at different body parts to matchmake them together! made for Concordia's 2021 Game Jam`,
+  genre: "twin stick shooter",
+  bgColor:"coral",
+  controls:`Move: WASD, Shoot: Click`,
+  tool: "Unity",
+  icon:"logos/logo_stog_sp.png",
+  screenshot:"images/screenshots/meatCute1.jpg"
 };

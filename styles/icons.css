@@ -19,6 +19,14 @@
   background-color: purple;
 }
 
+#title3{
+  position: absolute;
+  top: 920px;
+  left: 180px;
+  width: 70%;
+  background-color: darkcyan;
+}
+
 .row1{
   position: absolute;
   top:220px;
@@ -27,6 +35,11 @@
 .row2{
   position: absolute;
   top:620px;
+}
+
+.row3{
+  position: absolute;
+  top:1020px;
 }
 
 .col1{
