@@ -1,3 +1,56 @@
+var snowfolie = {
+  title: "Snowfolie",
+  year: "2022",
+  link:"https://george540.itch.io/snowfolie",
+  description:`Snowfolie is a multiplayer online battle arena of snowball fighting. Taking aesthetic inspiration from the movie Guerre des Tuques,Snowfolieattempts to spark thejoy and nostalgia of snowball fighting with your friends.`,
+  genre: "Online Multiplayer",
+  bgColor:"slategray",
+  controls:"Type Text to Play",
+  tool: "Unity",
+  icon:"logos/logo_snowfolie_sp.png",
+  screenshot:"images/screenshots/snowfolie1.png"
+};
+
+//dead link
+var trolley = {
+  title: "Trolley +",
+  year: "2022",
+  link:"https://2101.itch.io/trolleyplus",
+  description:`A choice-based game with inspired and derived from the infamous Trolley problem`,
+  genre: "text adventure",
+  bgColor:"slategray",
+  controls:"Type Text to Play",
+  tool: "Twine",
+  icon:"logos/logo_cooking_sp.png",
+  screenshot:"images/screenshots/cooking1.png"
+};
+
+var cooking = {
+  title: "Detailed Cooking Sim",
+  year: "2022",
+  link:"https://2101.itch.io/demo-detailed-cooking-sim",
+  description:`It's your first day as an intern chef! And you are assigned an easy task - cooking an egg! Don't mess it up!`,
+  genre: "text adventure",
+  bgColor:"slategray",
+  controls:"Type Text to Play",
+  tool: "Adventuron",
+  icon:"logos/logo_cooking_sp.png",
+  screenshot:"images/screenshots/cooking1.png"
+};
+
+var interview = {
+  title: "Interview",
+  year: "2022",
+  link:"https://kristiankurk.itch.io/interview",
+  description:`Interview is a game that combines the mechanics of a rhythm game with a dialogue system, where each word is a beat and a sentence is formed by playing the word beats on time. This unique gameplay was intended to be a metaphor for the distressing experience of a job interview.`,
+  genre: "rhythm",
+  bgColor:"slategray",
+  controls:"WASD + Click",
+  tool: "Unity",
+  icon:"logos/logo_it.png",
+  screenshot:"images/screenshots/interview1.jpg"
+};
+
 var nightMayor = {
   title: "night mayor",
   year: "2020",
@@ -107,11 +160,11 @@ var meatCute = {
   title: "Meat Cute",
   year: "2021 (sound/music)",
   link:"https://pipeflowwizard.itch.io/meat-cute",
-  description:`Shoot at different body parts to matchmake them together! made for Concordia's 2021 Game Jam`,
+  description:`Meat Cute is an arcade style twin stick shooter, where the player uses Cupid’s bow to shoot arrows that connect roaming body parts, in order to matchmake them into forming a complete body.`,
   genre: "twin stick shooter",
   bgColor:"coral",
   controls:`Move: WASD, Shoot: Click`,
   tool: "Unity",
-  icon:"logos/logo_stog_sp.png",
+  icon:"logos/logo_meatcute_sp.png",
   screenshot:"images/screenshots/meatCute1.jpg"
 };
