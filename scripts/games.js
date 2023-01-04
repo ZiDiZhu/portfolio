@@ -1,6 +1,7 @@
 
 var currentGame;
 
+//opens information window
 function openWindow(myGame){
   console.log(myGame.title);
   showThing('#infoWindow');
