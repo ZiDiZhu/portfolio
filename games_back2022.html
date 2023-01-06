@@ -21,6 +21,33 @@
     <!--back button-->
     <a href="index.html"><img src="logos\btn_back.png" style="top:120px; left:30px; position:absolute"></a>
 
+
+    <div id="title1">
+      <h2 style="color:pink;display: inline-block">[ Music Games ]</h2>
+      <p style="display: inline">Rhythm / DJ games</p>
+    </div>
+
+    <div id="title1_2">
+      <h2 style="color:blue;display: inline-block">[ Puzzles ]</h2>
+      <p style="display: inline">Games with puzzle elements</p>
+    </div>
+
+    <div id="title2">
+      <h2 style="color:pink;display: inline-block">[ Tactical ]</h2>
+      <p style="display: inline">Action-centered games</p>
+    </div>
+
+    <div id="title2_2">
+      <h2 style="color:pink;display: inline-block">[ Creative ]</h2>
+      <p style="display: inline">Unleash your creativity!</p>
+    </div>
+
+
+    <div id="title3">
+      <h2 style="color:pink;display: inline-block">[ other ]</h2>
+      <p style="display: inline">unsorted </p>
+    </div>
+
     <div class="change row1 col1" onclick="openWindow(interview)" onmousemove="showPreview(interview,event)" onmouseout="closePreview()">
         <img src = "logos\logo_it.png" class= "icon">
         <img src = "logos\logo_it_sp.png" class= "icon">
@@ -37,7 +64,7 @@
         <p>Band Simulator</p>
     </div>
 
-    <div class="change row2 col1" onclick="openWindow(cooking)">
+    <div class="change row1 col4" onclick="openWindow(cooking)">
         <img src = "logos\logo_cooking.png" class= "icon">
         <img src = "logos\logo_cooking_sp.png" class= "icon">
         <h2>Detailed<br>Cooking</h2>
@@ -45,7 +72,7 @@
         <p>text adventure<br>/ puzzle</p>
     </div>
 
-    <div class="change row2 col2" onclick="openWindow(pluralPlatformers)">
+    <div class="change row1 col5" onclick="openWindow(pluralPlatformers)">
         <img src = "logos\logo_pp.png" class= "icon">
         <img src = "logos\logo_pp_sp.png" class= "icon">
         <h2>Plural<br>Platformers</h2>
@@ -53,7 +80,7 @@
         <p>puzzle / platformer</p>
     </div>
 
-    <div class="change row3 col1" onclick="openWindow(snowfolie)">
+    <div class="change row2 col1" onclick="openWindow(snowfolie)">
         <img src = "logos\logo_snowfolie_sp.png" class= "icon">
         <img src = "logos\logo_snowfolie.png" class= "icon">
         <h2>Snowfolie</h2>
@@ -61,7 +88,7 @@
         <p>Online Multiplayer</p>
     </div>
 
-    <div class="change row3 col2" onclick="openWindow(meatCute)">
+    <div class="change row2 col2" onclick="openWindow(meatCute)">
         <img src = "logos\logo_meatcute.png" class= "icon">
         <img src = "logos\logo_meatcute_sp.png" class= "icon">
         <h2>Meat Cute</h2>
@@ -69,7 +96,7 @@
         <p>twin stick shooter</p>
     </div>
 
-    <div class="change row4 col1" onclick="openWindow(humanError)">
+    <div class="change row3 col3" onclick="openWindow(humanError)">
         <img src = "logos\logo_humanerror.png" class= "icon">
         <img src = "logos\logo_humanerror_sp.png" class= "icon">
         <h2>Human Error</h2>
@@ -77,7 +104,7 @@
         <p>puzzle / mystery</p>
     </div>
 
-    <div class="change row4 col2" onclick="openWindow(memeSandbox)">
+    <div class="change row2 col4" onclick="openWindow(memeSandbox)">
         <img src = "logos\logo_SMS.png" class= "icon">
         <img src = "logos\logo_SMS_sp.png" class= "icon">
         <h2>Meme<br>Sandbox</h2>
@@ -85,7 +112,7 @@
         <p>meme generator</p>
     </div>
 
-    <div class="change row1 col3" onclick="openWindow(painTor)">
+    <div class="change row2 col5" onclick="openWindow(painTor)">
         <img src = "logos\logo_paintor.png" class= "icon">
         <img src = "logos\logo_paintor_sp.png" class= "icon">
         <h2>PAINter</h2>
@@ -93,7 +120,7 @@
         <p>drawing tool</p>
     </div>
 
-    <div class="change row3 col3" onclick="openWindow(nightMayor)">
+    <div class="change row3 col4" onclick="openWindow(nightMayor)">
         <img src = "logos\logo_nm.png" class= "icon">
         <img src = "logos\logo_nm_sp.png" class= "icon">
         <h2>Night<br>Mayor</h2>
@@ -101,7 +128,7 @@
         <p>mystery / puzzle</p>
     </div>
 
-    <div class="change row2 col3" onclick="openWindow(theHole)">
+    <div class="change row3 col5" onclick="openWindow(theHole)">
         <img src = "logos/logo_hole.png" class= "icon">
         <img src = "logos/logo_hole.png" class= "icon">
         <h2>The Hole</h2>
@@ -109,7 +136,7 @@
         <p>Horror / Survival</p>
     </div>
 
-    <div class="change row4 col3" onclick="openWindow(stog)">
+    <div class="change row3 col2" onclick="openWindow(stog)">
         <img src = "logos\logo_stog.png" class= "icon">
         <img src = "logos\logo_stog_sp.png" class= "icon">
         <h2>Some Type<br>of God</h2>
@@ -131,6 +158,8 @@
       <button id = "playbutton" onclick="openLink()">PLAY</button>
 
     </div>
+
+    <img id = "preview" src="" style="position: absolute;width: 500px">
 
 
   </body>

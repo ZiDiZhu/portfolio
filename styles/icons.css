@@ -5,7 +5,7 @@
 
 #title1{
   position: absolute;
-  top: 120px;
+  top: 40px;
   left: 180px;
   width: 25%;
   background-color: blue;
@@ -45,17 +45,22 @@
 
 .row1{
   position: absolute;
-  top:220px;
+  top:100px;
 }
 
 .row2{
   position: absolute;
-  top:620px;
+  top:400px;
 }
 
 .row3{
   position: absolute;
-  top:1020px;
+  top:700px;
+}
+
+.row4{
+  position: absolute;
+  top:1000px;
 }
 
 .col1{

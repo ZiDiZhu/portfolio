@@ -1,6 +1,20 @@
 
 var currentGame;
 
+function showPreview(myGame,event){
+  currentGame=myGame;
+  console.log(myGame.title);
+  $('#preview').attr("src",myGame.screenshot);
+
+  $('#preview').css("top",event.clientY+5);
+  //$('#preview').css("left",event.clientX+5);
+
+}
+
+function closePreview(){
+  $('#preview').attr("src","");
+}
+
 //opens information window
 function openWindow(myGame){
   console.log(myGame.title);
