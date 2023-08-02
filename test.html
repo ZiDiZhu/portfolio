@@ -47,18 +47,15 @@
 
   <style>
     .filterDiv {
-      float: left;
-      background-color: #2196F3;
-      color: #ffffff;
-      width: 100px;
-      line-height: 100px;
-      text-align: center;
-      margin: 2px;
       display: none;
     }
 
     .show {
-      display: block;
+      display: inline-block;
+    }
+
+    .hide {
+      display: none;
     }
 
     .container {
@@ -107,6 +104,7 @@
     }
 
     function w3RemoveClass(element, name) {
+      console.log(element.className);
       var i, arr1, arr2;
       arr1 = element.className.split(" ");
       arr2 = name.split(" ");
@@ -116,6 +114,7 @@
         }
       }
       element.className = arr1.join(" ");
+      console.log(element.className);
     }
 
     // Add active class to the current button (highlight it)
