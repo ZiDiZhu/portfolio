@@ -11,10 +11,10 @@
     body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </style>
 </head>
-<body class="w3-light-grey w3-content" style="max-width:1600px">
+<body class="w3-deep-purple w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse w3-lime w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container">
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
@@ -28,13 +28,22 @@
     <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
   </div>
+  <div class="w3-bar-block">
+    <button class="w3-button w3-teal w3-bar-item">
+      <h4><i class="fa fa-download"></i> Download Resume</h4>
+    </button>
+  </div>
+  <style>
+    .w3-panel i.fa {
+      font-size: 32px; /* Adjust the font size as needed */
+      margin-right: 20px;
+    }
+  </style>
   <div class="w3-panel w3-large">
     <a href="https://www.linkedin.com/in/zidizhu/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <a href="https://github.com/ZiDiZhu" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/nebularswamp/?hl=en" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.youtube.com/channel/UCGmpoOeeE2a74SfH44yOiUQ" target="_blank"><i class="fa fa-youtube w3-hover-opacity"></i></a>
   </div>
 </nav>
 
@@ -87,14 +96,23 @@
     function filterSelection(c) {
       var x, i;
       x = document.getElementsByClassName("filterDiv");
-      if (c == "all") c = "";
+      var title = document.getElementById("portfolio-title");
+      if (c == "all"){
+        c = "";
+        title.textContent = "My Portfolio";
+      } else{
+        title.textContent = "My Portfolio > ";
+        title.textContent += c;
+      }
       for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        removeClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) {
+          addClass(x[i], "show");
+        }
       }
     }
 
-    function w3AddClass(element, name) {
+    function addClass(element, name) {
       var i, arr1, arr2;
       arr1 = element.className.split(" ");
       arr2 = name.split(" ");
@@ -103,7 +121,7 @@
       }
     }
 
-    function w3RemoveClass(element, name) {
+    function removeClass(element, name) {
       console.log(element.className);
       var i, arr1, arr2;
       arr1 = element.className.split(" ");
@@ -134,14 +152,15 @@
     <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
-      <h1><b>My Portfolio</b></h1>
-      <div id="myBtnContainer" class="w3-section w3-bottombar w3-padding-16">
+      <h1 id="portfolio-title"><b>My Portfolio</b></h1>
+      <div id="myBtnContainer" class="w3-section w3-padding-16">
         <span class="w3-margin-right">Filter:</span>
         <button class="w3-button w3-white btn" onclick="filterSelection('all')">ALL</button>
-        <button class="w3-button w3-black btn" onclick="filterSelection('best')"><i class="fa fa-diamond w3-margin-right"></i>Best</button>
-        <button class="w3-button w3-white w3-hide-small btn" onclick="filterSelection('games')"><i class="fa fa-photo w3-margin-right"></i>Games</button>
-        <button class="w3-button w3-white w3-hide-small btn" onclick="filterSelection('art')"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
+        <button class="w3-button w3-white btn" onclick="filterSelection('best')"><i class="fa fa-diamond w3-margin-right"></i>Best</button>
+        <button class="w3-button w3-white w3-hide-small btn" onclick="filterSelection('games')">Games</button>
+        <button class="w3-button w3-white w3-hide-small btn" onclick="filterSelection('art')">Art</button>
       </div>
+      <hr>
     </div>
   </header>
 
@@ -207,80 +226,43 @@
     </div>
   </div>
 
-  <!-- Images of Me -->
-  <div class="w3-row-padding w3-padding-16" id="about">
-    <div class="w3-col m6">
-      <img src="/w3images/avatar_g.jpg" alt="Me" style="width:100%">
+  <div class="w3-row-padding w3-padding-12" id="about">
+    <h2><b>About Me</b></h2>
+    <hr>
+
+    <div class="w3-col s4">
+      <img src="/images/about_window.gif" alt="Me" style="width:100%">
     </div>
-    <div class="w3-col m6">
-      <img src="/w3images/me2.jpg" alt="Me" style="width:100%">
+    <div class="w3-col s6">
+      <p>Hi! My name is Zi Di :)
+        <br><br>I'm an aspiring software developer and designer, my specialization is in game design, graphics and UI/UX.
+        <br>I've had experiences working as game programmer, QA tester, graphic designer, and exhibition artist.
+        <br><br>On my free time, I enjoy making music and gardening. I have a lovely garden-balcony and a bunny named Kiki!
+      </p>
     </div>
   </div>
-
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <h4><b>About Me</b></h4>
-    <p>Hi! My name is Zi Di :)
-      <br><br>I'm an aspiring software developer and designer, my specialization is in game design, graphics and UI/UX.
-      <br>I've had experiences working as game programmer, QA tester, graphic designer, and exhibition artist.
-      <br><br>On my free time, I enjoy making music and gardening. I have a lovely garden-balcony and a bunny named Kiki!
-    </p>
-    <hr>
-
-    <h4>Technical Skills</h4>
-    <!-- Progress bars / Skills -->
-    <p>Game Development</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
-    </div>
-    <p>UI/UX Design</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:85%">85%</div>
-    </div>
-    <p>Graphics</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">80%</div>
-    </div>
-    <p>
-      <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-        <i class="fa fa-download w3-margin-right"></i>Download Resume
-      </button>
-    </p>
-    <hr>
 
     <h4>Skills Overview</h4>
     <!-- Pricing Tables -->
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-third w3-margin-bottom">
-        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-black w3-xlarge w3-padding-32">Software Skills</li>
-          <li class="w3-padding-16">Languages: Java, C#, Python, C++</li>
+        <ul class="w3-ul w3-border w3-white w3-center">
+          <li class="w3-black w3-xlarge w3-padding-32">Developer Skills</li>
+          <li class="w3-padding-16">Programming: Java, C#, Python, C++</li>
           <li class="w3-padding-16">Game Engines: Unity, Godot</li>
-          <li class="w3-padding-16">Graphic: OpenGL, Processing, TouchDesigner</li>
+          <li class="w3-padding-16">Graphics: OpenGL, Processing, TouchDesigner</li>
           <li class="w3-padding-16">Web: HTML, CSS, Javascript, Ajax </li>
-          <li class="w3-padding-16">
-            <h2>Insert a scroll view of qualification</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Download Resume</button>
-          </li>
         </ul>
       </div>
 
       <div class="w3-third w3-margin-bottom">
-        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+        <ul class="w3-ul w3-border w3-white w3-center">
           <li class="w3-teal w3-xlarge w3-padding-32">Design Skills</li>
           <li class="w3-padding-16">System Design</li>
           <li class="w3-padding-16">Graphic Design: Illustrator, Photoshop</li>
           <li class="w3-padding-16">UI / UX: Using Figma to prototype User Interface</li>
           <li class="w3-padding-16">Game Design and Gamification</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
         </ul>
       </div>
 
@@ -291,17 +273,12 @@
           <li class="w3-padding-16">Building IOT devices with Arduino</li>
           <li class="w3-padding-16">Composing Music and Sound Design</li>
           <li class="w3-padding-16">Filming and Video Editing</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
         </ul>
       </div>
     </div>
   </div>
+
+  <hr>
 
   <!-- Contact Section -->
   <div class="w3-container w3-padding-large w3-grey">
