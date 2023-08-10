@@ -19,7 +19,7 @@
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <img src="/images/me.jpg" style="width:45%;" class="w3-round"><br><br>
+    <img src="/images/me.jpg" style="width:100%;" class="w3-circle"><br><br>
     <h4><b>Zi Di Zhu</b></h4>
     <p class="w3-text-grey">Full Stack Developer</p>
   </div>
@@ -44,6 +44,10 @@
     <a href="https://github.com/ZiDiZhu" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
     <a href="https://www.instagram.com/nebularswamp/?hl=en" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
     <a href="https://www.youtube.com/channel/UCGmpoOeeE2a74SfH44yOiUQ" target="_blank"><i class="fa fa-youtube w3-hover-opacity"></i></a>
+  </div>
+
+  <div class="w3-panel w3-large">
+    <a href="https://zidizhu.github.io/portfolio/" target="_blank">legacy version></a>
   </div>
 </nav>
 
@@ -77,16 +81,17 @@
       border: none;
       outline: none;
       padding: 12px 16px;
-      background-color: #f1f1f1;
+      background-color: #7799ee;
+      color: lightcyan;
       cursor: pointer;
     }
 
     .btn:hover {
-      background-color: #ddd;
+      background-color: darkorange;
     }
 
     .btn.active {
-      background-color: #666;
+      background-color: darkorange;
       color: white;
     }
   </style>
@@ -110,6 +115,7 @@
           addClass(x[i], "show");
         }
       }
+      updateButtonClasses(c);
     }
 
     function addClass(element, name) {
@@ -122,7 +128,6 @@
     }
 
     function removeClass(element, name) {
-      console.log(element.className);
       var i, arr1, arr2;
       arr1 = element.className.split(" ");
       arr2 = name.split(" ");
@@ -132,7 +137,18 @@
         }
       }
       element.className = arr1.join(" ");
-      console.log(element.className);
+    }
+
+    function updateButtonClasses(activeFilter) {
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        if (btns[i].getAttribute("onclick").includes(activeFilter)) {
+          btns[i].classList.add("active");
+        } else {
+          btns[i].classList.remove("active");
+        }
+      }
     }
 
     // Add active class to the current button (highlight it)
@@ -149,16 +165,14 @@
 
   <!-- Header -->
   <header id="portfolio">
-    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
       <h1 id="portfolio-title"><b>My Portfolio</b></h1>
       <div id="myBtnContainer" class="w3-section w3-padding-16">
         <span class="w3-margin-right">Filter:</span>
-        <button class="w3-button w3-white btn" onclick="filterSelection('all')">ALL</button>
-        <button class="w3-button w3-white btn" onclick="filterSelection('best')"><i class="fa fa-diamond w3-margin-right"></i>Best</button>
-        <button class="w3-button w3-white w3-hide-small btn" onclick="filterSelection('games')">Games</button>
-        <button class="w3-button w3-white w3-hide-small btn" onclick="filterSelection('art')">Art</button>
+        <button class=" btn" onclick="filterSelection('all')">ALL</button>
+        <button class=" btn" onclick="filterSelection('apps')">Apps</button>
+        <button class=" btn" onclick="filterSelection('games')">Games</button>
+        <button class=" btn" onclick="filterSelection('art')">Art</button>
       </div>
       <hr>
     </div>
@@ -191,11 +205,11 @@
 
   <!-- Second Photo Grid-->
   <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/images/me.jpg" alt="zidi" style="width:100%" class="w3-hover-opacity">
+    <div class="w3-third w3-container filterDiv games w3-margin-bottom">
+      <img src="/images/screenshots/interview1.jpg" alt="interview" style="width:100%" class="w3-hover-opacity">
       <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        <p><b>Interview</b></p>
+        <p>A fast-paced, stress-inducing interactive musical piece about going through a job interview. Welcome to Rhythm Hell!</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom">
@@ -205,11 +219,11 @@
         <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
       </div>
     </div>
-    <div class="w3-third w3-container">
-      <img src="/w3images/p3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+    <div class="w3-third w3-container filterDiv games">
+      <img src="/images/screenshots/cooking1.png" alt="cookingsim" style="width:100%" class="w3-hover-opacity">
       <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        <p><b>Cooking Sim</b></p>
+        <p>Frying an egg. How hard could it be?<br> A comedic cooking simulator in the style of early text adventure games.</p>
       </div>
     </div>
   </div>
@@ -217,19 +231,48 @@
   <!-- Pagination -->
   <div class="w3-center w3-padding-32">
     <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black" onclick="changePage(-1)">«</a>
+      <a href="#" class="w3-bar-item w3-button w3-black w3-pagination-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black w3-pagination-button">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black w3-pagination-button">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black w3-pagination-button">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black" onclick="changePage(1)">»</a>
     </div>
   </div>
 
-  <div class="w3-row-padding w3-padding-12" id="about">
+  <script>
+    var currentPage = 1;
+    var totalPages = 1; // Adjust this value based on the number of pages
+
+    function changePage(page) {
+      currentPage += page;
+
+      // Ensure currentPage stays within bounds
+      if (currentPage < 1) {
+        currentPage = 1;
+      } else if (currentPage > totalPages) {
+        currentPage = totalPages;
+      }
+
+      updatePagination();
+    }
+
+    function updatePagination() {
+      var paginationButtons = document.getElementsByClassName("w3-pagination-button");
+
+      for (var i = 0; i < paginationButtons.length; i++) {
+        paginationButtons[i].classList.remove("w3-black");
+      }
+
+      paginationButtons[currentPage - 1].classList.add("w3-black");
+
+      // You can also add logic here to update the displayed content based on the current page.
+    }
+  </script>
+
+  <div class="w3-row-padding w3-padding-12 w3-deep-purple" id="about">
     <h2><b>About Me</b></h2>
     <hr>
-
     <div class="w3-col s4">
       <img src="/images/about_window.gif" alt="Me" style="width:100%">
     </div>
@@ -240,49 +283,56 @@
         <br><br>On my free time, I enjoy making music and gardening. I have a lovely garden-balcony and a bunny named Kiki!
       </p>
     </div>
-  </div>
-  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <div class="w3-container w3-padding-large" style="margin-bottom:32px">
 
-    <h4>Skills Overview</h4>
-    <!-- Pricing Tables -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-third w3-margin-bottom">
-        <ul class="w3-ul w3-border w3-white w3-center">
-          <li class="w3-black w3-xlarge w3-padding-32">Developer Skills</li>
-          <li class="w3-padding-16">Programming: Java, C#, Python, C++</li>
-          <li class="w3-padding-16">Game Engines: Unity, Godot</li>
-          <li class="w3-padding-16">Graphics: OpenGL, Processing, TouchDesigner</li>
-          <li class="w3-padding-16">Web: HTML, CSS, Javascript, Ajax </li>
-        </ul>
-      </div>
+      <h4>Skills Overview</h4>
+      <!-- Pricing Tables -->
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <ul class="w3-ul w3-border w3-white w3-center">
+            <li class="w3-black w3-xlarge w3-padding-32">Developer Skills</li>
 
-      <div class="w3-third w3-margin-bottom">
-        <ul class="w3-ul w3-border w3-white w3-center">
-          <li class="w3-teal w3-xlarge w3-padding-32">Design Skills</li>
-          <li class="w3-padding-16">System Design</li>
-          <li class="w3-padding-16">Graphic Design: Illustrator, Photoshop</li>
-          <li class="w3-padding-16">UI / UX: Using Figma to prototype User Interface</li>
-          <li class="w3-padding-16">Game Design and Gamification</li>
-        </ul>
-      </div>
+            <li class="w3-padding-16"><p>
+              <span class="w3-tag w3-deep-purple">C#</span> <span class="w3-tag w3-red">Java</span>
+              <span class="w3-tag w3-indigo">Python</span> <span class="w3-tag w3-blue">C++</span>
+            </p></li>
+            <li class="w3-padding-16">Game Engines: Unity, Godot</li>
+            <li class="w3-padding-16">Graphics: OpenGL, Processing, TouchDesigner</li>
+            <li class="w3-padding-16">Web: HTML, CSS, Javascript, Ajax </li>
+          </ul>
+        </div>
 
-      <div class="w3-third">
-        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-black w3-xlarge w3-padding-32">Creative Skills</li>
-          <li class="w3-padding-16">Concept Art for Environment, Characters and Props</li>
-          <li class="w3-padding-16">Building IOT devices with Arduino</li>
-          <li class="w3-padding-16">Composing Music and Sound Design</li>
-          <li class="w3-padding-16">Filming and Video Editing</li>
-        </ul>
+        <div class="w3-third w3-margin-bottom">
+          <ul class="w3-ul w3-border w3-white w3-center">
+            <li class="w3-teal w3-xlarge w3-padding-32">Design Skills</li>
+            <li class="w3-padding-16">System Design</li>
+            <li class="w3-padding-16">Graphic Design: Illustrator, Photoshop</li>
+            <li class="w3-padding-16">UI / UX: Using Figma to prototype User Interface</li>
+            <li class="w3-padding-16">Game Design and Gamification</li>
+          </ul>
+        </div>
+
+        <div class="w3-third">
+          <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <li class="w3-black w3-xlarge w3-padding-32">Creative Skills</li>
+            <li class="w3-padding-16">Concept Art for Environment, Characters and Props</li>
+            <li class="w3-padding-16">Building IOT devices with Arduino</li>
+            <li class="w3-padding-16">Composing Music and Sound Design</li>
+            <li class="w3-padding-16">Filming and Video Editing</li>
+          </ul>
+        </div>
       </div>
     </div>
+
+
   </div>
 
-  <hr>
+
 
   <!-- Contact Section -->
   <div class="w3-container w3-padding-large w3-grey">
-    <h4 id="contact"><b>Contact Me</b></h4>
+    <h2 id="contact"><b>Contact Me</b></h2>
+    <hr>
     <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
       <div class="w3-third w3-dark-grey">
         <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
@@ -300,12 +350,14 @@
   </div>
 
   <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <footer class="w3-container w3-padding-32 w3-deep-orange">
     <div class="w3-row-padding">
       <div class="w3-third">
-        <h3>FOOTER</h3>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        <h3>About This Website</h3>
+        <p>This website was written in html and javascript,</p>
+        <p>powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>,</p>
+        <p>and hosted by Github Pages.</p>
+        <p>© Zi Di Zhu | 2023</p>
       </div>
 
       <div class="w3-third">
@@ -325,14 +377,8 @@
       </div>
 
       <div class="w3-third">
-        <h3>POPULAR TAGS</h3>
-        <p>
-          <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
-        </p>
+        <h3>FUN STUFF</h3>
+
       </div>
 
     </div>
@@ -343,18 +389,6 @@
   <!-- End page content -->
 </div>
 
-<script>
-  // Script to open and close sidebar
-  function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-  }
-
-  function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-  }
-</script>
 
 </body>
 </html>

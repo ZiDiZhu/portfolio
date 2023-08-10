@@ -14,6 +14,42 @@
 
   <body>
 
+  <div id="app" style="height: 100vh">
+      <!-- Webamp will attempt to center itself within this div -->
+  </div>
+  <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
+  <script>
+      const Webamp = window.Webamp;
+      const webamp = new Webamp({
+          initialTracks: [
+              {
+                  metaData: {
+                      artist: "Helix Square",
+                      title: "anemoia"
+                  },
+                  url: "audio/anemoia.wav",
+              },
+              {
+                  metaData: {
+                      artist: "Helix Square",
+                      title: "intimidating aura"
+                  },
+                  url: "audio/yomamaonadickV2.wav",
+              },
+              {
+                  metaData: {
+                      artist: "Helix Square",
+                      title: "dreamcore"
+                  },
+                  url: "audio/seeyouinmydream.wav",
+              }
+          ],
+      });
+
+      // Returns a promise indicating when it's done loading.
+      webamp.renderWhenReady(document.getElementById('app'));
+  </script>
+
     <a class = "change" id="mainLogo" href="index.html">
       <img src="logos\main_logo.PNG" width="140px;">
       <img src="logos\main_logo_anim.gif" width="140px;">
