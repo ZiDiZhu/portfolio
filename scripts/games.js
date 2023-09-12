@@ -29,6 +29,7 @@ function openWindow(myGame){
   $('#tools').text("made with: "+ myGame.tool);
   $('#controls').text("controls: "+ myGame.controls);
   currentGame = myGame;
+  console.log(currentGame.tags);
 }
 
 //currently only used for game info window, but probably reusable.

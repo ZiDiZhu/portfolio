@@ -8,7 +8,8 @@ var snowfolie = {
   controls:"Type Text to Play",
   tool: "Unity",
   icon:"logos/logo_snowfolie_sp.png",
-  screenshot:"images/screenshots/snowfolie1.png"
+  screenshot:"images/screenshots/snowfolie1.png",
+  tags: ["multiplayer","tactile"]
 };
 
 //dead link
