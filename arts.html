@@ -4,6 +4,7 @@
 <head>
   <title>2101 Games</title>
   <link rel = "stylesheet" href="style.css">
+  <link rel = "stylesheet" href="styles/icons.css">
 </head>
 
 <body>
@@ -25,6 +26,8 @@
   <!--back button-->
   <a href="index.html"><img src="logos\btn_back.png" style="top:120px; left:30px; position:absolute"></a>
 
+
+
   <!--social media links (right)-->
   <a href = "https://www.artstation.com/nebularswamp" target="_blank"><h3 class="link" style="top:220px;right:30px;background-color: blue">Artstation</h3></a>
   <a href = "https://github.com/ZiDiZhu" target="_blank"><h3 class="link" style="top:260px;right:30px;background-color: black">GitHub</h3></a>
@@ -34,8 +37,8 @@
   <a href = "https://www.instagram.com/nebularswamp/" target="_blank"><h3 class="link" style="top:340px;right:30px;background-color: hotpink">Instagram</h3></a>
 
   <!--gallery-->
-  <button style="top:140px;left:250px;position:absolute" class="button" onclick="plusDivs(-1)">Prev</button>
-  <button style="top:140px;left:400px;position:absolute" class="button" onclick="plusDivs(+1)">Next</button>
+  <button style="top:140px;right:650px;position:absolute" class="button" onclick="plusDivs(-1)">Prev</button>
+  <button style="top:140px;right:400px;position:absolute" class="button" onclick="plusDivs(+1)">Next</button>
   <img class="mySlides" src="arts/01.png" style="top:200px;left:150px;position:absolute; width: 60%; display: none;">
   <img class="mySlides" src="arts/00.gif" style="top:200px;left:150px;position:absolute; width: 50%;display: none;">
   <img class="mySlides" src="arts/03.png" style="top:200px;left:150px;position:absolute; width: 70%;display: block;">
@@ -60,7 +63,11 @@
     }
   </script>
 
-
+  <div class = "change row1 col1 icon" onclick="location.href='films.html'">
+    <img src="logos/folder_closed.png" class= "icon">
+    <img src="logos/folder_open.png" class= "icon">
+    <h2>Films</h2>
+  </div>
 
 </body>
 
