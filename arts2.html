@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <style>
+        /* Add your custom CSS styles here */
+        .gallery-container {
+            text-align: center;
+        }
+        .thumbnail {
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .artwork-container {
+            display: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="gallery-container">
+    <h1>Art Gallery</h1>
+    <div class="thumbnail-view">
+        <!-- Thumbnails will be displayed here dynamically -->
+    </div>
+    <div class="artwork-container">
+        <button id="back-to-thumbnails">Back to Thumbnails</button>
+        <div id="artwork-display"></div>
+        <button id="prev-artwork">Previous</button>
+        <button id="next-artwork">Next</button>
+    </div>
+</div>
+
+<script>
+    const thumbnailView = document.querySelector('.thumbnail-view');
+    const artworkContainer = document.querySelector('.artwork-container');
+    const artworkDisplay = document.getElementById('artwork-display');
+    const backButton = document.getElementById('back-to-thumbnails');
+    const prevButton = document.getElementById('prev-artwork');
+    const nextButton = document.getElementById('next-artwork');
+    let currentPage = 1;
+    const artworksPerPage = 20;
+
+    // Function to display thumbnails for a given page
+    function displayThumbnails(page) {
+        thumbnailView.innerHTML = '';
+
+        // Fetch artwork files from the "drawings" folder
+        fetch('drawings')
+            .then(response => response.text())
+            .then(data => {
+                const files = data.split('\n');
+
+                // Filter for image files (JPG, PNG, GIF)
+                const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+                const imageFiles = files.filter(file => {
+                    const lowerCaseFile = file.toLowerCase();
+                    return imageExtensions.some(ext => lowerCaseFile.endsWith(ext));
+                });
+
+                const startIndex = (page - 1) * artworksPerPage;
+                const endIndex = startIndex + artworksPerPage;
+
+                for (let i = startIndex; i < endIndex && i < imageFiles.length; i++) {
+                    const thumbnail = document.createElement('img');
+                    thumbnail.src = `drawings/${imageFiles[i]}`;
+                    thumbnail.classList.add('thumbnail');
+                    thumbnail.addEventListener('click', () => displayArtwork(imageFiles[i]));
+                    thumbnailView.appendChild(thumbnail);
+                }
+            });
+    }
+
+    // Function to display the selected artwork
+    function displayArtwork(artworkFileName) {
+        thumbnailView.style.display = 'none';
+        artworkContainer.style.display = 'block';
+        artworkDisplay.innerHTML = `<img src="drawings/${artworkFileName}" alt="${artworkFileName}">`;
+
+        backButton.addEventListener('click', () => {
+            thumbnailView.style.display = 'block';
+            artworkContainer.style.display = 'none';
+        });
+
+        // Find the index of the displayed artwork in the list
+        fetch('drawings')
+            .then(response => response.text())
+            .then(data => {
+                const files = data.split('\n');
+                const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+                const imageFiles = files.filter(file => {
+                    const lowerCaseFile = file.toLowerCase();
+                    return imageExtensions.some(ext => lowerCaseFile.endsWith(ext));
+                });
+                const currentIndex = imageFiles.indexOf(artworkFileName);
+
+                // Update navigation buttons
+                prevButton.disabled = currentIndex === 0;
+                nextButton.disabled = currentIndex === imageFiles.length - 1;
+
+                prevButton.addEventListener('click', () => {
+                    if (currentIndex > 0) {
+                        displayArtwork(imageFiles[currentIndex - 1]);
+                    }
+                });
+
+                nextButton.addEventListener('click', () => {
+                    if (currentIndex < imageFiles.length - 1) {
+                        displayArtwork(imageFiles[currentIndex + 1]);
+                    }
+                });
+            });
+    }
+
+    // Initialize the gallery with the first page of thumbnails
+    displayThumbnails(currentPage);
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Orb</title>
+    <script src="scripts/LightBox.js"></script>
+    <link rel="stylesheet" href="css/LightBox.css">
+    <link rel="stylesheet" href="css/ProjectOrb.css">
+
+</head>
+<body>
+<h2 style="text-align:center">Lightbox</h2>
+
+<div class="row">
+    <div class="column">
+        <img class="item" src="images/screenshots/cooking1.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img class="item" src="images/screenshots/fruitsJam1.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img class="item" src="images/screenshots/humanError1.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img class="item" src="images/screenshots/interview1.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+        <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="images/screenshots/cooking1.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="images/screenshots/fruitsJam1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="images/screenshots/humanError1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="images/screenshots/interview1.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+
+        <div class="column">
+            <img class="demo cursor" src="images/screenshots/cooking1.png" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/screenshots/fruitsJam1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/screenshots/humanError1.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/screenshots/interview1.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
