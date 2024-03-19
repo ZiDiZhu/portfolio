@@ -1,0 +1,8 @@
+body{
+    background-image: url("images/OrbMap.PNG");
+    background-color: #3f51b5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Lucida Console", Courier, monospace;
+    color: white;
+}

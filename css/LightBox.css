@@ -4,11 +4,13 @@
 }
 
 .item{
-    width: 300px;
+    width: 100%;
 }
 
+
+
 .row > .column {
-    padding: 0 8px;
+    padding: 2px 2px;
 
 }
 
@@ -16,11 +18,13 @@
     content: "";
     display: table;
     clear: both;
+
 }
 
 .column {
     float: left;
-    width: 25%;
+    width: 20%;
+
 }
 
 /* The Modal (background) */
@@ -35,16 +39,34 @@
     height: 100%;
     overflow: auto;
     background-color: black;
+
 }
 
 /* Modal Content */
 .modal-content {
-    position: relative;
+    /*position: relative;
     background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    width: 90%;
+    margin: auto;s
+    padding: 0;*/
+    position: relative;
     max-width: 1200px;
+    height: 80%;
+    margin: auto;
+}
+
+@media screen and (max-width: 700px) {
+    .modal-content {
+        width: 95%;
+    }
+
+    .prev, .next {
+        font-size: 18px; /* Adjust size for smaller screens */
+        padding: 12px; /* Adjust padding for smaller screens */
+    }
+
+    .mySlides img {
+        max-height: 70vh; /* Adjust for better fit on smaller screens */
+    }
 }
 
 /* The Close Button */
@@ -78,6 +100,7 @@
     cursor: pointer;
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     width: auto;
     padding: 16px;
     margin-top: -50px;
