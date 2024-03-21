@@ -1,8 +1,34 @@
 body{
     background-image: url("images/OrbMap.PNG");
-    background-color: #3f51b5;
+    background-color: #000000;
     background-size: cover;
     background-repeat: no-repeat;
     font-family: "Lucida Console", Courier, monospace;
     color: white;
+}
+
+.chara_full{
+    height: 40vh;
+    position: relative;
+    padding-left: -10px;
+}
+
+/* unvisited link */
+a:link {
+    color: #8bc34a;
+}
+
+/* visited link */
+a:visited {
+    color: #9c27b0;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: #f2f2f2;
 }

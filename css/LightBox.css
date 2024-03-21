@@ -10,7 +10,7 @@
 
 
 .row > .column {
-    padding: 2px 2px;
+    padding: 1% 1%;
 
 }
 
@@ -24,7 +24,6 @@
 .column {
     float: left;
     width: 20%;
-
 }
 
 /* The Modal (background) */
@@ -39,7 +38,6 @@
     height: 100%;
     overflow: auto;
     background-color: black;
-
 }
 
 /* Modal Content */
@@ -50,8 +48,10 @@
     padding: 0;*/
     position: relative;
     max-width: 1200px;
-    height: 80%;
+    width: 80%;
     margin: auto;
+
+
 }
 
 @media screen and (max-width: 700px) {
@@ -88,6 +88,7 @@
 
 .mySlides {
     display: none;
+    position: relative;
 }
 
 .cursor {
@@ -159,5 +160,5 @@ img.hover-shadow {
 }
 
 .hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
 }
