@@ -5,7 +5,7 @@
 
 #title1{
   position: absolute;
-  top: 40px;
+  top: 10vh;
   left: 180px;
   width: 25%;
   background-color: blue;
@@ -64,25 +64,50 @@
 }
 
 .col1{
-  left: 200px;
+  left: 10vw;
 }
 
 .col2{
   position: absolute;
-  left: 450px;
+  left: 30vw;
 }
 
 .col3{
   position: absolute;
-  left: 700px;
+  left: 50vw;
 }
 
 .col4{
   position: absolute;
-  left: 950px;
+  left: 70vw;
 }
 
 .col5{
   position: absolute;
-  left: 1200px;
+  left: 90vw;
+}
+
+.openFolder{
+  position: absolute;
+  height: 80px;
+  top: 200px;
+  left: 30px;
+}
+
+.openFoldertxt{
+  position: absolute;
+  height: 80px;
+  top: 260px;
+  left: 50px;
+  color: yellow;
+}
+
+.change img:nth-child(2){display:none;}
+.change:hover img:first-child{display:none;}
+.change:hover img:nth-child(2){display:inline-block;}
+
+.change:hover{
+  cursor: pointer;
+  color:lime;
+  text-decoration: underline;
 }

@@ -32,31 +32,6 @@ p{
   color: #42FF00;
 }
 
-.openFolder{
-  position: absolute;
-  height: 80px;
-  top: 200px;
-  left: 30px;
-}
-
-.openFoldertxt{
-  position: absolute;
-  height: 80px;
-  top: 260px;
-  left: 50px;
-  color: yellow;
-}
-
-.change img:nth-child(2){display:none;}
-.change:hover img:first-child{display:none;}
-.change:hover img:nth-child(2){display:inline-block;}
-
-.change:hover{
-  cursor: pointer;
-  color:lime;
-  text-decoration: underline;
-}
-
 a{
   font-style: italic;
   color: lime;

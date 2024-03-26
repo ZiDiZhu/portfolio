@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel = "stylesheet" href="styles/icons.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111111;
+      color: #ffffff;
+      background-image: url('images/bg_robo.jpg'); /* Add your background image here */
+      background-size: cover; /* Cover the entire page */
+      background-position: center; /* Center the background image */
+      background-attachment: fixed; /* Fixed background (doesn't scroll with the page) */
+    }
+    .header { text-align: center; margin: 20px; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); grid-gap: 20px; padding: 20px; }
+    .gallery img { width: 100%; height: auto; }
+    /* unvisited link */
+    a:link {
+      color: #6688dd;
+    }
+
+    /* visited link */
+    a:visited {
+      color: #3355aa;
+    }
+
+    /* mouse over link */
+    a:hover {
+      color: #cddc39;
+    }
+
+    /* selected link */
+    a:active {
+      color: blue;
+    }
+    .scrollbox {
+      width: 100vw;
+      overflow: hidden;
+      position: relative;
+      white-space: nowrap;
+      background-image: url('images/resources/pattern1.gif');
+      background-size: cover;
+      background-position: center;
+    }
+    .marquee-content {
+      display: inline-block;
+      will-change: transform;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class = "scrollbox">
+    <marquee scrollamount="32" scrolldelay="100"; scrolldelay = "0">
+      <h1>✩♬₊˚.✮⋆☾⋆⁺₊✧𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 𝕥𝕙𝕖 𝔸𝕣𝕥 𝔾𝕒𝕝𝕝𝕖𝕣𝕪⋆.˚ ᡣ𐭩 .𖥔˚ 欢迎来到美术馆╰┈ ⋆｡˚ ❀ *· 🌬 ࿐ ࿔ ˚:⋆ ✧･ﾟ</h1>
+    </marquee>
+  </div>
+
+  <div class = "change row1 col1 icon" onclick="location.href='films.html'">
+    <img src="logos/folder_closed.png" class= "icon">
+    <img src="logos/folder_open.png" class= "icon">
+    <h2>Films</h2>
+  </div>
+
+  <br>
+  <h2> <a href="https://zidizhu.github.io/portfolio/"><< Return to Zi Di's Website</a></h2>
+  <img src="images/home.gif" alt="Your Name" style="width:150px; height:auto;">
+  <h1>Zi Di's Art Gallery</h1>
+  <div class="social-links">
+    <!-- Update href with your social media links -->
+    <h1><a href="https://www.artstation.com/zi-di">ArtStation</a></h1>
+  </div>
+</div>
+
+<div class="gallery">
+  <!-- Static list of images for the gallery -->
+  <img src="orb_images/0320_rigs_1.gif" alt="Gallery Image 1">
+  <img src="orb_images/0320_town_1.gif" alt="Gallery Image 2">
+  <img src="orb_images/0320_neoatlantis_3.gif" alt="Gallery Image 3">
+  <!-- Add more images as needed -->
+</div>
+
+<script>
+  // JavaScript for dynamic gallery loading (simplified example)
+  // You'd need to adjust this to your project's requirements, possibly with server-side support
+  const images = [
+    "arts/01.png",
+    "arts/001.gif",
+    "arts/02.png",
+    "arts/03.png",
+    "arts/04.PNG",
+    "arts/05.jpg"];
+  const galleryElement = document.querySelector('.gallery');
+
+  images.forEach(imagePath => {
+    const imgElement = document.createElement('img');
+    imgElement.src = imagePath;
+    imgElement.alt = 'Gallery Image';
+    galleryElement.appendChild(imgElement);
+  });
+</script>
+</body>
+</html>
