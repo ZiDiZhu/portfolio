@@ -1,0 +1,6 @@
+#draggable {
+    position: absolute;
+    z-index: 9;
+    background-color: #000000;
+    text-align: center;
+}

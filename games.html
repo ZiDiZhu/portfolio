@@ -5,9 +5,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src = "scripts\games.js"></script>
     <script src = "scripts\gamesinfo.js"></script>
+    <script src = "scripts/Draggable.js"></script>
     <link rel = "stylesheet" href="style.css">
     <link rel = "stylesheet" href="styles/icons.css">
     <link rel = "stylesheet" href="styles/infowindow.css">
+    <link rel = "stylesheet" href="css/draggable.css">
     <title>2101 Games</title>
   </head>
 
@@ -118,19 +120,22 @@
     </div>
 
 
-    <div id="infoWindow">
-      <button id = "closeWindow" onclick="hideThing('#infoWindow')">x</button>
-      <img id = "icon"></img>
-      <h1 id = "title">Title</h1>
-      <img id = "screenshot"></img>
-      <h3 id="year">2020</h3>
-      <h3 id="genre">genre</h3>
-      <p id = "description">Description goes here Beep boop beep boop beep</p>
-      <p id = "tools">made with:</p>
-      <p id = "controls">controls:</p>
-      <button id = "playbutton" onclick="openLink()">PLAY</button>
-
+    <div id = "draggable">
+        <div id="infoWindow">
+            <button id = "closeWindow" onclick="hideThing('#infoWindow')">x</button>
+            <img id = "icon"></img>
+            <h1 id = "title">Title</h1>
+            <img id = "screenshot"></img>
+            <h3 id="year">2020</h3>
+            <h3 id="genre">genre</h3>
+            <p id = "description">Description goes here Beep boop beep boop beep</p>
+            <p id = "tools">made with:</p>
+            <p id = "controls">controls:</p>
+            <button id = "playbutton" onclick="openLink()">PLAY</button>
+        </div>
     </div>
+
+  <script>dragElement(document.getElementById("draggable"));</script>
 
 
   </body>

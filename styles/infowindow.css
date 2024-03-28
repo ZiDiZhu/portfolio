@@ -2,8 +2,8 @@
   width: 900px;
   height: 600px;
   position: absolute;
-  top:200px;
-  left:900px;
+  top:10vh;
+  left:100px;
   background-color: purple;
   display: none;
   border-radius: 4px;
