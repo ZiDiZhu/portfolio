@@ -169,3 +169,16 @@ var meatCute = {
   icon:"logos/logo_meatcute_sp.png",
   screenshot:"images/screenshots/meatCute1.jpg"
 };
+
+var catLander = {
+  title: "CatLander",
+  year: "CGJ 2023 - 2nd place",
+  link:"https://2101.itch.io/catballz",
+  description:`After clipping through the floor chasing a magic yarn ball, our cat hero find itself traveling between dimensions!`,
+  genre: "Arcade / Endless Runner",
+  bgColor:"coral",
+  controls:`Move: AD, Jump: Space`,
+  tool: "Unity",
+  icon:"logos/folder_closed.png",
+  screenshot:"images/screenshots/catlander.png"
+};
