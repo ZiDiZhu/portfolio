@@ -1,0 +1,28 @@
+.icon{
+  text-align: center;
+}
+.rightrow > .rightcolumn {
+  padding: 1% 1%;
+
+}
+.rightrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.rightrow{
+  position: fixed;
+  right: 0;
+  top:0;
+}
+
+
+.change img:nth-child(2){display:none;}
+.change:hover img:first-child{display:none;}
+.change:hover img:nth-child(2){display:inline-block;}
+
+.change:hover{
+  cursor: pointer;
+  color:lime;
+  text-decoration: underline;
+}
