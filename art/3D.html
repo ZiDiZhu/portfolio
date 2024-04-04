@@ -16,8 +16,7 @@
       font-family: Arial, sans-serif;
       background-color: #999999;
       color: #ffffff;
-      background-image: url('../images/resources/pattern3.gif'); /* Add your background image here */
-      background-blend-mode: soft-light;
+      background-image: url('../images/bg_robo.jpg'); /* Add your background image here */
       background-size: cover; /* Cover the entire page */
       background-position: center; /* Center the background image */
       background-attachment: fixed; /* Fixed background (doesn't scroll with the page) */
@@ -26,12 +25,12 @@
     .gallery img { width: 100%; height: auto; }
     /* unvisited link */
     a:link {
-      color: #6688dd;
+      color: #ffc107;
     }
 
     /* visited link */
     a:visited {
-      color: #3355aa;
+      color: #00ffff;
     }
 
     /* mouse over link */
@@ -79,8 +78,8 @@
   </div>
 
   <div class = "change icon rightcolumn" onclick="location.href='sketches.html'">
-    <img src="../logos/folder_closed.png" class= "icon">
     <img src="../logos/folder_open.png" class= "icon">
+    <img src="../logos/folder_closed.png" class= "icon">
     <h3>SKETCHES</h3>
   </div>
 
@@ -91,15 +90,15 @@
   </div>
 
   <div class = "change icon rightcolumn" onclick="location.href='characters.html'">
-    <img src="../logos/folder_open.png" class= "icon">
     <img src="../logos/folder_closed.png" class= "icon">
-    <h2 style="color: #42FF00">OCs</h2>
+    <img src="../logos/folder_open.png" class= "icon">
+    <h3>OCs</h3>
   </div>
 
-  <div class = "change icon rightcolumn" onclick="location.href='3D.html'">
+  <div class = "change icon rightcolumn" onclick="location.href='index.html'">
     <img src="../logos/folder_closed.png" class= "icon">
     <img src="../logos/folder_open.png" class= "icon">
-    <h3>3D</h3>
+    <h2 style="color: #42FF00">3D</h2>
   </div>
 
   <div class = "change icon rightcolumn" onclick="location.href='gameart.html'">
@@ -109,34 +108,24 @@
   </div>
 </div>
 
-<div style="background-color: #999999">
-
+<div>
 
 
   <div class="row">
-    <div class="column" style="width: 95vw">
-      <img src="characters/b1.jpg" style="padding: 1%; height: 35vw" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-      <img src="characters/gizmo.JPG" style="padding: 1%; height: 35vw" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    <div class="column"style="width: 90vw"><h2>Polygon 3D Modeling</h2></div>
+    <div class="column"style="width: 90vw">
+      <img src="3D/jellyfish_probe.jpg" style=" height: 30vw"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    </div>
+    <div class="column"style="width: 90vw">
+      <img src="3D/robo.jpg" style=" height: 30vw; padding: 1%"  onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      <img src="3D/oni_render1.png" style=" height: 30vw; padding: 1%"  onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    </div>
+    <div class="column"style="width: 90vw"><h2>3D Sculpting</h2></div>
+    <div class="column"style="width: 90vw">
+      <img src="3D/ganesh.jpg" style=" height: 30vw; padding: 1%"  onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
     </div>
 
   </div>
-  <div class="row">
-
-    <div class="change column" style="width: 85vw">
-      <img src="characters/cash22_colored.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor item">
-      <img src="characters/cash22_line.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor item">
-    </div>
-
-  </div>
-
-  <div class="row">
-    <div class="column change" style="width: 25vw">
-      <img src="characters/b3.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor item">
-      <img src="characters/b3_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor item">
-    </div>
-  </div>
-  </div>
-
 
 
 
@@ -148,64 +137,34 @@
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
 
-    <div class="row">
-      <div class="mySlides">
-        <div class="numbertext"> ???????? </div>
-        <img src="characters/b1_1.jpg" style="width:100%">
-      </div>
+    <div class="mySlides">
+      <div class="numbertext">Concept Art of an alien probe. Visually inspired by Sputnik</div>
+      <img src="3D/jellyfish_probe.jpg" style="width:100%">
+    </div>
 
-      <div class="mySlides">
-        <div class="numbertext">1 / 10</div>
-        <img src="characters/gizmo.JPG" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">Character for original story, "CA$H 22"</div>
-        <img src="characters/cash22_colored.jpg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">still life - pencil and chalk</div>
-        <img src="concept/a1.jpg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">still life - pencil and chalk</div>
-        <img src="concept/a1_1.jpg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">still life - pastel</div>
-        <img src="sketches/b4.jpg" style="width:100%">
-      </div>
+    <div class="mySlides">
+      <div class="numbertext">Art asset for my music video, "Death of A Robot", which was never released*</div>
+      <img src="3D/robo_1.jpg" style="width:100%">
     </div>
 
     <div class="row">
       <div class="mySlides">
-        <div class="numbertext">6 / 10</div>
-        <img src="../orb_images/0320_rigs_3.gif" style="width:100%">
+        <div class="numbertext"> Fan art for my favorite game, <i>Oxygen Not Included</i> </div>
+        <img src="3D/oni_render1.png" style="width:100%">
       </div>
 
       <div class="mySlides">
-        <div class="numbertext">7 / 10</div>
-        <img src="../orb_images/0320_town_1.gif" style="width:100%">
+        <div class="numbertext">A 3D Model of Hindu God, Ganesh</div>
+        <img src="3D/ganesh_1.jpg" style="width:100%">
       </div>
 
-      <div class="mySlides">
-        <div class="numbertext">8 / 10</div>
-        <img src="../orb_images/0320_town_2.gif" style="width:100%">
-      </div>
 
-      <div class="mySlides">
-        <div class="numbertext">9 / 10</div>
-        <img src="../orb_images/0320_town_3.gif" style="width:100%">
-      </div>
 
-      <div class="mySlides">
-        <div class="numbertext">10 / 10</div>
-        <img src="../orb_images/0322_sailin.gif" style="width:100%">
-      </div>
+
+
     </div>
+
+
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
