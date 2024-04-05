@@ -1,8 +1,8 @@
 body{
-    background-image: url("images/OrbMap.PNG");
+    background-image: url("images/resources/planet.gif");
     background-color: #000000;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat;
     font-family: "Lucida Console", Courier, monospace;
     color: white;
 }
