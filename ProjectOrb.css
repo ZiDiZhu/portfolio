@@ -2,7 +2,6 @@ body{
     background-image: url("images/resources/planet.gif");
     background-color: #000000;
     background-size: contain;
-    background-repeat: repeat;
     font-family: "Lucida Console", Courier, monospace;
     color: white;
 }
