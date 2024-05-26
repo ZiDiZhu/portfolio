@@ -6,6 +6,23 @@
     <title>Unity WebGL Player | Speculative2</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      #unityContainer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -57,11 +74,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/AHB_0523_0_WebGL.loader.js";
+      var loaderUrl = buildUrl + "/AHB_0526_0_WebGL.loader.js";
       var config = {
-        dataUrl: buildUrl + "/AHB_0523_0_WebGL.data.br",
-        frameworkUrl: buildUrl + "/AHB_0523_0_WebGL.framework.js.br",
-        codeUrl: buildUrl + "/AHB_0523_0_WebGL.wasm.br",
+        dataUrl: buildUrl + "/AHB_0526_0_WebGL.data",
+        frameworkUrl: buildUrl + "/AHB_0526_0_WebGL.framework.js",
+        codeUrl: buildUrl + "/AHB_0526_0_WebGL.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Speculative2",
