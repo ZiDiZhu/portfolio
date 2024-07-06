@@ -1,6 +1,6 @@
 #infoWindow{
-  width: 900px;
-  height: 600px;
+  width: 80vw;
+  height: 70vh;
   position: absolute;
   top:10vh;
   left:100px;
@@ -48,62 +48,13 @@
   top: 80px;
   left: 30px;
   background-color: gray;
-  width: 600px;
-  height: 400px;
+  height: 40vh;
 }
 
-#year{
-  display: inline-block;
-  position: absolute;
-  left: 650px;
-  top: 100px;
-}
-
-#genre{
-  display: inline-block;
-  position: absolute;
-  left: 650px;
-  top: 150px;
-}
 
 #description{
   display: inline-block;
   position: absolute;
-  left: 650px;
-  top: 250px;
-}
-
-#tools{
-  display: inline-block;
-  position: absolute;
-  left: 80px;
-  top: 500px;
-}
-
-#controls{
-  display: inline-block;
-  position: absolute;
-  left: 80px;
-  top: 530px;
-}
-
-#playbutton{
-  display: inline-block;
-  position: absolute;
-  left: 700px;
-  top: 500px;
-  padding: 20px 40px;
-  text-align: center;
-  font-size: 26px;
-  background-color: darkorange;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-}
-
-#playbutton:hover{
-  cursor: pointer;
-  background-color: orange;
-  color: white;
+  left: 50px;
+  top: 50vh;
 }
