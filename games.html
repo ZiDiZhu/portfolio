@@ -62,7 +62,7 @@
         <p>puzzle / platformer</p>
     </div>
 
-    <div class="change row1 col4" onmouseover="openWindow(snowfolie)" onclick="openLink()" onmousemove="movePreview(event)" onmouseout="hideThing('#infoWindow')">
+    <div class="change row2 col4" onmouseover="openWindow(snowfolie)" onclick="openLink()" onmousemove="movePreview(event)" onmouseout="hideThing('#infoWindow')">
         <img src = "logos\logo_snowfolie_sp.png" class= "icon">
         <img src = "logos\logo_snowfolie.png" class= "icon">
         <h2>Snowfolie</h2>
@@ -94,7 +94,7 @@
         <p>meme generator</p>
     </div>
 
-    <div class="change row4 col4" onmouseover="openWindow(painTor)" onclick="openLink()" onmousemove="movePreview(event)" onmouseout="hideThing('#infoWindow')">
+    <div class="change row4 col2" onmouseover="openWindow(painTor)" onclick="openLink()" onmousemove="movePreview(event)" onmouseout="hideThing('#infoWindow')">
         <img src = "logos\logo_paintor.png" class= "icon">
         <img src = "logos\logo_paintor_sp.png" class= "icon">
         <h2>PAINter</h2>
@@ -129,11 +129,10 @@
 
     <div id = "draggable">
         <div id="infoWindow">
-            <button id = "closeWindow" onclick="hideThing('#infoWindow')">x</button>
-            <img id = "icon"></img>
-            <h1 id = "title">Title</h1>
             <img id = "screenshot"></img>
             <p id = "description">Description goes here Beep boop beep boop beep</p>
+            <img id = "icon"></img>
+            <h3 id = "title">Title</h3>
             <!-- <button id = "playbutton" onclick="openLink()">PLAY</button> -->
         </div>
     </div>

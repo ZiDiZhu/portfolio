@@ -1,10 +1,10 @@
 #infoWindow{
-  width: 80vw;
-  height: 70vh;
+  width: 60vh;
+  height: 50vh;
   position: absolute;
   top:10vh;
   left:100px;
-  background-color: purple;
+  background-color: rgba(120, 120, 120, 0.7);
   display: none;
   border-radius: 4px;
 }
@@ -38,23 +38,25 @@
 
 #title{
   display: inline-block;
-  left: 80px;
+  left: 70px;
+  text-align: left;
   position: absolute;
 }
 
 #screenshot{
   display: inline-block;
   position: absolute;
-  top: 80px;
-  left: 30px;
+  top: 70px;
+  left: 10px;
   background-color: gray;
-  height: 40vh;
+  width: 50vh;
+  height: 30vh;
 }
 
 
 #description{
   display: inline-block;
   position: absolute;
-  left: 50px;
-  top: 50vh;
+  left: 10px;
+  top: 36vh;
 }
