@@ -37,25 +37,27 @@
     height: 100%;
     overflow: auto;
     background-color: black;
+    align-items: center;
 }
 
 /* Modal Content */
 .modal-content {
     /*position: relative;
     background-color: #fefefe;
-    margin: auto;s
-    padding: 0;*/
-    position: relative;
-    max-width: 1200px;
-    width: 80%;
     margin: auto;
+    padding: 0;*/
+    position: absolute;
+    max-width: 80vw;
+    width: 80vw;
+    margin: auto;
+    left: 10vw;
 
 
 }
 
 @media screen and (max-width: 700px) {
     .modal-content {
-        width: 95%;
+        height: 80vh;
     }
 
     .prev, .next {
