@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Films</title>
+    <link rel = "stylesheet" href="../style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    function changeVideoSrc(link){
+        document.getElementById("videoSource").src =link;
+        document.getElementById("videoPlayer").load();
+    }
+</script>
+
+<button onclick="changeVideoSrc('w22_01.mp4')">current.mp4</button>
+<button onclick="changeVideoSrc('w22_02.mp4')">interview.mp4</button>
+<button onclick="changeVideoSrc('w22_03.mp4')">web.mp4</button>
+<button onclick="changeVideoSrc('w22_04.mp4')">radiowave.mp4</button>
+<button onclick="changeVideoSrc('w22_05.mp4')">untitled.mp4</button>
+<br>
+<video id="videoPlayer" controls>
+    <source id="videoSource" src="w22_05.mp4" type="video/mp4">
+</video>
+
+
+
+</body>
+</html>
