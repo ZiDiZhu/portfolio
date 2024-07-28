@@ -38,6 +38,10 @@ a{
   color: lime;
 }
 
+a:hover{
+  color: gold;
+}
+
 .link{
   font-style: italic;
   color: white;

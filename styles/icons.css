@@ -108,6 +108,6 @@
 
 .change:hover{
   cursor: pointer;
-  color:lime;
+  color:whitesmoke;
   text-decoration: underline;
 }
