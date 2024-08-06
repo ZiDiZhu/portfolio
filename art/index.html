@@ -4,17 +4,14 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Zi Di's Art</title>
 
-    <script src = "../scripts/Draggable.js"></script>
     <link rel = "stylesheet" href="icons.css">
     <link rel = "stylesheet" href="../styles/infowindow.css">
-    <link rel = "stylesheet" href="../css/draggable.css">
-    <link rel = "stylesheet" href="style.css">
+    <link rel = "stylesheet" href="../style.css">
     <link rel="stylesheet" href="LightBox.css">
     <script src="LightBox.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: radial-gradient(circle at 1.5% 22%, rgb(237, 220, 200) 0%, rgb(250, 178, 172) 25.5%, rgb(230, 138, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+            background: radial-gradient(circle at 1.5% 22%, rgb(237, 220, 200) 0%, rgb(250, 178, 172) 25.5%, rgb(230, 138, 210) 62.3%, rgb(225, 0, 255) 93.8%);
             color: #f5c7f7;
             background-blend-mode: soft-light;
             background-size: cover; /* Cover the entire page */
@@ -24,29 +21,6 @@
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); grid-gap: 20px; padding: 20px; }
         .gallery img { width: 100%; height: auto; }
         /* unvisited link */
-        a:link {
-            color: #adf7d1;
-        }
-
-        /* visited link */
-        a:visited {
-            color: #e0ffcd;
-        }
-
-        /* mouse over link */
-        a:hover {
-            color: #ffcab0;
-        }
-
-        /* selected link */
-        a:active {
-            color: blue;
-        }
-
-        .marquee-content {
-            display: inline-block;
-            will-change: transform;
-        }
 
         .center {
             display: flex;
@@ -84,7 +58,6 @@
 
 <div class="rightrow">
     <div class = "change icon rightcolumn">
-        <a class = "change" id="mainLogo" href="../index.html">
             <img src="../gifs/computer_a.gif" width="150px;">
             <img src="../gifs/computer.gif" width="150px;">
           </a>

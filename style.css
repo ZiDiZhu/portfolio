@@ -5,11 +5,23 @@ body {
   color: white;
 }
 
+#draggable {
+  position: absolute;
+  z-index: 3;
+  background-color: #000000;
+  text-align: center;
+  cursor: move;
+}
+
 /* Main logo positioning */
 #mainLogo {
   right: 30px;
   top: 10px;
   position: absolute;
+}
+
+.navigator{
+  z-index: 5;
 }
 
 /* Scrollbox styling */
@@ -19,8 +31,22 @@ body {
   right: 200px;
   top: 20px;
   position: absolute;
-  background-color: black;
   color: #42FF00;
+  z-index: -1;
+}
+
+.change img:nth-child(2){display:none;}
+.change:hover img:first-child{display:none;}
+.change:hover img:nth-child(2){display:inline-block;}
+
+.change:hover{
+  cursor: pointer;
+  color:whitesmoke;
+  text-decoration: underline;
+}
+
+.item{
+  display: inline-block;
 }
 
 /* Social media link background colors */

@@ -16,13 +16,3 @@
   top:0;
 }
 
-
-.change img:nth-child(2){display:none;}
-.change:hover img:first-child{display:none;}
-.change:hover img:nth-child(2){display:inline-block;}
-
-.change:hover{
-  cursor: pointer;
-  color:lime;
-  text-decoration: underline;
-}

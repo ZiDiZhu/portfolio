@@ -11,11 +11,11 @@ function movePreview(event){
   
 
   if (event.clientX + windowWidth > width){
-    $('#infoWindow').css("left",event.clientY-windowWidth);
+    $('#infoWindow').css("left",event.client-windowWidth);
   }
 
-  $('#infoWindow').css("top",event.clientY-50);
-  $('#infoWindow').css("left",event.clientX);
+  $('#infoWindow').css("top",event.clientY+5);
+  $('#infoWindow').css("left",event.clientX+5);
 }
 
 function closePreview(){

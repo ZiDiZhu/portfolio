@@ -3,46 +3,6 @@
   text-align: center;
 }
 
-#title1{
-  position: absolute;
-  top: 10vh;
-  left: 180px;
-  width: 25%;
-  background-color: blue;
-}
-
-#title1_2{
-  position: absolute;
-  top: 120px;
-  left: 920px;
-  width: 25%;
-  background-color: orange;
-}
-
-#title2{
-  position: absolute;
-  top: 520px;
-  left: 180px;
-  width: 25%;
-  background-color: purple;
-}
-
-#title2_2{
-  position: absolute;
-  top: 520px;
-  left: 920px;
-  width: 25%;
-  background-color: darkcyan;
-}
-
-#title3{
-  position: absolute;
-  top: 920px;
-  left: 180px;
-  width: 70%;
-  background-color: darkcyan;
-}
-
 .row1{
   position: absolute;
   top:100px;
@@ -110,4 +70,8 @@
   cursor: pointer;
   color:whitesmoke;
   text-decoration: underline;
+}
+
+.item{
+  display: inline-block;
 }

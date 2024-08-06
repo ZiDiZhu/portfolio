@@ -2,18 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zi Di's 3D</title>
+  <title>Zi Di's 3D art</title>
 
-  <script src = "../scripts/Draggable.js"></script>
   <link rel = "stylesheet" href="icons.css">
   <link rel = "stylesheet" href="../styles/infowindow.css">
-  <link rel = "stylesheet" href="../css/draggable.css">
-  <link rel = "stylesheet" href="style.css">
+  <link rel = "stylesheet" href="../style.css">
   <link rel="stylesheet" href="LightBox.css">
   <script src="LightBox.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
       background-color: #999999;
       color: #ffffff;
       background-image: url('../images/bg_robo.jpg'); /* Add your background image here */
@@ -23,35 +20,11 @@
     }
     .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); grid-gap: 20px; padding: 20px; }
     .gallery img { width: 100%; height: auto; }
-    /* unvisited link */
-    a:link {
-      color: #ffc107;
-    }
-
-    /* visited link */
-    a:visited {
-      color: #00ffff;
-    }
-
-    /* mouse over link */
-    a:hover {
-      color: #cddc39;
-    }
-
-    /* selected link */
-    a:active {
-      color: blue;
-    }
-
-    .marquee-content {
-      display: inline-block;
-      will-change: transform;
-    }
   </style>
 </head>
 <body>
 
-<h2>✮ <a href="../index.html">Index</a> / <a href="../games.html">Games</a> / <a href="index.html">Art</a> / <a href="../music.html">Music</a> ✮</h2>
+<h2 class="navigator">✮ <a href="../index.html">Index</a> / <a href="../games.html">Games</a> / <a href="index.html">Art</a> / <a href="../music.html">Music</a> ✮</h2>
 <a href = "https://www.artstation.com/zi-di" target="_blank"><h2 style="display: inline;background-color: blue">Artstation</h2></a>
 <div class = "scrollbox">
   <marquee scrollamount="32" scrolldelay="100"; scrolldelay = "0">
@@ -65,7 +38,6 @@
 
 <div class="rightrow">
   <div class = "change icon rightcolumn" onclick="location.href='index.html'">
-    <a class = "change" id="mainLogo" href="../index.html">
       <img src="../gifs/computer_a.gif" width="150px;">
       <img src="../gifs/computer.gif" width="150px;">
     </a>
