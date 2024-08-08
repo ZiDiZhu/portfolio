@@ -47,6 +47,7 @@ body {
 
 .item{
   display: inline-block;
+  padding: 10PX;
 }
 
 /* Social media link background colors */
@@ -59,7 +60,7 @@ body {
 
 /* Social media link states */
 a:link, .social-link:link {
-  color: #42FF00;
+  color: paleturquoise
 }
 
 a:visited, .social-link:visited {
@@ -85,17 +86,4 @@ a:hover, .social-link:hover {
 .social-links li {
   display: inline;
   margin-right: 10px;
-}
-
-/* Button styling */
-.button {
-  background-color: #42FF00;
-  border: none;
-  color: black;
-  padding: 8px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 26px;
-  cursor: pointer;
 }

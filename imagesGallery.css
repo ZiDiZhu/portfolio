@@ -1,0 +1,63 @@
+.gallery-container {
+  width: 80%; /* Adjust as needed */
+  max-width: 600px; /* Set a max-width to prevent it from becoming too large */
+  display: flex; /* Align image and text side by side */
+  align-items: center; /* Center items vertically */
+  position: relative; /* Relative positioning for animations */
+  overflow: hidden; /* Hide overflowing content */
+  background-color: #343434;
+}
+
+/* Fixed size for the image */
+#current-image {
+  width: 400px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Styling for the text description */
+#image-text {
+  font-size: 1.2em; /* Font size */
+  color: #42FF00;
+  font-family: Arial, sans-serif; /* Font family */
+  margin-left: 20px; /* Space between image and text */
+  width: 300px; /* Fixed width for text area */
+  padding: 0; /* Remove padding */
+}
+
+/* Keyframes for fade-in and fade-out */
+@keyframes fade {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Apply the animation to the images */
+.gallery-container img {
+  animation: 7s fade infinite; 
+}
+
+/* Navigation buttons styling */
+.nav-buttons {
+  margin-left:30vw; /* Center buttons horizontally */
+
+}
+  
+  .nav-buttons button {
+    background-color: #42FF00; /* Button background color */
+    padding: 10px 20px; /* Padding around text */
+    border: none; /* Remove default border */
+    color: black; /* Text color */
+    text-align: center; /* Center text inside button */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Optional rounded corners */
+    margin-right: 10px; /* Space between buttons */
+  }
+  
+  .nav-buttons button:hover {
+    background-color: #33cc33; /* Darker green on hover */
+  }
+  

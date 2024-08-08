@@ -1,21 +1,24 @@
 
 var currentGame;
+var width = window.innerWidth;
+var height = window.innerHeight;
 
 function movePreview(event){
   //$('#preview').attr("src",myGame.screenshot);
-
-  var width = window.innerWidth;
-
-  var windowWidth = $('#infowindow').width;
-  console.log(width);
   
+  console.log(width);
+  var windowWidth = $('#infowindow').width();
 
-  if (event.clientX + windowWidth > width){
-    $('#infoWindow').css("left",event.client-windowWidth);
+  if (event.clientX> width/2){
+    $('#infoWindow').css("left",event.clientX-windowWidth-5);
+  }else{
+    $('#infoWindow').css("left",event.clientX+5);
   }
-
-  $('#infoWindow').css("top",event.clientY+5);
-  $('#infoWindow').css("left",event.clientX+5);
+  if (event.clientY> height/2){
+    $('#infoWindow').css("top",event.clientY-$('#infoWindow').height()-5);
+  }else{
+    $('#infoWindow').css("top",event.clientY+5);
+  }
 }
 
 function closePreview(){
@@ -29,7 +32,7 @@ function openWindow(myGame){
   $('#title').text(myGame.title+"("+myGame.year+")-"+myGame.genre);
   $('#icon').attr("src", myGame.icon);
   $('#screenshot').attr("src", myGame.screenshot);
-  $('#infoWindow').css("background-color",myGame.bgColor);
+  //$('#infoWindow').css("background-color",myGame.bgColor);
   $('#description').text(myGame.description);
   $('#tools').text("made with: "+ myGame.tool);
   currentGame = myGame;

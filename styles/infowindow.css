@@ -1,30 +1,15 @@
 #infoWindow{
+  background-image: url('../images/window.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 60vh;
   height: 50vh;
   position: absolute;
-  background-color: rgba(120, 120, 120, 0.7);
   display: none;
   border-radius: 4px;
   z-index: 3;
 }
 
-#closeWindow{
-  right: 0px;
-  top: 0px;
-  display: inline-block;
-  position: absolute;
-  background-color: red;
-  padding: 10px 20px;
-  text-align: center;
-  color: white;
-  font-size: 30px;
-  border: none;
-  border-radius: 4px;
-}
-
-#closeWindow:hover{
-  background-color: tomato;
-}
 
 #icon{
   display: inline-block;

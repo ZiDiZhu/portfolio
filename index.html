@@ -3,12 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Zi Di's art</title>
+  <title>Zi Di's Website</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="styles/icons.css">
+  <link rel="stylesheet" href="imagesGallery.css">
+  <script src="imageGallery.js"></script>
 </head>
 
-<body>
+<body onload="initializeGallery()">
 
   <!-- background images -->
   <img src="images/office1.png" style="top:0px;left:0px; width: 82%; position: absolute; z-index: -1;" alt="Office Background">
@@ -18,7 +20,6 @@
     <img src="gifs/computer_a.gif" width="150px" alt="Computer Animation 1">
     <img src="gifs/computer.gif" width="150px" alt="Computer Animation 2">
   </a>
-  
   <!-- folders -->
 
   <div class="change item" onclick="location.href='games.html'">
@@ -55,6 +56,22 @@
       <li><a href="https://www.instagram.com/_bnuyz_/" target="_blank" class="social-link instagram">Instagram</a></li>
       <li><a href="https://www.youtube.com/channel/UCGmpoOeeE2a74SfH44yOiUQ" target="_blank" class="social-link youtube">Youtube</a></li>
     </ul>
+  </div>
+
+
+
+   <!-- gallery -->
+  <div class="gallery-container">
+    <img id="current-image" src="" alt="Image">
+    <div id="image-text"></div>
+  </div>
+  <div>
+    <button onclick="prevImage()">Prev Image</button>
+    <button onclick="nextImage()">Next Image</button>
+  </div>
+  <div class="nav-buttons">
+    <button onclick="prevSet()">Previous Page</button>
+    <button onclick="nextSet()">Next Page</button>
   </div>
 
 </body>
