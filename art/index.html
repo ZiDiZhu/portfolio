@@ -3,41 +3,62 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Zi Di's Art</title>
-
-    <link rel = "stylesheet" href="icons.css">
     <link rel = "stylesheet" href="../styles/infowindow.css">
     <link rel = "stylesheet" href="../style.css">
-    <link rel="stylesheet" href="LightBox.css">
-    <script src="LightBox.js"></script>
     <style>
         body {
-            background: radial-gradient(circle at 1.5% 22%, rgb(237, 220, 200) 0%, rgb(250, 178, 172) 25.5%, rgb(230, 138, 210) 62.3%, rgb(225, 0, 255) 93.8%);
+            background: radial-gradient(circle at 1.5% 22%, rgb(4, 0, 255) 0%, rgb(250, 178, 172) 25.5%, rgb(230, 138, 210) 62.3%, rgb(225, 0, 255) 93.8%);
             color: #f5c7f7;
             background-blend-mode: soft-light;
             background-size: cover; /* Cover the entire page */
             background-position: center; /* Center the background image */
             background-attachment: fixed; /* Fixed background (doesn't scroll with the page) */
         }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); grid-gap: 20px; padding: 20px; }
-        .gallery img { width: 100%; height: auto; }
-        /* unvisited link */
 
-        .center {
-            display: flex;
+        .iframe-container {
+            position: fixed;
             justify-content: center;
             align-items: center;
             height: 200px;
             border: 3px solid #f5c7f7;
+            width: 78vw;
+            height: 70vh; /* Adjust the height as needed */
+            overflow: hidden;
         }
 
-        .zoom {
-            transition: transform .2s; /* Animation */
+        .rightrow{
+            position: fixed;
+            top: 0; 
+            right: 0;
+            border: 3px solid #f5c7f7;
+            width: 20vw;
+            background-color: rgba(255, 212, 232, 0.25);
         }
 
-        .zoom:hover {
-            -ms-transform: scale(1.5); /* IE 9 */
-            -webkit-transform: scale(1.5); /* Safari 3-8 */
-            transform: scale(1.5);
+        .foldericon {
+            cursor: pointer;
+            display: flex;
+            align-items: right;
+            min-width: max-content;
+            width: 100%;
+        }
+
+        .foldericon :hover{
+            color: blueviolet;
+        }
+
+        #randomArtLink {
+            cursor: pointer;
+            color: black;
+            text-align: center;
+            width: 100px;
+            font-size: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            text-decoration: none;
+            background-color: fuchsia;
+            padding: 2px 2px;
+            border-radius: 10px;
+            margin: 10px;
         }
 
     </style>
@@ -45,7 +66,7 @@
 <body>
 
 <h2>✮ <a href="../index.html">Index</a> / <a href="../games.html">Games</a> / <a href="index.html">Art</a> / <a href="../music.html">Music</a> ✮</h2>
-<a href = "https://www.artstation.com/zi-di" target="_blank"><h2 style="display: inline;background-color: blue">Artstation</h2></a>
+<a href = "https://www.artstation.com/zi-di" target="_blank"><h2 style="background-color: blue">Artstation</h2></a>
 <div class = "scrollbox">
     <marquee scrollamount="32" scrolldelay="100"; scrolldelay = "0">
         <h1>✩♬₊˚.✮⋆☾⋆⁺₊✧𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 𝕥𝕙𝕖 𝔸𝕣𝕥 𝔾𝕒𝕝𝕝𝕖𝕣𝕪⋆.˚ ᡣ𐭩 .𖥔˚ 欢迎来到美术馆╰┈ ⋆｡˚ ❀ *· 🌬 ࿐ ࿔ ˚:⋆ ✧･ﾟ</h1>
@@ -53,56 +74,62 @@
 </div>
 
 
+<iframe id="contentIframe" src="concept.html" class="iframe-container" title="Content Frame"></iframe>
+<script>
+    function changeIframeContent(page) {
+        document.getElementById('contentIframe').src = page;
+    }
+</script>
 
 <!--folders-->
 
 <div class="rightrow">
-    <div class = "change icon rightcolumn">
-            <img src="../gifs/computer_a.gif" width="150px;">
-            <img src="../gifs/computer.gif" width="150px;">
-          </a>
+    <div class = "change foldericon"  onclick="location.href='../index.html'">
+        <img src="../gifs/computer_a.gif" style="width: 120px;">
+        <img src="../gifs/computer.gif" style="width: 120px;">
     </div>
 
-    <div class = "change icon rightcolumn" onclick="location.href='gifs.html'">
-        <img src="../logos/folder_closed.png" class= "icon">
-        <img src="../logos/folder_open.png" class= "icon">
+    <div class = "change foldericon" onclick="changeIframeContent('gifs.html')">
+        <img src="../logos/folder_closed.png" >
+        <img src="../logos/folder_open.png" >
         <h3>GIFS</h3>
     </div>
 
-    <div class = "change icon rightcolumn" onclick="location.href='sketches.html'">
-        <img src="../logos/folder_closed.png" class= "icon">
-        <img src="../logos/folder_open.png" class= "icon">
+    <div class = "change foldericon" onclick="changeIframeContent('sketches.html')">
+        <img src="../logos/folder_closed.png" >
+        <img src="../logos/folder_open.png" >
         <h3>SKETCHES</h3>
     </div>
 
-    <div class = "change icon rightcolumn" onclick="location.href='concept.html'">
-        <img src="../logos/folder_closed.png" class= "icon">
-        <img src="../logos/folder_open.png" class= "icon">
+    <div class = "change foldericon" onclick="changeIframeContent('concept.html')">
+        <img src="../logos/folder_closed.png" >
+        <img src="../logos/folder_open.png" >
         <h3>CONCEPT ART</h3>
     </div>
 
-    <div class = "change icon rightcolumn" onclick="location.href='characters.html'">
-        <img src="../logos/folder_closed.png" class= "icon">
-        <img src="../logos/folder_open.png" class= "icon">
+    <div class = "change foldericon" onclick="changeIframeContent('characters.html')">
+        <img src="../logos/folder_closed.png" >
+        <img src="../logos/folder_open.png" >
         <h3>OCs</h3>
     </div>
 
-    <div class = "change icon rightcolumn" onclick="location.href='3D.html'">
-        <img src="../logos/folder_closed.png" class= "icon">
-        <img src="../logos/folder_open.png" class= "icon">
+    <div class = "change foldericon" onclick="changeIframeContent('3D.html')">
+        <img src="../logos/folder_closed.png" >
+        <img src="../logos/folder_open.png" >
         <h3>3D</h3>
     </div>
 
-    <div class = "change icon rightcolumn" onclick="location.href='gameart.html'">
-        <img src="../logos/folder_closed.png" class= "icon">
-        <img src="../logos/folder_open.png" class= "icon">
+    <div class = "change foldericon" onclick="changeIframeContent('gameart.html')">
+        <img src="../logos/folder_closed.png" >
+        <img src="../logos/folder_open.png" >
         <h3>GAME ART</h3>
     </div>
-</div>
 
-<div class="center" id ="randomArtLink">
-    <img src = "../gifs/yip-drawing.gif" style="width: 120px">
-    <br><h1 class="zoom">SEE SOME ART</h1>
+    <div class = "change foldericon" id="randomArtLink">
+        <img src="../logos/yip_drawing.png" style="width: 120px;">
+        <img src="../gifs/yip-drawing.gif" style="width: 120px;">
+        <h3>RANDOM</h3>
+    </div>
 </div>
 
 
@@ -122,21 +149,9 @@
         var randomIndex = Math.floor(Math.random() * links.length);
 
         // Redirect the browser to the randomly selected link
-        window.location.href = links[randomIndex];
+        changeIframeContent(links[randomIndex]);
     });
 
-    document.getElementById('randomLink').addEventListener('click', function() {
-        var links = [
-            '../music.html',
-            '../games.html'
-        ];
-
-        // Generate a random index based on the number of links
-        var randomIndex = Math.floor(Math.random() * links.length);
-
-        // Redirect the browser to the randomly selected link
-        window.location.href = links[randomIndex];
-    });
 </script>
 </body>
 </html>

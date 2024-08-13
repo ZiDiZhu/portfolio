@@ -4,7 +4,6 @@
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
   <title>Zi Di's Sketches</title>
 
-  <link rel = "stylesheet" href="icons.css">
   <link rel = "stylesheet" href="../styles/infowindow.css">
   <link rel = "stylesheet" href="../style.css">
   <link rel="stylesheet" href="LightBox.css">
@@ -19,83 +18,25 @@
       background-position: center; /* Center the background image */
       background-attachment: fixed; /* Fixed background (doesn't scroll with the page) */
     }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); grid-gap: 20px; padding: 20px; }
-    .gallery img { width: 100%; height: auto; }
+    #imageDisplay {
+      width: 100%;
+    }
+
   </style>
 </head>
 <body>
 
-<h2 class="navigator">✮ <a href="../index.html">Index</a> / <a href="../games.html">Games</a> / <a href="index.html">Art</a> / <a href="../music.html">Music</a> ✮</h2>
-
-<div class = "scrollbox">
-  <marquee scrollamount="32" scrolldelay="100"; scrolldelay = "0">
-    <h1>✩♬₊˚.✮⋆☾⋆⁺₊✧𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 𝕥𝕙𝕖 𝔸𝕣𝕥 𝔾𝕒𝕝𝕝𝕖𝕣𝕪⋆.˚ ᡣ𐭩 .𖥔˚ 欢迎来到美术馆╰┈ ⋆｡˚ ❀ *· 🌬 ࿐ ࿔ ˚:⋆ ✧･ﾟ</h1>
-  </marquee>
-</div>
-
-
-
-<!--folders-->
-
-<div class="rightrow">
-
-  <div class = "change icon rightcolumn" onclick="location.href='index.html'">
-      <img src="../gifs/computer_a.gif" width="150px;">
-      <img src="../gifs/computer.gif" width="150px;">
-    </a>
-  </div>
-
-  <div class = "change icon rightcolumn" onclick="location.href='gifs.html'">
-    <img src="../logos/folder_closed.png" class= "icon">
-    <img src="../logos/folder_open.png" class= "icon">
-    <h3>GIFS</h3>
-  </div>
-
-  <div class = "change icon rightcolumn" onclick="location.href='index.html'">
-    <img src="../logos/folder_open.png" class= "icon">
-    <img src="../logos/folder_closed.png" class= "icon">
-    <h2 style="color: #42FF00">SKETCHES</h2>
-  </div>
-
-  <div class = "change icon rightcolumn" onclick="location.href='concept.html'">
-    <img src="../logos/folder_closed.png" class= "icon">
-    <img src="../logos/folder_open.png" class= "icon">
-    <h3>CONCEPT ART</h3>
-  </div>
-
-  <div class = "change icon rightcolumn" onclick="location.href='characters.html'">
-    <img src="../logos/folder_closed.png" class= "icon">
-    <img src="../logos/folder_open.png" class= "icon">
-    <h3>OCs</h3>
-  </div>
-
-  <div class = "change icon rightcolumn" onclick="location.href='3D.html'">
-    <img src="../logos/folder_closed.png" class= "icon">
-    <img src="../logos/folder_open.png" class= "icon">
-    <h3>3D</h3>
-  </div>
-
-  <div class = "change icon rightcolumn" onclick="location.href='gameart.html'">
-    <img src="../logos/folder_closed.png" class= "icon">
-    <img src="../logos/folder_open.png" class= "icon">
-    <h3>GAME ART</h3>
-  </div>
-</div>
-
-<div>
-
-
   <div class="row">
     <div class="column"style="width: 90vw"><h2>DYNAMIC POSES STUDIES</h2></div>
     <div class="column"style="width: 90vw">
-      <img src="sketches/study1.jpg" style=" height: 20vw"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-      <img src="sketches/study2.jpg" style=" height: 20vw"  onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-      <img src="sketches/study3.jpg" style=" height: 20vw"  onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      <img src="sketches/study1.jpg" style=" height: 20vw" class="hover-shadow cursor image">
+      <img src="sketches/study2.jpg" style=" height: 20vw" class="hover-shadow cursor image">
+      <img src="sketches/study3.jpg" style=" height: 20vw" class="hover-shadow cursor image">
     </div>
     <div class="column"style="width: 90vw">
-      <img src="sketches/study4.jpg" style=" height: 20vw"  onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-      <img src="sketches/study5.jpg" style=" height: 20vw"  onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
-      <img src="sketches/study6.jpg" style=" height: 20vw"  onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+      <img src="sketches/study4.jpg" style=" height: 20vw" class="hover-shadow cursor image">
+      <img src="sketches/study5.jpg" style=" height: 20vw" class="hover-shadow cursor image">
+      <img src="sketches/study6.jpg" style=" height: 20vw" class="hover-shadow cursor image">
     </div>
 
   </div>
@@ -103,78 +44,18 @@
   <div class="row">
     <div class="column"style="width: 90vw"><h2>ABSTRACT / NATURE </h2></div>
     <div class="column"style="width: 95vw">
-      <img src="sketches/abstract1.JPG" style=" height: 30vw"  onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
-      <img src="sketches/flower.JPG" style=" height: 30vw"  onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
-      <img src="sketches/abstract2.JPG" style=" height: 30vw"  onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+      <img src="sketches/abstract1.JPG" style=" height: 30vw"  onclick="openModal();currentSlide(7)" class="hover-shadow cursor image">
+      <img src="sketches/flower.JPG" style=" height: 30vw" class="hover-shadow cursor image">
+      <img src="sketches/abstract2.JPG" style=" height: 30vw" class="hover-shadow cursor image">
     </div>
   </div>
 
-
 </div>
 
-
-
 <div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <span class="close cursor" onclick="closeImage()">&times;</span>
   <div class="modal-content">
-
-    <div class="row">
-      <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="sketches/study1.jpg" style="width: 80vw;">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="sketches/study2.jpg" style="width: 80vw;">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="sketches/study3.jpg" style="width: 80vw;">
-      </div>
-
-
-      <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="sketches/study4.jpg" style="width: 80vw;">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="sketches/study5.jpg" style="width: 80vw;">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="sketches/study6.jpg" style="width: 80vw;">
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="sketches/abstract1.JPG" style="width: 80vw;">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="sketches/flower.JPG" style="width: 80vw;">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="sketches/abstract2.JPG" style="width: 80vw;">
-      </div>
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
+    <img id="imageDisplay" src ="sketches/abstract2.JPG">
   </div>
 </div>
 

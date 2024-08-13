@@ -41,7 +41,6 @@ body {
 
 .change:hover{
   cursor: pointer;
-  color:whitesmoke;
   text-decoration: underline;
 }
 

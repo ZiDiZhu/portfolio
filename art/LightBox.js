@@ -2,6 +2,16 @@ function openModal() {
     document.getElementById("myModal").style.display = "block";
 }
 
+function openImage(source){
+    document.getElementById("myModal").style.display = "block";
+    document.getElementById("imageDisplay").src = source;
+    console.log(source);
+}
+
+function closeImage(){
+    document.getElementById("myModal").style.display = "none";
+}
+
 function closeModal() {
     document.getElementById("myModal").style.display = "none";
 }
@@ -34,3 +44,18 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
+
+
+function init(){
+    var images = document.getElementsByClassName("image");
+    
+    // Convert HTMLCollection to Array to use forEach
+    Array.from(images).forEach(function(image) {
+        image.addEventListener("click", function() {
+            openImage(this.src);
+        });
+    });
+}
+
+window.onload = init;

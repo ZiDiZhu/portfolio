@@ -19,174 +19,63 @@
       background-position: center; /* Center the background image */
       background-attachment: fixed; /* Fixed background (doesn't scroll with the page) */
     }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); grid-gap: 20px; padding: 20px; }
-    .gallery img { width: 100%; height: auto; }
+
+    #imageDisplay {
+      width: 100%;
+    }
+
   </style>
 </head>
 <body>
 
-<h2>✮ <a href="../index.html">Index</a> / <a href="../games.html">Games</a> / <a href="index.html">Art</a> / <a href="../music.html">Music</a> ✮</h2>
-<a href = "https://www.artstation.com/zi-di" target="_blank"><h2 style="display: inline;background-color: blue">Artstation</h2></a>
-<div class = "scrollbox">
-  <marquee scrollamount="32" scrolldelay="100"; scrolldelay = "0">
-    <h1>✩♬₊˚.✮⋆☾⋆⁺₊✧𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 𝕥𝕙𝕖 𝔸𝕣𝕥 𝔾𝕒𝕝𝕝𝕖𝕣𝕪⋆.˚ ᡣ𐭩 .𖥔˚ 欢迎来到美术馆╰┈ ⋆｡˚ ❀ *· 🌬 ࿐ ࿔ ˚:⋆ ✧･ﾟ</h1>
-  </marquee>
+<h2>Concept Art</h2>
+<div class="row">
+  <div class="column"style="width: 95vw">
+    <img src="concept/astronaut.jpg" style=" height: 33vw; padding: 1%" class="hover-shadow cursor image">
+    <img src="concept/creature.jpg" style=" height: 33vw; padding: 1%" class="hover-shadow cursor image">
+  </div>
+
 </div>
 
+<div class="row">
 
-
-<!--folders-->
-
-<div class="rightrow">
-  <div class = "change icon rightcolumn" onclick="location.href='index.html'">
-      <img src="../gifs/computer_a.gif" width="150px;">
-      <img src="../gifs/computer.gif" width="150px;">
-    </a>
+  <div class="column change" >
+    <img src="concept/env_1_1.jpg" style=" width: 88vw" class="hover-shadow cursor image">
+    <img src="concept/env_1.jpg" style=" width: 88vw" class="hover-shadow cursor image">
   </div>
-
-  <div class = "change icon rightcolumn" onclick="location.href='gifs.html'">
-    <img src="../logos/folder_closed.png" class= "icon">
-    <img src="../logos/folder_open.png" class= "icon">
-    <h3>GIFS</h3>
-  </div>
-
-  <div class = "change icon rightcolumn" onclick="location.href='sketches.html'">
-    <img src="../logos/folder_closed.png" class= "icon">
-    <img src="../logos/folder_open.png" class= "icon">
-    <h3>SKETCHES</h3>
-  </div>
-
-  <div class = "change icon rightcolumn" onclick="location.href='index.html'">
-    <img src="../logos/folder_open.png" class= "icon">
-    <img src="../logos/folder_closed.png" class= "icon">
-    <h2 style="color: #42FF00">CONCEPT ART</h2>
-  </div>
-
-  <div class = "change icon rightcolumn" onclick="location.href='characters.html'">
-    <img src="../logos/folder_closed.png" class= "icon">
-    <img src="../logos/folder_open.png" class= "icon">
-    <h3>OCs</h3>
-  </div>
-
-  <div class = "change icon rightcolumn" onclick="location.href='3D.html'">
-    <img src="../logos/folder_closed.png" class= "icon">
-    <img src="../logos/folder_open.png" class= "icon">
-    <h3>3D</h3>
-  </div>
-
-  <div class = "change icon rightcolumn" onclick="location.href='gameart.html'">
-    <img src="../logos/folder_closed.png" class= "icon">
-    <img src="../logos/folder_open.png" class= "icon">
-    <h3>GAME ART</h3>
-  </div>
-</div>
-
-<div>
-
-  <h2>Concept Art</h2>
-  <div class="row">
-    <div class="column"style="width: 95vw">
-      <img src="concept/astronaut.jpg" style=" height: 33vw; padding: 1%"  onclick="openModal(1);currentSlide(1)" class="hover-shadow cursor">
-      <img src="concept/creature.jpg" style=" height: 33vw; padding: 1%"   onclick="openModal(2);currentSlide(8)" class="hover-shadow cursor">
-    </div>
-
-  </div>
-
-  <div class="row">
-
-    <div class="column change" >
-      <img src="concept/env_1_1.jpg" style=" width: 88vw"  onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-      <img src="concept/env_1.jpg" style=" width: 88vw"  onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-    </div>
-
-
-  </div>
-
-
-  <div class="row">
-    <div class="column"style="width: 95vw">
-      <img src="concept/thumbnails.jpg" style=" height: 25vw; padding: 1%"  onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-      <img src="concept/sheep.jpg" style=" height: 25vw; padding: 1%"  onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
-    </div>
-
-  </div>
-
-  <div class="row">
-
-
-    <div class="column change" style="width: 40vw">
-      <img src="sketches/a2.jpg" onclick="openModal();currentSlide(6)" style=" height: 25vw; padding: 1%" class="hover-shadow cursor ">
-      <img src="sketches/a1.jpg" onclick="openModal();currentSlide(6)" style=" height: 25vw; padding: 1%" class="hover-shadow cursor ">
-    </div>
-
-    <div class="column change"  style="width: 40vw">
-      <img src="concept/a1.jpg" onclick="openModal();currentSlide(7)" style=" height: 25vw; padding: 1%" class="hover-shadow cursor">
-      <img src="concept/a1_1.jpg" onclick="openModal();currentSlide(7)" style=" height: 25vw; padding: 1%" class="hover-shadow cursor ">
-    </div>
-
-  </div>
-
-
-
 
 
 </div>
 
+
+<div class="row">
+  <div class="column"style="width: 95vw">
+    <img src="concept/thumbnails.jpg" style=" height: 25vw; padding: 1%" class="hover-shadow cursor image">
+    <img src="concept/sheep.jpg" style=" height: 25vw; padding: 1%" class="hover-shadow cursor image">
+  </div>
+
+</div>
+
+<div class="row">
+
+
+  <div class="column change" style="width: 40vw">
+    <img src="sketches/a2.jpg" style=" height: 25vw; padding: 1%" class="hover-shadow cursor image ">
+    <img src="sketches/a1.jpg" style=" height: 25vw; padding: 1%" class="hover-shadow cursor image ">
+  </div>
+
+  <div class="column change"  style="width: 40vw">
+    <img src="concept/a1.jpg" style=" height: 25vw; padding: 1%" class="hover-shadow cursor image">
+    <img src="concept/a1_1.jpg" style=" height: 25vw; padding: 1%" class="hover-shadow cursor image ">
+  </div>
+
+</div>
 
 
 <div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <span class="close cursor" onclick="closeImage()">&times;</span>
   <div class="modal-content">
-
-    <div class="row">
-      <div class="mySlides">
-        <div class="numbertext"> ???????? </div>
-        <img src="concept/astronaut.jpg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">1 / 10</div>
-        <img src="concept/creature.jpg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="concept/env_1.jpg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="concept/thumbnails.jpg " style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="paintings/sheep.jpg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="sketches/a2.jpg" style="width:100%">
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="mySlides">
-        <div class="numbertext">6 / 10</div>
-        <img src="concept/a1_1.jpg" style="width:100%">
-      </div>
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-
-
-
-
+    <img id="imageDisplay" src ="sketches/abstract2.JPG">
   </div>
 </div>
 
