@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Zi Di's Art</title>
-    <link rel = "stylesheet" href="../styles/infowindow.css">
     <link rel = "stylesheet" href="../style.css">
     <style>
         body {
             background: radial-gradient(circle at 1.5% 22%, rgb(4, 0, 255) 0%, rgb(250, 178, 172) 25.5%, rgb(230, 138, 210) 62.3%, rgb(225, 0, 255) 93.8%);
             color: #f5c7f7;
+            background-image: image('images/resources/grid.png'); /* Add your background image here */
             background-blend-mode: soft-light;
             background-size: cover; /* Cover the entire page */
             background-position: center; /* Center the background image */
@@ -22,13 +22,13 @@
             height: 200px;
             border: 3px solid #f5c7f7;
             width: 78vw;
-            height: 70vh; /* Adjust the height as needed */
+            height: 90vh; /* Adjust the height as needed */
             overflow: hidden;
         }
 
         .rightrow{
             position: fixed;
-            top: 0; 
+            top: 100px; 
             right: 0;
             border: 3px solid #f5c7f7;
             width: 20vw;
@@ -65,7 +65,6 @@
 </head>
 <body>
 
-<h2>✮ <a href="../index.html">Index</a> / <a href="../games.html">Games</a> / <a href="index.html">Art</a> / <a href="../music.html">Music</a> ✮</h2>
 <a href = "https://www.artstation.com/zi-di" target="_blank"><h2 style="background-color: blue">Artstation</h2></a>
 <div class = "scrollbox">
     <marquee scrollamount="32" scrolldelay="100"; scrolldelay = "0">
@@ -84,9 +83,11 @@
 <!--folders-->
 
 <div class="rightrow">
-    <div class = "change foldericon"  onclick="location.href='../index.html'">
-        <img src="../gifs/computer_a.gif" style="width: 120px;">
-        <img src="../gifs/computer.gif" style="width: 120px;">
+
+    <div class = "change foldericon" id="randomArtLink">
+        <img src="../logos/yip_drawing.png" style="width: 120px;">
+        <img src="../gifs/yip-drawing.gif" style="width: 120px;">
+        <h3>RANDOM</h3>
     </div>
 
     <div class = "change foldericon" onclick="changeIframeContent('gifs.html')">
@@ -125,11 +126,7 @@
         <h3>GAME ART</h3>
     </div>
 
-    <div class = "change foldericon" id="randomArtLink">
-        <img src="../logos/yip_drawing.png" style="width: 120px;">
-        <img src="../gifs/yip-drawing.gif" style="width: 120px;">
-        <h3>RANDOM</h3>
-    </div>
+
 </div>
 
 

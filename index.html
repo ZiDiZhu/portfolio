@@ -7,10 +7,24 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="styles/icons.css">
   <link rel="stylesheet" href="imagesGallery.css">
+  <link rel="stylesheet" href="styles/draggable.css">
+  <style>
+
+    
+    .iframe-container {
+        background-color: #f5c7f7;
+        color: violet;
+        border: 3px solid #f5c7f7;
+        width: 100%;
+        min-height: 80vh;
+        object-fit: cover;
+    }
+  </style>
   <script src="imageGallery.js"></script>
+  <script src="scripts/Draggable.js"></script>
 </head>
 
-<body onload="initializeGallery()">
+<body onload="initializeGallery() ">
 
   <!-- background images -->
   <img src="images/office1.png" style="top:0px;left:0px; width: 82%; position: absolute; z-index: -1;" alt="Office Background">
@@ -22,28 +36,62 @@
   </a>
   <!-- folders -->
 
-  <div class="change item" onclick="location.href='games.html'">
-    <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
-    <img src="logos/folder_open.png" class="icon" alt="Open Folder">
-    <h2>GAMES</h2>
-  </div>
 
-  <div class="change item" onclick="location.href='art/index.html'">
-    <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
-    <img src="logos/folder_open.png" class="icon" alt="Drawing Animation">
-    <h2>ART</h2>
-  </div>
 
-  <div class="change item" onclick="location.href='music.html'">
-    <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
-    <img src="logos/folder_open.png" class="icon" alt="Music Animation">
-    <h2>MUSIC</h2>
-  </div>
+  <div style="border: dotted #fcfcfc; display: flex;">
+    <div style="margin: 10px;display: block;">
+      <h2>✮ Welcome to Zi Di's Website ✮</h2>
+      <p class="clickable" onclick="showDraggable(document.getElementById('draggable-about-me'))"> ✦ About Me ✦ </p>
 
-  <div class="change item" onclick="location.href='resume.html'">
-    <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
-    <img src="logos/folder_open.png" class="icon" alt="Open Folder">
-    <h2>RESUME</h2>
+      <div class="change item" onclick="changeIframeContent('games.html')">
+        <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
+        <img src="logos/folder_open.png" class="icon" alt="Open Folder">
+        <h2>GAMES</h2>
+      </div>
+    
+      <div class="change item" onclick="changeIframeContent('art/index.html')">
+        <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
+        <img src="logos/folder_open.png" class="icon" alt="Drawing Animation">
+        <h2>ART</h2>
+      </div>
+    
+      <div class="change item" onclick="changeIframeContent('music.html')">
+        <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
+        <img src="logos/folder_open.png" class="icon" alt="Music Animation">
+        <h2>MUSIC</h2>
+      </div>
+    
+      <div class="change item" onclick="changeIframeContent('resume.html')">
+        <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
+        <img src="logos/folder_open.png" class="icon" alt="Open Folder">
+        <h2>RESUME</h2>
+      </div>
+    </div>
+    
+    <iframe id="contentIframe" src="games.html" class="iframe-container" title="Content Frame"></iframe>
+    
+
+    
+
+        <!-- gallery -->
+    <div class="gallery-container" id="draggable-about-me">
+      <div style="text-align: right;">
+        <p style="display: inline-block; font-weight: bold;">About Me</p>
+        <button style="font-weight: bolder; display: inline block; margin: 10px; border: #fcfcfc; cursor: pointer;" onclick="hideDraggable(document.getElementById('draggable-about-me'))">X</button>
+      </div>
+      
+      <img id="current-image" src="" alt="Image">
+      <div style="margin-left: 10px;">
+        <button onclick="prevImage()">Prev Image</button>
+        <button onclick="nextImage()">Next Image</button>
+      </div>
+      <div id="image-text">text</div>
+      <div class="nav-buttons">
+        <button onclick="prevSet()">Previous Page</button>
+        <button onclick="nextSet()">Next Page</button>
+      </div>
+    </div>
+  
   </div>
 
   <div>
@@ -59,21 +107,15 @@
   </div>
 
 
-
-   <!-- gallery -->
-  <div class="gallery-container">
-    <img id="current-image" src="" alt="Image">
-    <div id="image-text"></div>
-  </div>
-  <div>
-    <button onclick="prevImage()">Prev Image</button>
-    <button onclick="nextImage()">Next Image</button>
-  </div>
-  <div class="nav-buttons">
-    <button onclick="prevSet()">Previous Page</button>
-    <button onclick="nextSet()">Next Page</button>
-  </div>
-
 </body>
+
+<script>
+  dragElement(document.getElementById("draggable-about-me"));
+
+  function changeIframeContent(page) {
+    var iframe = document.getElementById('contentIframe');
+    iframe.src = page;
+  }
+</script>
 
 </html>

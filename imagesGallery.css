@@ -1,28 +1,23 @@
 .gallery-container {
-  width: 80%; /* Adjust as needed */
-  max-width: 600px; /* Set a max-width to prevent it from becoming too large */
-  display: flex; /* Align image and text side by side */
-  align-items: center; /* Center items vertically */
-  position: relative; /* Relative positioning for animations */
-  overflow: hidden; /* Hide overflowing content */
-  background-color: #343434;
+  display: inline-block;
 }
 
 /* Fixed size for the image */
 #current-image {
-  width: 400px; /* Fixed width */
-  height: 400px; /* Fixed height */
-  object-fit: cover; /* Maintain aspect ratio */
+  width: 300px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  object-fit: cover; /* Cover the image */
+  margin: 10px;
+  display: inline;
 }
 
 /* Styling for the text description */
 #image-text {
   font-size: 1.2em; /* Font size */
-  color: #42FF00;
-  font-family: Arial, sans-serif; /* Font family */
-  margin-left: 20px; /* Space between image and text */
-  width: 300px; /* Fixed width for text area */
-  padding: 0; /* Remove padding */
+  color: aliceblue;
+  display: inline-block;
+  margin-left: 10px;
+  
 }
 
 /* Keyframes for fade-in and fade-out */
@@ -40,24 +35,24 @@
 
 /* Navigation buttons styling */
 .nav-buttons {
-  margin-left:30vw; /* Center buttons horizontally */
-
+  align-items: right; /* Align buttons to the right */
+  width: 100%; /* Full width */
+  margin: 10px;
 }
   
-  .nav-buttons button {
-    background-color: #42FF00; /* Button background color */
-    padding: 10px 20px; /* Padding around text */
-    border: none; /* Remove default border */
-    color: black; /* Text color */
-    text-align: center; /* Center text inside button */
-    text-decoration: none; /* Remove underline */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 5px; /* Optional rounded corners */
-    margin-right: 10px; /* Space between buttons */
-  }
-  
-  .nav-buttons button:hover {
-    background-color: #33cc33; /* Darker green on hover */
-  }
-  
+.nav-buttons button {
+  background-color: #42FF00; /* Button background color */
+  padding: 10px 20px; /* Padding around text */
+  border: none; /* Remove default border */
+  color: black; /* Text color */
+  text-align: center; /* Center text inside button */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Optional rounded corners */
+  margin-right: 10px; /* Space between buttons */
+}
+
+.nav-buttons button:hover {
+  background-color: #33cc33; /* Darker green on hover */
+}

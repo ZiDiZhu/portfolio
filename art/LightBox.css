@@ -41,17 +41,11 @@
 
 /* Modal Content */
 .modal-content {
-    /*position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;*/
     position: absolute;
     max-width: 80vw;
     width: 80vw;
     margin: auto;
     left: 10vw;
-
-
 }
 
 @media screen and (max-width: 700px) {

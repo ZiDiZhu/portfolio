@@ -5,13 +5,15 @@ body {
   color: white;
 }
 
-#draggable {
-  position: absolute;
-  z-index: 3;
-  background-color: #000000;
-  text-align: center;
-  cursor: move;
+.clickable{
+  cursor: pointer;
+  text-decoration: underline;
 }
+
+.clickable:hover{
+  color: #42FF00;
+}
+
 
 /* Main logo positioning */
 #mainLogo {
