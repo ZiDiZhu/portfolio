@@ -9,86 +9,89 @@
     <link rel = "stylesheet" href="styles/style.css">
     <link rel = "stylesheet" href="styles/icons.css">
     <link rel = "stylesheet" href="styles/infowindow.css">
-    <title>zi di's music</title>
+    <title>♬zi di's music♬</title>
   </head>
 
   <body>
-  <div style="text-align: right;">
-    <a href = "https://soundcloud.com/helixsquare" target="_blank"><h3 class="link" style="bottom:150px;right:30px;background-color: orange">Soundcloud</h3></a>
-    <a href = "https://www.youtube.com/channel/UCGmpoOeeE2a74SfH44yOiUQ" target="_blank"><h3 class="link" style="bottom:100px;right:30px;background-color: red">Youtube</h3></a>
-  </div>
 
-  <div id="app" style="top: 100px; left: 100px; position: absolute;">
-      <!-- Webamp will attempt to center itself within this div -->
-  </div>
-  <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
-  <script>
-      const Webamp = window.Webamp;
-      const webamp = new Webamp({
-          initialTracks: [
-              {
-                  metaData: {
-                      title: "anemoia"
-                  },
-                  url: "audio/anemoia.wav",
-              },
-              {
-                  metaData: {
-                      title: "getting milk"
-                  },
-                  url: "audio/yomamaonadickV2.wav",
-              },
-              {
-                  metaData: {
-                      title: "dreamcore"
-                  },
-                  url: "audio/seeyouinmydream.wav",
-              }
-          ],
+    <h1>♬ ♪⋆ Music ⋆♪ ♬</h1>
 
-          initialSkin: {
-        url: 
-        // Find skins https://skins.webamp.org - download them and          host them on your website!
-        "styles/MySkin.wsz"
-      }
-      });
-      // Returns a promise indicating when it's done loading.
-      webamp.renderWhenReady(document.getElementById('app'));
-
-  </script>
-
-    <div class="change item" onclick="openWindow(vcmc)">
-        <img src = "logos\logo_vcmc.png">
-        <img src = "logos\logo_vcmc_sp.png">
-        <h2>vcmc<br>beat machine</h2>
-        <p>2021</p>
-        <p>beat machine</p>
+    <div style="text-align: right;">
+      <a href = "https://soundcloud.com/helixsquare" target="_blank"><h3 class="link" style="bottom:150px;right:30px;background-color: orange">Soundcloud</h3></a>
+      <a href = "https://www.youtube.com/channel/UCGmpoOeeE2a74SfH44yOiUQ" target="_blank"><h3 class="link" style="bottom:100px;right:30px;background-color: red">Youtube</h3></a>
     </div>
 
-    <div class="change item" onclick="openWindow(popcart212)">
-        <img src = "logos\logo_cartpop212.png">
-        <img src = "logos\logo_cartpop212_sp.png">
-        <h2>POPCART212</h2>
-        <p>2021</p>
-        <p>music video</p>
+    <div id="app" style="top: 100px; left: 100px; position: absolute;">
+        <!-- Webamp will attempt to center itself within this div -->
     </div>
+    <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
+    <script>
+        const Webamp = window.Webamp;
+        const webamp = new Webamp({
+            initialTracks: [
+                {
+                    metaData: {
+                        title: "anemoia"
+                    },
+                    url: "audio/anemoia.wav",
+                },
+                {
+                    metaData: {
+                        title: "getting milk"
+                    },
+                    url: "audio/yomamaonadickV2.wav",
+                },
+                {
+                    metaData: {
+                        title: "dreamcore"
+                    },
+                    url: "audio/seeyouinmydream.wav",
+                }
+            ],
+
+            initialSkin: {
+          url: 
+          // Find skins https://skins.webamp.org - download them and          host them on your website!
+          "styles/MySkin.wsz"
+        }
+        });
+        // Returns a promise indicating when it's done loading.
+        webamp.renderWhenReady(document.getElementById('app'));
+
+    </script>
+
+      <div class="change item" onclick="openWindow(vcmc)">
+          <img src = "logos\logo_vcmc.png">
+          <img src = "logos\logo_vcmc_sp.png">
+          <h2>vcmc<br>beat machine</h2>
+          <p>2021</p>
+          <p>beat machine</p>
+      </div>
+
+      <div class="change item" onclick="openWindow(popcart212)">
+          <img src = "logos\logo_cartpop212.png">
+          <img src = "logos\logo_cartpop212_sp.png">
+          <h2>POPCART212</h2>
+          <p>2021</p>
+          <p>music video</p>
+      </div>
 
 
-    <div id="infoWindow" style="top: 0px; left: 0px; position: absolute;">
-      <button id = "closeWindow" onclick="hideThing('#infoWindow')">x</button>
-      <img id = "icon"></img>
-      <h1 id = "title">Title</h1>
-      <iframe id="screenshot" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <h3 id="year">2020</h3>
-      <h3 id="genre">genre</h3>
-      <p id = "description">Description goes here Beep boop beep boop beep</p>
-      <p id = "tools">made with:</p>
-      <p id = "controls">controls:</p>
-      <button id = "playbutton" onclick="openLink()">MORE</button>
+      <div id="infoWindow" style="top: 0px; left: 0px; position: absolute;">
+        <button id = "closeWindow" onclick="hideThing('#infoWindow')">x</button>
+        <img id = "icon"></img>
+        <h1 id = "title">Title</h1>
+        <iframe id="screenshot" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3 id="year">2020</h3>
+        <h3 id="genre">genre</h3>
+        <p id = "description">Description goes here Beep boop beep boop beep</p>
+        <p id = "tools">made with:</p>
+        <p id = "controls">controls:</p>
+        <button id = "playbutton" onclick="openLink()">MORE</button>
 
-    </div>
+      </div>
 
-    <iframe width="800" height="600" src="https://www.youtube.com/embed/8dBNCLDdcxM?si=uQE4p2UgiVsMYBhG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="800" height="600" src="https://www.youtube.com/embed/8dBNCLDdcxM?si=uQE4p2UgiVsMYBhG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   </body>
 
