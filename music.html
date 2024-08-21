@@ -6,18 +6,19 @@
     <script src = "scripts/games.js"></script>
     <script src = "scripts/gamesinfo.js"></script>
     <script src = "scripts/multimediainfo.js"></script>
-    <link rel = "stylesheet" href="style.css">
+    <link rel = "stylesheet" href="styles/style.css">
     <link rel = "stylesheet" href="styles/icons.css">
     <link rel = "stylesheet" href="styles/infowindow.css">
     <title>zi di's music</title>
   </head>
 
   <body>
+  <div style="text-align: right;">
+    <a href = "https://soundcloud.com/helixsquare" target="_blank"><h3 class="link" style="bottom:150px;right:30px;background-color: orange">Soundcloud</h3></a>
+    <a href = "https://www.youtube.com/channel/UCGmpoOeeE2a74SfH44yOiUQ" target="_blank"><h3 class="link" style="bottom:100px;right:30px;background-color: red">Youtube</h3></a>
+  </div>
 
-    <h2 class="navigator">✮ <a href="index.html">Index</a> / <a href="games.html">Games</a> / <a href="art/index.html">Art</a> / Music ✮</h2>
-  <iframe width="800" height="600" src="https://www.youtube.com/embed/8dBNCLDdcxM?si=uQE4p2UgiVsMYBhG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-  <div id="app" style="height: 100vh">
+  <div id="app" style="top: 100px; left: 100px; position: absolute;">
       <!-- Webamp will attempt to center itself within this div -->
   </div>
   <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
@@ -33,7 +34,7 @@
               },
               {
                   metaData: {
-                      title: "intimidating aura"
+                      title: "getting milk"
                   },
                   url: "audio/yomamaonadickV2.wav",
               },
@@ -48,49 +49,32 @@
           initialSkin: {
         url: 
         // Find skins https://skins.webamp.org - download them and          host them on your website!
-        "MySkin.wsz"
+        "styles/MySkin.wsz"
       }
       });
-
-      
-
       // Returns a promise indicating when it's done loading.
       webamp.renderWhenReady(document.getElementById('app'));
 
-      
   </script>
 
-  <div>
-    <!--social media links (right)-->
-    <a href = "https://2101.itch.io/" target="_blank"><h3 class="link" style="bottom:350px;right:30px;background-color: coral">itch.io</h3></a>
-    <a href = "https://www.instagram.com/_bnuyz_/" target="_blank"><h3 class="link" style="bottom:300px;right:30px;background-color: hotpink">Instagram</h3></a>
-    <a href = "https://www.artstation.com/zi-di" target="_blank"><h3 class="link" style="bottom:250px;right:30px;background-color: blue">Artstation</h3></a>
-    <a href = "https://github.com/ZiDiZhu" target="_blank"><h3 class="link" style="bottom:200px;right:30px;background-color: black">GitHub</h3></a>
-    <a href = "https://soundcloud.com/helixsquare" target="_blank"><h3 class="link" style="bottom:150px;right:30px;background-color: orange">Soundcloud</h3></a>
-    <a href = "https://www.youtube.com/channel/UCGmpoOeeE2a74SfH44yOiUQ" target="_blank"><h3 class="link" style="bottom:100px;right:30px;background-color: red"><i>Youtube</i></h3></a>
-    <a href = "https://www.twitch.tv/bnuyz" target="_blank"><h3 class="link" style="bottom:50px;right:30px;background-color: blueviolet">Twitch</h3></a>
-
-
-  </div>
-
-    <div class="change row1 col1" id="icon1" onclick="openWindow(vcmc)">
-        <img src = "logos\logo_vcmc.png" class= "icon">
-        <img src = "logos\logo_vcmc_sp.png" class= "icon">
+    <div class="change item" onclick="openWindow(vcmc)">
+        <img src = "logos\logo_vcmc.png">
+        <img src = "logos\logo_vcmc_sp.png">
         <h2>vcmc<br>beat machine</h2>
         <p>2021</p>
         <p>beat machine</p>
     </div>
 
-    <div class="change row1 col2" id="icon2" onclick="openWindow(popcart212)">
-        <img src = "logos\logo_cartpop212.png" class= "icon">
-        <img src = "logos\logo_cartpop212_sp.png" class= "icon">
+    <div class="change item" onclick="openWindow(popcart212)">
+        <img src = "logos\logo_cartpop212.png">
+        <img src = "logos\logo_cartpop212_sp.png">
         <h2>POPCART212</h2>
         <p>2021</p>
         <p>music video</p>
     </div>
 
 
-    <div id="infoWindow">
+    <div id="infoWindow" style="top: 0px; left: 0px; position: absolute;">
       <button id = "closeWindow" onclick="hideThing('#infoWindow')">x</button>
       <img id = "icon"></img>
       <h1 id = "title">Title</h1>
@@ -103,6 +87,8 @@
       <button id = "playbutton" onclick="openLink()">MORE</button>
 
     </div>
+
+    <iframe width="800" height="600" src="https://www.youtube.com/embed/8dBNCLDdcxM?si=uQE4p2UgiVsMYBhG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   </body>
 

@@ -4,15 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Zi Di's Website</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="styles/icons.css">
-  <link rel="stylesheet" href="imagesGallery.css">
+  <link rel="stylesheet" href="styles/imagesGallery.css">
   <link rel="stylesheet" href="styles/draggable.css">
+  <link rel="stylesheet" href="styles/style.css">
   <style>
-
-    
     .iframe-container {
-        background-color: #f5c7f7;
+        background-color: #f5c7f7c7;
         color: violet;
         border: 3px solid #f5c7f7;
         width: 100%;
@@ -20,7 +18,8 @@
         object-fit: cover;
     }
   </style>
-  <script src="imageGallery.js"></script>
+  <script src="scripts/openFolder.js"></script>
+  <script src="scripts/imageGallery.js"></script>
   <script src="scripts/Draggable.js"></script>
 </head>
 
@@ -30,38 +29,32 @@
   <img src="images/office1.png" style="top:0px;left:0px; width: 82%; position: absolute; z-index: -1;" alt="Office Background">
   <h2 class="navigator">✮ Index / <a href="games.html">Games</a> / <a href="art/index.html">Art</a> / <a href="music.html">Music</a> ✮</h2>
   
-  <a class="change" id="mainLogo">
-    <img src="gifs/computer_a.gif" width="150px" alt="Computer Animation 1">
-    <img src="gifs/computer.gif" width="150px" alt="Computer Animation 2">
-  </a>
-  <!-- folders -->
-
-
-
   <div style="border: dotted #fcfcfc; display: flex;">
     <div style="margin: 10px;display: block;">
       <h2>✮ Welcome to Zi Di's Website ✮</h2>
       <p class="clickable" onclick="showDraggable(document.getElementById('draggable-about-me'))"> ✦ About Me ✦ </p>
 
-      <div class="change item" onclick="changeIframeContent('games.html')">
+
+        <!-- folders -->
+      <div class="change item" onclick="changeIframeContent('games.html',this)">
         <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
         <img src="logos/folder_open.png" class="icon" alt="Open Folder">
         <h2>GAMES</h2>
       </div>
     
-      <div class="change item" onclick="changeIframeContent('art/index.html')">
+      <div class="change item" onclick="changeIframeContent('art/index.html',this)">
         <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
         <img src="logos/folder_open.png" class="icon" alt="Drawing Animation">
         <h2>ART</h2>
       </div>
     
-      <div class="change item" onclick="changeIframeContent('music.html')">
+      <div class="change item" onclick="changeIframeContent('music.html',this)">
         <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
         <img src="logos/folder_open.png" class="icon" alt="Music Animation">
         <h2>MUSIC</h2>
       </div>
     
-      <div class="change item" onclick="changeIframeContent('resume.html')">
+      <div class="change item" onclick="changeIframeContent('resume.html',this)">
         <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
         <img src="logos/folder_open.png" class="icon" alt="Open Folder">
         <h2>RESUME</h2>
@@ -69,8 +62,6 @@
     </div>
     
     <iframe id="contentIframe" src="games.html" class="iframe-container" title="Content Frame"></iframe>
-    
-
     
 
         <!-- gallery -->
@@ -106,16 +97,17 @@
     </ul>
   </div>
 
+  <a class="change">
+    <img src="gifs/computer_a.gif" width="150px" alt="Computer Animation 1">
+    <img src="gifs/computer.gif" width="150px" alt="Computer Animation 2">
+  </a>
+
 
 </body>
 
 <script>
   dragElement(document.getElementById("draggable-about-me"));
 
-  function changeIframeContent(page) {
-    var iframe = document.getElementById('contentIframe');
-    iframe.src = page;
-  }
 </script>
 
 </html>
