@@ -3,7 +3,15 @@
     display: inline-block;
     width: 600px;  
     height: 600px; 
-    margin: 20px; 
+    margin-bottom: 20px; 
+}
+
+@media only screen and (max-width: 768px) {
+    .rotatable-container {
+        max-width: 40vh;
+        max-height: 40vh;
+        overflow: hidden;
+    }
 }
 
 
@@ -23,6 +31,7 @@
     width: 100%;
     height: 100%;
     transform-origin: center;
+    object-fit: contain; /* Ensures the image scales within its container */
 }
 .overlay {
     position: absolute;
@@ -31,4 +40,6 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
+    object-fit: contain; /* Ensures the image scales within its container */
+
 }
