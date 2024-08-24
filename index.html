@@ -30,7 +30,7 @@
   <!-- <h2 class="navigator">✮ Index / <a href="games.html">Games</a> / <a href="art/index.html">Art</a> / <a href="music.html">Music</a> ✮</h2> -->
   <h2>✮ Welcome to Zi Di's Website ✮</h2>
   <div style="border: dotted #fcfcfc; display: flex;">
-    <div style="margin: 10px;display: block;">
+    <div style="margin: 10px;display: block;width: 25vw;">
       <p class="clickable" onclick="showDraggable(document.getElementById('draggable-about-me'))"> ✦ About Me ✦ </p>
 
 
@@ -58,6 +58,11 @@
         <img src="logos/folder_open.png" class="icon" alt="Open Folder">
         <h2>RESUME</h2>
       </div>
+      <hr>
+      <h2>✦ Tools & References ✦</h2>
+      <a href="colorwheel.html">The Colorwheel</a> 
+      <button onclick="changeIframeContent('colorwheel.html',this)">view in page</button>
+
     </div>
     
     <iframe id="contentIframe" src="games.html" class="iframe-container" title="Content Frame"></iframe>
