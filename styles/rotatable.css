@@ -13,6 +13,7 @@
     width: 100%;
     height: 100%;
     user-select: none;
+    touch-action: none; /* Disable touch actions like zooming */
 }
 
 .rotatable-img {
