@@ -2,8 +2,26 @@
 body {
   background-image: url('../images/resources/star_rain.gif');
   font-family: "Lucida Console", Courier, monospace;
+  font-stretch: condensed;
   color: white;
   background-color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+      font-family: 'Arial', sans-serif; /* Font for mobile screens */
+      font-size: 14px; /* Optional: Adjust font size for mobile */
+  }
+
+  .leftPanel{
+    display: inline-block;
+    margin: 5px;
+  }
+}
+
+.leftPanel{
+  width: max-content;
+  margin: 5px;
 }
 
 .clickable{
@@ -41,7 +59,6 @@ body {
 
 .item{
   display: inline-block;
-  padding: 10PX;
 }
 
 /* Social media link background colors */
@@ -67,18 +84,18 @@ a:hover, .social-link:hover {
 
 /* General styling for social media links */
 .social-link {
-  margin-bottom: 10px;
+  margin: 10px;
   padding: 5px;
   color: white;
   text-decoration: none;
 }
 
 .social-links {
-  list-style: none;
   padding: 0;
+  margin: 10px;
 }
 
 .social-links li {
-  display: inline;
+  display: inline-block;
   margin: 10px;
 }
