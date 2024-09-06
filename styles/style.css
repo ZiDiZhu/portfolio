@@ -7,18 +7,6 @@ body {
   background-color: black;
 }
 
-@media only screen and (max-width: 768px) {
-  body {
-      font-family: 'Arial', sans-serif; /* Font for mobile screens */
-      font-size: 14px; /* Optional: Adjust font size for mobile */
-  }
-
-  .leftPanel{
-    display: inline-block;
-    margin: 5px;
-  }
-}
-
 .leftPanel{
   width: max-content;
   margin: 5px;
