@@ -1,13 +1,18 @@
 #infoWindow{
-  background-image: url('../images/window.gif');
+  background-color: rgba(238, 130, 238, 0.925);
+  border: double 5px;
+  cursor: move;
   background-size: cover;
   background-repeat: no-repeat;
   width: 60vh;
-  height: 50vh;
+  height: 60vh;
+  min-height: 400px;
   position: absolute;
   display: none;
   border-radius: 4px;
   z-index: 3;
+  right: 10px;
+  bottom: 10px;
 }
 
 
@@ -42,6 +47,26 @@
   display: inline-block;
   position: absolute;
   left: 10px;
-  top: 36vh;
+  top: 38vh;
   text-align: left;
+}
+
+#playbutton{
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  font-weight: bold;
+  font-size: larger;
+  border: dotted 2px;
+  cursor: pointer;
+  top: 56vh;
+  text-align: right;
+}
+
+#closebutton{
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  text-align: right;
 }

@@ -2,6 +2,8 @@ let currentlyOpenedFolder = null;
 function changeIframeContent(page,clickedElement) {
     document.getElementById('contentIframe').src = page;
 
+    if(clickedElement==null)return;
+
     // Close the previously opened folder, if any
     if (currentlyOpenedFolder) {
     currentlyOpenedFolder.querySelector('img:nth-child(1)').style.display = 'inline-block';
