@@ -19,3 +19,4 @@ function changeIframeContent(page,clickedElement) {
     // Set the clicked folder as the currently opened one
     currentlyOpenedFolder = clickedElement;
 }
+
