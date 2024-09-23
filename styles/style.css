@@ -5,7 +5,6 @@ body {
   font-stretch: condensed;
   color: white;
   background-color: black;
-  touch-action: none; /* Disable all touch actions */
   overscroll-behavior: none; /* Disable elastic scrolling */
 }
 
