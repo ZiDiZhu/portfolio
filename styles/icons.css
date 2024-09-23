@@ -1,7 +1,6 @@
 .icon{
   width: 50px;
   text-align: center;
-  padding: none;
 }
 
 
@@ -18,5 +17,4 @@
 .item{
   display: inline-block;
   text-align: center;
-  padding: none;
 }
