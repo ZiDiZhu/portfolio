@@ -40,8 +40,14 @@
     <div id="leftPanel" class="leftPanel">
       
       <p class="clickable" onclick="showDraggable(document.getElementById('draggable-about-me'))">✦ About Me ✦</p>
-      <p class="clickable" onclick="changeIframeContent('resume.html',this)">☞ Resume ☜</p>
-      
+
+      <div class="change item" onclick="changeIframeContent('resume.html',this)">
+        <img src="logos/resume_1.png" class="icon" style="width: 30px;">
+        <img src="logos/resume_2.png." class="icon" style="width: 30px;">
+        <p>RESUME</p>
+      </div>
+      <hr>
+      <p style="font-stretch: extra-condensed">✦ Products ✦</p>
       <!-- folders -->
       <div class="change item" onclick="changeIframeContent('games.html',this)">
         <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
@@ -60,9 +66,7 @@
         <img src="logos/folder_open.png" class="icon" alt="Music Animation">
         <p>MUSIC</p>
       </div>
-      
-      <hr>
-      <p>✦ Tools & Resources ✦</p>
+
       <li><a onclick="changeIframeContent('colorwheel.html',this)">colorwheel</a>
       <br><br>
       <li><a onclick="changeIframeContent('https://zidizhu.github.io/p5painter/index.html',this)">p5.paint</a>
