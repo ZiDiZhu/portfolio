@@ -9,6 +9,7 @@ body {
 
 .leftPanel{
   width: max-content;
+  max-width: 15vw;
   margin: 5px;
 }
 

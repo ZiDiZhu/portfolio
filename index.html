@@ -14,7 +14,7 @@
         border: #00000000 dotted;
         margin: 5px;
         width: 100%;
-        min-height: 80vh;
+        min-height: 90vh;
         object-fit: cover;
     }
     @media only screen and (max-width: 768px) {
@@ -35,19 +35,15 @@
 </head>
 
 <body onload="initializeGallery() ">
-  <img src = "logos/zidigital.gif" style="height: 50px">
-  <div style="border: #e6cde7 inset; display: flex">
+  <div style="border: none; display: flex">
     <div id="leftPanel" class="leftPanel">
-      
-      <p class="clickable" onclick="showDraggable(document.getElementById('draggable-about-me'))">✦ About Me ✦</p>
-
+      <img src = "logos/zidigital.gif" style=" max-width: 15vw; cursor: pointer" onclick="changeIframeContent('main.html',this)">
+      <hr>
       <div class="change item" onclick="changeIframeContent('resume.html',this)">
         <img src="logos/resume_1.png" class="icon" style="width: 30px;">
         <img src="logos/resume_2.png" class="icon" style="width: 30px;">
         <p>RESUME</p>
       </div>
-      <hr>
-      <p style="font-stretch: extra-condensed">✦ Products ✦</p>
       <!-- folders -->
       <div class="change item" onclick="changeIframeContent('games.html',this)">
         <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
@@ -66,37 +62,13 @@
         <img src="logos/folder_open.png" class="icon" alt="Music Animation">
         <p>MUSIC</p>
       </div>
-
-      <li><a onclick="changeIframeContent('colorwheel.html',this)">colorwheel</a>
-      <br><br>
-      <li><a onclick="changeIframeContent('https://zidizhu.github.io/p5painter/index.html',this)">p5.paint</a>
-
     </div>
-    
-    <iframe id="contentIframe" src="games.html" class="iframe-container" style="background-color: mintcream;" title="Content Frame">
+
+    <iframe id="contentIframe" src="main.html" class="iframe-container" style="background-color: mintcream;" title="Content Frame">
 
 
     </iframe>
-    
 
-    <!-- gallery -->
-    <div class="gallery-container" id="draggable-about-me">
-      <div style="text-align: right;">
-        <p style="display: inline-block; font-weight: bold;">About Me</p>
-        <button style="font-weight: bolder; display: inline block; margin: 10px; border: #fcfcfc; cursor: pointer;" onclick="hideDraggable(document.getElementById('draggable-about-me'))">X</button>
-      </div>
-      
-      <img id="current-image" src="" alt="Image">
-      <div style="margin-left: 10px;">
-        <button onclick="prevImage()">Prev Image</button>
-        <button onclick="nextImage()">Next Image</button>
-      </div>
-      <div id="image-text">text</div>
-      <div class="nav-buttons">
-        <button onclick="prevSet()">Previous Page</button>
-        <button onclick="nextSet()">Next Page</button>
-      </div>
-    </div>
   
   </div>
 

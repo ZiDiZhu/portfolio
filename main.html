@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zidigital</title>
+
+  <link rel="stylesheet" href="styles/imagesGallery.css">
+  <link rel="stylesheet" href="styles/draggable.css">
+  <style>
+    body{
+      text-align: center;
+      font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+      background-image: linear-gradient(to right, #cba1ff , #3355aa);
+      color: cornsilk;
+    }
+  </style>
+  <script src="scripts/imageGallery.js"></script>
+  <script src="scripts/Draggable.js"></script>
+</head>
+<body onload="initializeGallery() ">
+
+<h1 style="margin-bottom: 0">Welcome to Zi Di's Website</h1>
+<p style="font-size: smaller;margin-top: 0">(or the zi-dimension)</p>
+<h3 style="cursor: pointer; color: #b9ff13; text-decoration: underline" onclick="showDraggable(document.getElementById('draggable-about-me'))">✦ About Me ✦</h3>
+<!-- gallery -->
+<div class="gallery-container" id="draggable-about-me">
+  <div style="text-align: right;">
+    <p style="display: inline-block; font-weight: bold;">About Me</p>
+    <button style="font-weight: bolder; display: inline block; margin: 10px; border: #fcfcfc; cursor: pointer;" onclick="hideDraggable(document.getElementById('draggable-about-me'))">X</button>
+  </div>
+
+  <img id="current-image" src="" alt="Image" onclick="nextImage()" style="cursor: pointer">
+  <div id="image-text">text</div>
+  <div class="nav-buttons">
+    <button onclick="prevSet()">Previous Page</button>
+    <button onclick="nextSet()">Next Page</button>
+  </div>
+</div>
+<h2>Tools Development</h2>
+<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://zidizhu.github.io/p5painter/index.html">P5.Paint</a></h3>
+<p style="display: inline">a minimal painting app</p>
+<br><br>
+<h3 style="display: inline"><a style="color: #B9FF13FF" href="projects/colorwheel.html">Colorwheel</a></h3>
+<p style="display: inline">a digital bootleg of the classic color reference tool</p>
+<br><br>
+<h3 style="display: inline; text-decoration: line-through"><a style="color: #a0a69b" href="#">Google Calendar Summary</a></h3>
+<p style="display: inline">a summarizing tool for google calendar</p>
+<br><br>
+<h3 style="display: inline; text-decoration: line-through"><a style="color: #a0a69b" href="#">Flavoured Texts</a></h3>
+<p style="display: inline">a stylized Unity engine dialogue system</p>
+<br><br>
+
+<h2>Project Concepts</h2>
+<h3 style="display: inline"><a style="color: #B9FF13FF" href="#">Antarctic Holiday Blues</a></h3>
+<p style="display: inline">a sci-fi RPG</p>
+<br><br>
+<h3 style="display: inline"><a style="color: #B9FF13FF" href="projects/cash22.html">Ca$h 22</a></h3>
+<p style="display: inline">a slice-of-life visual novel</p>
+<br><br>
+
+<h2>Communities</h2>
+<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://kokolo-collective.github.io/events.html">Kokolo Game-Art Collective</a></h3>
+<p style="display: inline">a game-making collective</p>
+
+</body>
+<script>
+  dragElement(document.getElementById("draggable-about-me"));
+
+</script>
+</html>
