@@ -7,8 +7,8 @@ var snowfolie = {
   bgColor:"slategray",
   controls:"Type Text to Play",
   tool: "Unity",
-  icon:"logos/logo_snowfolie_sp.png",
-  screenshot:"images/screenshots/snowfolie1.png",
+  icon:"assets/images/logos/logo_snowfolie_sp.png",
+  screenshot:"assets/images/screenshots/snowfolie1.png",
   tags: ["multiplayer","tactile"]
 };
 
@@ -22,8 +22,8 @@ var trolley = {
   bgColor:"slategray",
   controls:"Type Text to Play",
   tool: "Twine",
-  icon:"logos/logo_cooking_sp.png",
-  screenshot:"images/screenshots/cooking1.png"
+  icon:"assets/images/logos/logo_cooking_sp.png",
+  screenshot:"assets/images/screenshots/cooking1.png"
 };
 
 var cooking = {
@@ -35,8 +35,8 @@ var cooking = {
   bgColor:"slategray",
   controls:"Type Text to Play",
   tool: "Adventuron",
-  icon:"logos/logo_cooking_sp.png",
-  screenshot:"images/screenshots/cooking1.png"
+  icon:"assets/images/logos/logo_cooking_sp.png",
+  screenshot:"assets/images/screenshots/cooking1.png"
 };
 
 var interview = {
@@ -48,8 +48,8 @@ var interview = {
   bgColor:"slategray",
   controls:"WASD + Click",
   tool: "Unity",
-  icon:"logos/logo_it.png",
-  screenshot:"images/screenshots/interview1.jpg"
+  icon:"assets/images/logos/logo_it.png",
+  screenshot:"assets/images/screenshots/interview1.jpg"
 };
 
 var nightMayor = {
@@ -62,8 +62,8 @@ var nightMayor = {
   bgColor:"royalblue",
   controls:"WASD",
   tool: "Bitsy",
-  icon:"logos/logo_nm.png",
-  screenshot:"images/screenshots/nightMayor1.jpg"
+  icon:"assets/images/logos/logo_nm.png",
+  screenshot:"assets/images/screenshots/nightMayor1.jpg"
 };
 
 var painTor = {
@@ -75,8 +75,8 @@ var painTor = {
   genre: "drawing tool",
   bgColor:"sienna",
   tool: "p5.js",
-  icon:"logos/logo_paintor.png",
-  screenshot:"images/screenshots/painTer1.jpg"
+  icon:"assets/images/logos/logo_paintor.png",
+  screenshot:"assets/images/screenshots/painTer1.jpg"
 };
 
 var fruitsJam = {
@@ -88,8 +88,8 @@ var fruitsJam = {
   description:`Jam with the fruit band! Sequence your own fruity loop and try play the keyboard with number keys! + Turn on the microphone to capturing your voice & generate lyrics subtitles!`,
   controls:`click on buttons!`,
   bgColor:"purple",
-  icon:"logos/logo_FJ_sp.png",
-  screenshot:"images/screenshots/fruitsJam1.jpg"
+  icon:"assets/images/logos/logo_FJ_sp.png",
+  screenshot:"assets/images/screenshots/fruitsJam1.jpg"
 };
 
 var memeSandbox = {
@@ -101,8 +101,8 @@ var memeSandbox = {
   description:`It makes a meme using the classic structure of top text / bottom text over an image! Choose the category of these components and hit “generate”! You can download your meme too.`,
   controls:"clicks",
   bgColor:"grey",
-  icon:"logos/logo_SMS_sp.png",
-  screenshot:"images/screenshots/memeSandbox1.jpg"
+  icon:"assets/images/logos/logo_SMS_sp.png",
+  screenshot:"assets/images/screenshots/memeSandbox1.jpg"
 };
 
 var pluralPlatformers = {
@@ -114,8 +114,8 @@ var pluralPlatformers = {
   description:`A platformer where you control multiple avatars at the same time! To win: control the bunnies to get all the strawberries and avoid the triangle spikes.Once a level is clear, left click to go to the next level.`,
   controls:"arrows: move, shift: jump, click: next level",
   bgColor:"hotpink",
-  icon:"logos/logo_pp.png",
-  screenshot:"images/screenshots/pluralPlatformers.JPG"
+  icon:"assets/images/logos/logo_pp.png",
+  screenshot:"assets/images/screenshots/pluralPlatformers.JPG"
 };
 
 var theHole = {
@@ -126,9 +126,9 @@ var theHole = {
   description:`Fan game of the 2019 movie, "The Platform"`,
   bgColor:"green",
   tool: "Unity",
-  icon: "logos/logo_hole.png",
+  icon: "assets/images/logos/logo_hole.png",
   controls:"WASD + Click",
-  screenshot:"images/screenshots/theHole1.jpg"
+  screenshot:"assets/images/screenshots/theHole1.jpg"
 };
 
 var humanError = {
@@ -140,8 +140,8 @@ var humanError = {
   bgColor:"blue",
   controls:`WASD + Click`,
   tool: "Unity",
-  icon:"logos/logo_humanerror_sp.png",
-  screenshot:"images/screenshots/humanError1.jpg"
+  icon:"assets/images/logos/logo_humanerror_sp.png",
+  screenshot:"assets/images/screenshots/humanError1.jpg"
 };
 
 var stog = {
@@ -153,8 +153,8 @@ var stog = {
   bgColor:"black",
   controls:`Keyboard`,
   tool: "p5.js + Rainebow Engine",
-  icon:"logos/logo_stog_sp.png",
-  screenshot:"images/screenshots/stog1.jpg"
+  icon:"assets/images/logos/logo_stog_sp.png",
+  screenshot:"assets/images/screenshots/stog1.jpg"
 };
 
 var meatCute = {
@@ -166,8 +166,8 @@ var meatCute = {
   bgColor:"coral",
   controls:`Move: WASD, Shoot: Click`,
   tool: "Unity",
-  icon:"logos/logo_meatcute_sp.png",
-  screenshot:"images/screenshots/meatCute1.jpg"
+  icon:"assets/images/logos/logo_meatcute_sp.png",
+  screenshot:"assets/images/screenshots/meatCute1.jpg"
 };
 
 var catLander = {
@@ -179,6 +179,6 @@ var catLander = {
   bgColor:"coral",
   controls:`Move: AD, Jump: Space`,
   tool: "Unity",
-  icon:"logos/catlander.png",
-  screenshot:"images/screenshots/catlander.png"
+  icon:"assets/images/logos/catlander.png",
+  screenshot:"assets/images/screenshots/catlander.png"
 };

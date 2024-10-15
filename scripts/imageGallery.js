@@ -2,17 +2,17 @@ var gallerySets = [
     {
         text: '<br> Hi! <br> My name is Zi Di, I\'m a citizen of planet Earth. I like art, music, games, design and programming. I have many ideas and sometimes I try to make things that could be useful, thought-provoking or simply fun.',
         images: [
-            'images/me/me_spotted.png',
-            'images/me/moose.jpg',
-            'images/me.jpg',
-            'images/me/me_ngl.png'
+            'assets/images/zidi/me_spotted.png',
+            'assets/images/zidi/moose.jpg',
+            'assets/images/zidi/me.jpg',
+            'assets/images/zidi/me_ngl.png'
         ]
     },
     {
         text: 'Kiki<br> That\'s my Bunny!',
         images: [
-            'images/kiki/kiki_bow.JPG',
-            'images/kiki/kiki_ball.png'
+            'assets/images/kiki/kiki_bow.JPG',
+            'assets/images/kiki/kiki_ball.png'
         ]
     }
 ];
@@ -56,12 +56,6 @@ function showImage(index) {
     imgElement.classList.add('hidden');
     imgElement.src = gallerySets[currentSetIndex].images[index];
     resetImageFade();
-}
-
-// Navigate to the previous image in the current set
-function prevImage() {
-    currentImageIndex = (currentImageIndex - 1 + gallerySets[currentSetIndex].images.length) % gallerySets[currentSetIndex].images.length;
-    showImage(currentImageIndex);
 }
 
 // Navigate to the next image in the current set

@@ -37,36 +37,39 @@
 <body onload="initializeGallery() ">
   <div style="border: none; display: flex">
     <div id="leftPanel" class="leftPanel">
-      <img src = "logos/zidigital.gif" style=" max-width: 15vw; cursor: pointer" onclick="changeIframeContent('main.html',this)">
+      <hr>
+      <img src = "assets/images/logos/zidigital.gif" style=" max-width: 15vw; cursor: pointer" onclick="changeIframeContent('main.html',null)">
+      <hr>
+      <div style="text-align: right">
+      <button style="background: transparent;color: #cba1ff" onclick="changeIframeContent('main.html',null)">Home</button>
+      </div>
       <hr>
       <div class="change item" onclick="changeIframeContent('resume.html',this)">
-        <img src="logos/resume_1.png" class="icon" style="width: 30px;">
-        <img src="logos/resume_2.png" class="icon" style="width: 30px;">
+        <img src="assets/images/logos/resume_1.png" class="icon" style="width: 30px;">
+        <img src="assets/images/logos/resume_2.png" class="icon" style="width: 30px;">
         <p>RESUME</p>
       </div>
       <!-- folders -->
       <div class="change item" onclick="changeIframeContent('games.html',this)">
-        <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
-        <img src="logos/folder_open.png" class="icon" alt="Open Folder">
+        <img src="assets/images/logos/folder_closed.png" class="icon" alt="Closed Folder">
+        <img src="assets/images/logos/folder_open.png" class="icon" alt="Open Folder">
         <p>GAMES</p>
       </div>
     
       <div class="change item" onclick="changeIframeContent('art/index.html',this)">
-        <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
-        <img src="logos/folder_open.png" class="icon" alt="Drawing Animation">
+        <img src="assets/images/logos/folder_closed.png" class="icon" alt="Closed Folder">
+        <img src="assets/images/logos/folder_open.png" class="icon" alt="Drawing Animation">
         <p>ART</p>
       </div>
     
       <div class="change item" onclick="changeIframeContent('music.html',this)">
-        <img src="logos/folder_closed.png" class="icon" alt="Closed Folder">
-        <img src="logos/folder_open.png" class="icon" alt="Music Animation">
+        <img src="assets/images/logos/folder_closed.png" class="icon" alt="Closed Folder">
+        <img src="assets/images/logos/folder_open.png" class="icon" alt="Music Animation">
         <p>MUSIC</p>
       </div>
     </div>
 
     <iframe id="contentIframe" src="main.html" class="iframe-container" style="background-color: mintcream;" title="Content Frame">
-
-
     </iframe>
 
   
@@ -81,14 +84,10 @@
       <li><a href="https://github.com/ZiDiZhu" target="_blank" class="social-link github">GitHub</a></li>
       <li><a href="https://www.instagram.com/_zi_digital_/" target="_blank" class="social-link instagram">Instagram</a></li>
       <li><a href="https://www.youtube.com/@zi-digital" target="_blank" class="social-link youtube">Youtube</a></li>
+      <li>Contact: zidizhu[at]proton[dot]me</li>
     </ul>
   </div>
 
 </body>
-
-<script>
-  dragElement(document.getElementById("draggable-about-me"));
-
-</script>
 
 </html>

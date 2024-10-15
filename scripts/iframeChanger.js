@@ -1,4 +1,5 @@
 let currentlyOpenedFolder = null;
+let homePageSrc = 'main.html';
 function changeIframeContent(page,clickedElement) {
     document.getElementById('contentIframe').src = page;
 
