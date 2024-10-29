@@ -1,6 +1,6 @@
 var gallerySets = [
     {
-        text: '<br> Hi! <br> My name is Zi Di, I\'m a citizen of planet Earth. I like art, music, games, design and programming. I have many ideas and sometimes I try to make things that could be useful, thought-provoking or simply fun.',
+        text: '<br> It\'s me! <br> ',
         images: [
             'assets/images/zidi/me_spotted.png',
             'assets/images/zidi/moose.jpg',
