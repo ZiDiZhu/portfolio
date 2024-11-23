@@ -2,6 +2,7 @@ var snowfolie = {
   title: "Snowfolie",
   year: "2022",
   link:"https://george540.itch.io/snowfolie",
+  videolink:"https://www.youtube.com/watch?v=CdDxsHVQank", //not all objects has this field
   description:`Snowfolie is a multiplayer online battle arena of snowball fighting. Taking aesthetic inspiration from the movie Guerre des Tuques,Snowfolieattempts to spark thejoy and nostalgia of snowball fighting with your friends.`,
   genre: "Online Multiplayer",
   bgColor:"slategray",

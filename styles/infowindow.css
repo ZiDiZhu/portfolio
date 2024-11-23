@@ -42,6 +42,16 @@
   height: 30vh;
 }
 
+#iframePlayer{
+  display: inline-block;
+  position: absolute;
+  top: 70px;
+  left: 10px;
+  background-color: gray;
+  width: 50vh;
+  height: 30vh;
+}
+
 
 #description{
   display: inline-block;
@@ -55,6 +65,18 @@
   display: inline-block;
   position: absolute;
   right: 10px;
+  font-weight: bold;
+  font-size: larger;
+  border: dotted 2px;
+  cursor: pointer;
+  top: 56vh;
+  text-align: right;
+}
+
+#videobutton{
+  display: inline-block;
+  position: absolute;
+  right: 100px;
   font-weight: bold;
   font-size: larger;
   border: dotted 2px;

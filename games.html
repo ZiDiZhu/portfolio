@@ -20,7 +20,12 @@
   </head>
 
   <body>
-    <img style="width:400px;max-width: 80vw" src="assets/images/logos/zidisGames.gif">
+  <div style="width: 300px; max-width: 70vw; display: inline">
+
+      <img style="width: 300px; max-width: 70vw; display: inline" src="assets/images/logos/zidisGames.gif">
+  </div>
+
+
     <div class="change item" onclick="openWindow(catLander)" >
         <img src = "assets/images/logos/catlander.png" class= "icon">
         <img src = "assets/images/logos/catlander_sp.png" class= "icon">
@@ -28,6 +33,8 @@
         <p>2023 (collab) <br>programming/music</p>
         <p>Arcade</p>
     </div>
+
+
 
     <div class="change item" onclick="openWindow(interview)" >
         <img src = "assets/images/logos\logo_it.png" class= "icon">
@@ -119,13 +126,22 @@
 
 
     <div id="infoWindow">
-        <img id = "screenshot"></img>
+        <img id = "screenshot">
+        <iframe
+            id="iframePlayer"
+            src = ""
+            style="display: none; border: none;"
+            allowfullscreen>
+        </iframe>
         <p id = "description">Description goes here Beep boop beep boop beep</p>
-        <img id = "icon"></img>
+        <img id = "icon">
         <h3 id = "title">Title</h3>
         <button id = "playbutton" onclick="openLink()">PLAY</button>
+        <button id = "videobutton" onclick="openVideoLink()">VIDEO</button>
         <button id = "closebutton" onclick="hideThing(document.getElementById('infoWindow'))">X</button>
     </div>
+
+
 
     <br><br>
 
