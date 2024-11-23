@@ -3,7 +3,7 @@
     z-index: 9;
     cursor: move;
     display: none;
-    max-width: 350px;
+    max-width: 300px;
     border: #ececec double 5px; /* Border around the gallery */
     background-color: #2600ff80;
 }

@@ -4,11 +4,12 @@
 
 /* Fixed size for the image */
 #current-image {
-  width: 300px; /* Fixed width */
-  height: 300px; /* Fixed height */
+  max-width: 300px; /* Fixed width */
+  max-height: 300px; /* Fixed height */
   object-fit: cover; /* Cover the image */
   margin: 10px;
   display: inline;
+  width: 90%;
 }
 
 /* Styling for the text description */
@@ -35,7 +36,6 @@
 
 /* Navigation buttons styling */
 .nav-buttons {
-  align-items: right; /* Align buttons to the right */
   width: 100%; /* Full width */
   margin: 10px;
 }

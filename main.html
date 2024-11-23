@@ -20,28 +20,11 @@
       color: #42FF00;
     }
   </style>
-  <script src="scripts/imageGallery.js"></script>
-  <script src="scripts/Draggable.js"></script>
 </head>
-<body onload="initializeGallery() ">
+<body>
 
 <h1 style="margin-bottom: 0">Welcome to the Zi-Dimension</h1>
 <p style="font-size: smaller;margin-top: 0">The Portfolio of Zi Di Zhu (Zidigital)</p>
-<h3 style="cursor: pointer; color: #b9ff13; text-decoration: underline" onclick="showDraggable(document.getElementById('draggable-about-me'))">✦ Photo Album ✦</h3>
-<!-- gallery -->
-<div class="gallery-container" id="draggable-about-me">
-  <div style="text-align: right;">
-    <p style="display: inline-block; font-weight: bold;">About Me</p>
-    <button style="font-weight: bolder; display: inline; margin: 10px; border: #fcfcfc; cursor: pointer;" onclick="hideDraggable(document.getElementById('draggable-about-me'))">X</button>
-  </div>
-
-  <img id="current-image" src="" alt="Image" onclick="nextImage()" style="cursor: pointer">
-  <div id="image-text">text</div>
-  <div class="nav-buttons">
-    <button onclick="prevSet()">Previous Page</button>
-    <button onclick="nextSet()">Next Page</button>
-  </div>
-</div>
 <hr>
 <h2><a href="games.html">GAMES</a></h2>
 <p style="display: inline">2024 / </p>
@@ -50,11 +33,11 @@
 <h3 style="display: inline"><a style="color: #B9FF13FF" href="https://z-digital.itch.io/playground" target="_blank">Clone's Playground</a></h3>
 <br><br>
 <p style="display: inline"> 2023 / </p>
-<h3 style="display: inline"><a style="color: #B9FF13FF" href=https://z-digital.itch.io/catballz" target="_blank">CatLander</a></h3>
+<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://z-digital.itch.io/catballz" target="_blank">CatLander</a></h3>
 <p style="display: inline">(collab)</p>
 <br><br>
 <p style="display: inline"> 2022 / </p>
-<h3 style="display: inline"><a style="color: #B9FF13FF" href=https://z-digital.itch.io/demo-detailed-cooking-sim" target="_blank">Egg Game</a></h3>
+<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://z-digital.itch.io/demo-detailed-cooking-sim" target="_blank">Egg Game</a></h3>
 <p style="display: inline"> / </p>
 <h3 style="display: inline"><a style="color: #B9FF13FF" href="https://george540.itch.io/snowfolie" target="_blank">Snowfolie</a></h3>
 <p style="display: inline">(collab) / </p>
@@ -62,12 +45,12 @@
 <p style="display: inline">(collab) </p>
 <br><br>
 <p style="display: inline"> 2021 / </p>
-<h3 style="display: inline"><a style="color: #B9FF13FF" href=https://zidizhu.github.io/cart263/projects/project2-fruitjam-prototype/" target="_blank">Fruits Jam</a></h3>
+<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://zidizhu.github.io/cart263/projects/project2-fruitjam-prototype/" target="_blank">Fruits Jam</a></h3>
 <p style="display: inline"> / </p>
-<h3 style="display: inline"><a style="color: #B9FF13FF" href=https://z-digital.itch.io/human-error" target="_blank">Human Error</a></h3>
+<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://z-digital.itch.io/human-error" target="_blank">Human Error</a></h3>
 <br><br>
 <p style="display: inline"> 2020 / </p>
-<h3 style="display: inline"><a style="color: #B9FF13FF" href=https://zidizhu.github.io/cart253/projects/project2/prototype/" target="_blank">Plural Platformers</a></h3>
+<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://zidizhu.github.io/cart253/projects/project2/prototype/" target="_blank">Plural Platformers</a></h3>
 
 <br>
 <h2>Tools</h2>
@@ -102,8 +85,4 @@
 <p>Resume: <a href="cv/pdf/ZiDiZhu_developer_en.pdf">en</a> / <a href="cv/pdf/ZiDiZhu_developer_fr.pdf">fr</a></p>
 
 </body>
-<script>
-  dragElement(document.getElementById("draggable-about-me"));
-
-</script>
 </html>
