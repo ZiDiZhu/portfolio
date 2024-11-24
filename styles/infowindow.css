@@ -5,7 +5,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 60vh;
-  height: 60vh;
+  height: 68vh;
   min-height: 400px;
   position: absolute;
   display: none;
@@ -38,8 +38,7 @@
   top: 70px;
   left: 10px;
   background-color: gray;
-  width: 50vh;
-  height: 30vh;
+  width: 58vh;
 }
 
 #iframePlayer{
@@ -54,10 +53,9 @@
 
 
 #description{
-  display: inline-block;
   position: absolute;
   left: 10px;
-  top: 38vh;
+  bottom: 30px;
   text-align: left;
 }
 
@@ -69,7 +67,7 @@
   font-size: larger;
   border: dotted 2px;
   cursor: pointer;
-  top: 56vh;
+  bottom: 10px;
   text-align: right;
 }
 
@@ -81,7 +79,7 @@
   font-size: larger;
   border: dotted 2px;
   cursor: pointer;
-  top: 56vh;
+    bottom: 10px;
   text-align: right;
 }
 
