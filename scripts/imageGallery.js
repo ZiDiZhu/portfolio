@@ -39,10 +39,7 @@ function initializeGallery() {
 // Show images and text from a specific set
 function showSet(setIndex) {
     var imgElement = document.getElementById('current-image');
-    var textElement = document.getElementById('image-text');
-    stopSlideshow(); // Stop the slideshow if it's running
-    // Update text and start the slideshow
-    textElement.innerHTML = gallerySets[setIndex].text;
+    stopSlideshow();
     currentImageIndex = 0;
     imgElement.src = gallerySets[setIndex].images[currentImageIndex];
     resetImageFade();

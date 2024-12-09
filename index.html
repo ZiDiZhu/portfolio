@@ -6,12 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>zidigital</title>
   <link rel="stylesheet" href="styles/icons.css">
-  <link rel="stylesheet" href="styles/imagesGallery.css">
-  <link rel="stylesheet" href="styles/draggable.css">
   <link rel="stylesheet" href="styles/style.css">
   <style>
     .iframe-container {
-        border: #00000000 dotted;
+        border: dotted;
         margin: 5px;
         width: 100%;
         min-height: 90vh;
@@ -30,11 +28,9 @@
     }
   </style>
   <script src="scripts/iframeChanger.js"></script>
-  <script src="scripts/imageGallery.js"></script>
-  <script src="scripts/Draggable.js"></script>
 </head>
 
-<body onload="initializeGallery() ">
+<body>
   <div style="border: none; display: flex">
     <div id="leftPanel" class="leftPanel">
       <hr>
@@ -69,22 +65,6 @@
       </div>
 
 
-      <h3 style="cursor: pointer; color: #b9ff13; text-decoration: underline" onclick="showDraggable(document.getElementById('draggable-about-me'))">✦ Photo Album ✦</h3>
-      <!-- gallery -->
-      <div class="gallery-container" id="draggable-about-me">
-        <div style="text-align: right;">
-          <p style="display: inline-block; font-weight: bold;">Photo Album</p>
-          <button style="font-weight: bolder; display: inline; margin: 10px; border: #fcfcfc; cursor: pointer;" onclick="hideDraggable(document.getElementById('draggable-about-me'))">X</button>
-        </div>
-
-        <img id="current-image" src="" alt="Image" onclick="nextImage()" style="cursor: pointer">
-        <div id="image-text">text</div>
-        <div class="nav-buttons">
-          <button onclick="prevSet()"><<</button>
-          <button onclick="nextSet()">>></button>
-        </div>
-      </div>
-
     </div>
 
     <iframe id="contentIframe" src="main.html" class="iframe-container" style="background-color: mintcream;" title="Content Frame">
@@ -107,9 +87,5 @@
   </div>
 
 </body>
-<script>
-  dragElement(document.getElementById("draggable-about-me"));
-
-</script>
 
 </html>

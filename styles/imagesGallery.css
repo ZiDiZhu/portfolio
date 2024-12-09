@@ -4,12 +4,11 @@
 
 /* Fixed size for the image */
 #current-image {
-  max-width: 300px; /* Fixed width */
-  max-height: 300px; /* Fixed height */
-  object-fit: cover; /* Cover the image */
-  margin: 10px;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  overflow: hidden;
   display: inline;
-  width: 90%;
 }
 
 /* Styling for the text description */
