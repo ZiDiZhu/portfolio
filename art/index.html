@@ -7,29 +7,28 @@
     <script src="../scripts/iframeChanger.js"></script>
     <style>
         body {
-            background: radial-gradient(circle at 1.5% 22%, rgb(4, 0, 255) 0%, rgb(250, 178, 172) 25.5%, rgb(230, 138, 210) 62.3%, rgb(225, 0, 255) 93.8%);
             color: #f5c7f7;
             background-image: image('assets/images/resources/grid.png'); /* Add your background image here */
             background-blend-mode: soft-light;
             background-size: cover; /* Cover the entire page */
             background-position: center; /* Center the background image */
             background-attachment: fixed; /* Fixed background (doesn't scroll with the page) */
+
         }
 
         .iframe-container {
+
             position: fixed;
             justify-content: center;
             align-items: center;
-            height: 200px;
-            border: 3px solid #f5c7f7;
             width: 78vw;
-            height: 90vh; /* Adjust the height as needed */
+            height: 100vh; /* Adjust the height as needed */
             overflow: hidden;
         }
 
         .rightrow{
             position: fixed;
-            top: 100px; 
+            top: 0;
             right: 0;
             border: 3px solid #f5c7f7;
             width: 20vw;
@@ -38,7 +37,8 @@
 
         .foldericon {
             cursor: pointer;
-            display: flex;
+            display:inline-flex;
+            align-items: flex-start;
         }
 
         .foldericon :hover{
@@ -63,18 +63,8 @@
 </head>
 <body>
 
-    <h1 style="color: rgb(216, 247, 255);">★・・・MY ART・・・✮</h1>
-
-    <a href = "https://www.artstation.com/zi-di" target="_blank"><h2 style="background-color: blue">Artstation</h2></a>
-    <div class = "scrollbox">
-        <marquee scrollamount="32" scrolldelay="100"; scrolldelay = "0">
-            <h1>✩♬₊˚.✮⋆☾⋆⁺₊✧𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 𝕥𝕙𝕖 𝔸𝕣𝕥 𝔾𝕒𝕝𝕝𝕖𝕣𝕪⋆.˚ ᡣ𐭩 .𖥔˚ 欢迎来到美术馆╰┈ ⋆｡˚ ❀ *· 🌬 ࿐ ࿔ ˚:⋆ ✧･ﾟ</h1>
-        </marquee>
-    </div>
-
 
     <iframe id="contentIframe" src="concept.html" class="iframe-container" title="Content Frame"></iframe>
-
     <!--folders-->
 
     <div class="rightrow">
