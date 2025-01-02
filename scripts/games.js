@@ -21,19 +21,15 @@ function movePreview(event){
   }
 }
 
-function closePreview(){
-  $('#preview').attr("src","");
-}
-
 //opens information window
 function openWindow(myGame){
   console.log(myGame.title);
   showThing('#infoWindow');
   $('#iframePlayer').css("display", "none");
   $('#screenshot').css("display", "block");
+  $('#screenshot').attr("src", myGame.screenshot);
   $('#title').text(myGame.title+"("+myGame.year+")-"+myGame.genre);
   $('#icon').attr("src", myGame.icon);
-  $('#screenshot').attr("src", myGame.screenshot);
   //$('#infoWindow').css("background-color",myGame.bgColor);
   $('#description').text(myGame.description);
   $('#tools').text("made with: "+ myGame.tool);
@@ -50,10 +46,12 @@ function openWindow(myGame){
 
 //currently only used for game info window, but probably reusable.
 function showThing(thing){
+  stopvideo();
   $(thing).css("display","inline-block");
 }
 
-function hideThing(thing){
+function closeGameInfo(thing){
+  stopvideo();
   $(thing).css("display","none");
 }
 
@@ -91,3 +89,9 @@ function extractYouTubeID(url) {
   const match = url.match(regExp);
   return match && match[1].length === 11 ? match[1] : null;
 }
+
+function stopvideo(){
+  const iframePlayer = document.getElementById('iframePlayer');
+  iframePlayer.src = iframePlayer.src;
+}
+

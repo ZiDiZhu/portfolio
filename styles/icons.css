@@ -17,4 +17,5 @@
 .item{
   display: inline-block;
   text-align: center;
+  margin: 15px;
 }

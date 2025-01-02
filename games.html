@@ -6,24 +6,19 @@
     <script src = "scripts/games.js"></script>
     <script src = "scripts/data/gamesData.js"></script>
     <script src = "scripts/Draggable.js"></script>
-    <link rel = "stylesheet" href="styles/style.css">
     <link rel = "stylesheet" href="styles/icons.css">
     <link rel = "stylesheet" href="styles/infowindow.css">
       <style>
           body{
-              background-image: url("assets/images/resources/star_rain_violet.gif");
-              font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
               font-stretch: extra-condensed;
+              background-color: black;
+              color: #88ff8c;
           }
       </style>
     <title>zi di's games</title>
   </head>
 
   <body>
-  <div style="width: 300px; max-width: 70vw; display: inline">
-
-      <img style="width: 300px; max-width: 70vw; display: inline" src="assets/images/logos/zidisGames.gif">
-  </div>
 
 
     <div class="change item" onclick="openWindow(catLander)" >
@@ -130,7 +125,7 @@
         <iframe
             id="iframePlayer"
             src = ""
-            style="display: none; border: none; width: 58vh;"
+            style="display: none; border: none; "
             allowfullscreen>
         </iframe>
         <p id = "description">Description goes here Beep boop beep boop beep</p>
@@ -138,10 +133,12 @@
         <h3 id = "title">Title</h3>
         <button id = "playbutton" onclick="openLink()">PLAY</button>
         <button id = "videobutton" onclick="openVideoLink()">VIDEO</button>
-        <button id = "closebutton" onclick="hideThing(document.getElementById('infoWindow'))">X</button>
+        <button id = "closebutton" onclick="closeGameInfo(document.getElementById('infoWindow'))">X</button>
     </div>
 
-
+    <div style="width: 300px; max-width: 70vw; display: inline">
+        <img style="width: 300px; max-width: 70vw; display: inline" src="assets/images/logos/zidisGames.gif">
+    </div>
 
     <br><br>
 

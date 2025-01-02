@@ -57,6 +57,7 @@ body {
 .social-link.github { background-color: black; }
 .social-link.soundcloud { background-color: orange; }
 .social-link.youtube { background-color: red; }
+.social-link.bluesky{ background-color: #00ccff;}
 
 /* Social media link states */
 a:link, .social-link:link {

@@ -48,7 +48,7 @@
       <p style="display: inline">unsorted </p>
     </div>
 
-    <div class="change row1 col1" onclick="openWindow(interview)" onmousemove="showPreview(interview,event)" onmouseout="closePreview()">
+    <div class="change row1 col1" onclick="openWindow(interview)">
         <img src = "logos\logo_it.png" class= "icon">
         <img src = "logos\logo_it_sp.png" class= "icon">
         <h2>Interview</h2>
@@ -146,7 +146,7 @@
 
 
     <div id="infoWindow">
-      <button id = "closeWindow" onclick="hideThing('#infoWindow')">x</button>
+      <button id = "closeWindow" onclick="closeGameInfo('#infoWindow')">x</button>
       <img id = "icon"></img>
       <h1 id = "title">Title</h1>
       <img id = "screenshot"></img>
