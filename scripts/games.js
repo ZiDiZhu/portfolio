@@ -34,11 +34,11 @@ function openWindow(myGame){
   $('#description').text(myGame.description);
   $('#tools').text("made with: "+ myGame.tool);
   if (myGame.videolink && myGame.videolink.trim() !== "") {
-    $('#videobutton').css("display", "block"); // Show the video button
+    $('#videobutton').css("display", "inline-block"); // Show the video button
   } else {
     $('#videobutton').css("display", "none"); // Hide the video button
   }
-
+  document.getElementById("infoWindow").scrollIntoView({behavior: 'smooth'});
 
   currentGame = myGame;
 }
@@ -73,7 +73,7 @@ function setYouTubeEmbed(videoLink) {
     const videoID = extractYouTubeID(videoLink);
     if (videoID) {
       iframePlayer.src = `https://www.youtube.com/embed/${videoID}`;
-      iframePlayer.style.display = "block"; // Show the iframe
+      iframePlayer.style.display = "inline-block"; // Show the iframe
     } else {
       console.error("Invalid YouTube link.");
     }
