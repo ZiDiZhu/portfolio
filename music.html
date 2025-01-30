@@ -4,145 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>♬zi di's music♬</title>
+  <link rel="stylesheet" href="styles/musicPlayer.css">
   <style>
-    body{
-      background: black;
-    }
-    .container {
-      width: 98%;
-      background: linear-gradient(135deg, #ff7e5f, #feb47b);
-      border-radius: 8px;
-      padding: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    }
-    .album {
-      display: inline-block;
-      width: 150px;
-      margin: 10px;
-      cursor: pointer;
-    }
-    .album img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .album-name {
-      margin-top: 10px;
-      font-size: 16px;
-    }
-    .player {
-      margin-top: 30px;
-      display: none;
-    }
-    audio {
-      width: 100%;
-      margin-top: 20px;
-    }
-    .lyrics {
-      margin-top: 20px;
-      white-space: pre-line;
-      font-size: 14px;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    .song {
-      margin-top: 10px;
-      cursor: pointer;
-      padding: 10px;
-      background-color: #daffa1;
-      border-radius: 5px;
-    }
-    .song:hover {
-      background-color: #88ff8c;
-    }
-    .song-name {
-      font-size: 18px;
+    body {
+      background-color: #2f3236;
+      color: #cba1ff;
     }
   </style>
+  <script src="scripts/musicPlayer.js"></script>
   <script src="scripts/data/musicData.js"></script>
 </head>
 <body>
 
-<div class="container">
-  <!-- Album Section -->
-  <h1>ALBUMS</h1>
-
-  <iframe width="200" height="150" style="display: inline-block" src="https://www.youtube.com/embed/8dBNCLDdcxM?si=uQE4p2UgiVsMYBhG" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
-
-  <div id="albums" style="display: inline-block">
-
-    <div class="album" onclick="loadAlbum(vol1.title, vol1.cover, vol1.songs);">
-      <img src="art/gifs/home.gif" alt="Album 1 Cover">
-      <div class="album-name">Vol.1</div>
-    </div>
-    <div class="album" onclick="loadAlbum(vol2.title, vol2.cover, vol2.songs)">
-      <img src="art/gifs/yip-music.gif" alt="Album 2 Cover">
-      <div class="album-name">Vol.2</div>
-    </div>
-  </div>
-
-  <!-- Player Section -->
-  <div class="player" id="player">
-    <img id="albumCover" src="" alt="Album Cover" style="width:150px; border-radius: 8px; display: inline-block">
-    <h2 id="albumTitle" style="display: inline-block"></h2>
-
-    <audio id="audioPlayer" controls>
-      <source id="audioSource" src="" type="audio/mp3">
-    </audio>
-    <div id="songs"></div>
-    <div class="lyrics" id="lyrics"></div>
-  </div>
-
-  <a href="https://zidizhu.github.io/pubcrawl/" target="_blank">
-    <img src="assets/images/logos/pubcrawl.gif" alt="Clickable Image" style="width: 200px; height: auto;">
-  </a>
+<div id="musicPlayer">
+  <h2 id="song-title">********</h2>
+  <audio id="audioPlayer" controls>
+    <source id="audioSource" src="" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 </div>
+<div id="albums" style="display: inline-block">
+
+  <div class="album" onclick="loadAlbum(vol1.title, vol1.cover, vol1.songs,this);">
+    <img src="art/gifs/home.gif" alt="Album 1 Cover">
+    <div class="album-name">vol1</div>
+  </div>
+
+  <div class="album" onclick="loadAlbum(vol2.title, vol2.cover, vol2.songs,this);">
+    <img src="art/gifs/yip-music.gif" alt="Album 2 Cover">
+    <div class="album-name">vol2</div>
+  </div>
+
+</div>
+
+<!-- Player Section -->
+<div class="player" id="player">
+  <h2 id="albumTitle"></h2>
+
+  <div id="songs"></div>
+
+  <div class="lyrics" id="lyrics"></div>
+</div>
+<hr>
+<a href="https://zidizhu.github.io/pubcrawl/" target="_blank"> -> Pub Crawl</a>
 
 
 
 <script>
-  //example: loadAlbum(vol1.title, vol1.cover, vol1.songs)
-  function loadAlbum(albumName, albumCover, songs) {
-    // Show player
-    document.getElementById('player').style.display = 'block';
-    // Update album info
-    document.getElementById('albumTitle').innerText = albumName;
-    document.getElementById('albumCover').src = albumCover;
-
-    // Load songs
-    const songsContainer = document.getElementById('songs');
-    songsContainer.innerHTML = ''; // Clear previous songs
-    songs.forEach((song, index) => {
-      const songDiv = document.createElement('div');
-      songDiv.className = 'song';
-      songDiv.onclick = () => loadSong(song);
-      songDiv.innerHTML = `<div class="song-name">${song.name}</div>`;
-      songsContainer.appendChild(songDiv);
-    });
-  }
-
-  function loadSong(song) {
-    // Update audio source
-    const audioPlayer = document.getElementById('audioPlayer');
-    const audioSource = document.getElementById('audioSource');
-    audioSource.src = song.src;
-    audioPlayer.load(); // Reload the audio element
-    audioPlayer.play();
-
-    // Fetch and display lyrics from the txt file
-    const lyricsDiv = document.getElementById('lyrics');
-    if(song.lyricsFile){
-      fetch(song.lyricsFile)
-              .then(response => response.text())
-              .then(text => {
-                lyricsDiv.innerText = text;
-              })
-              .catch(error => {
-                lyricsDiv.innerText = "Lyrics not available.";
-              });
-    }
-
-  }
 
 </script>
 </body>

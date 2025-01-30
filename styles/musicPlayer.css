@@ -1,0 +1,76 @@
+body{
+    background-repeat: repeat;
+    font-family: AppleGaramond, serif;
+    color: #cba1ff;
+}
+
+a{
+    color: #88ff8c;
+}
+
+a:visited {
+    color: #cba1ff;
+}
+
+.album {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.album:hover {
+    color: #b9ff13;
+    border-radius: 5px;
+}
+
+.album img {
+    width: 100%;
+    border-radius: 8px;
+}
+.album-name {
+    margin-top: 10px;
+    font-size: 16px;
+}
+.player {
+    margin-top: 30px;
+    display: none;
+}
+audio {
+    width: 100%;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #f2ffdc;
+}
+
+.lyrics {
+    margin-top: 20px;
+    white-space: pre-line;
+    font-size: 14px;
+    background-color: #d2ddc8;
+    padding: 10px;
+    border-radius: 5px;
+}
+.song {
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+.song:hover {
+    background-color: #ccc;
+}
+.song-name {
+    font-size: 18px;
+}
+
+#musicPlayer{
+    top: 0;
+    position: sticky;
+    background-color: #302c37;
+}
