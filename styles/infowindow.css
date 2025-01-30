@@ -1,6 +1,5 @@
 #infoWindow{
   background-color: rgb(118, 114, 131);
-  cursor: move;
   background-size: cover;
   background-repeat: no-repeat;
   text-align: right;
@@ -14,14 +13,16 @@
 
 
 #icon{
-  display: inline-block;
-  width: 100px;
-  height: 100px;
+  display: inline;
+  width: 70px;
+  height: 70px;
+  vertical-align: middle;
 }
 
 #title{
-  display: inline-block;
+  display: inline;
   width: max-content;
+  vertical-align: middle;
 }
 
 #screenshot{
@@ -43,26 +44,33 @@
 }
 
 #playbutton{
-  display: inline-block;
+  display: inline;
   font-weight: bold;
   font-size: larger;
   border: dotted 2px;
   cursor: pointer;
   text-align: right;
+  margin-left: 10px;
 }
 
 #videobutton{
-  display: inline-block;
+  display: inline;
   font-weight: bold;
   font-size: larger;
   border: dotted 2px;
+  margin-left: 10px;
   cursor: pointer;
 }
 
 #closebutton{
-  display: inline-block;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 3em;
+  display: inline;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 1.5em;
+  border: dotted 2px whitesmoke;
+  color: whitesmoke;
+  cursor: pointer;
+  background-color: mediumvioletred;
 }
