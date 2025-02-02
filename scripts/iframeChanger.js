@@ -8,6 +8,11 @@ function changeIframeContent(page, clickedElement) {
     // Close previously opened folder
     if (currentlyOpenedFolder) {
         currentlyOpenedFolder.classList.remove('open');
+        if(clickedElement===currentlyOpenedFolder){
+            currentlyOpenedFolder = null;
+            changeIframeContent('main.html',null);
+            return;
+        }
     }
 
     // Open the clicked folder

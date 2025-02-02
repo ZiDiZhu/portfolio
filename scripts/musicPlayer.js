@@ -1,8 +1,11 @@
 
 var currentAlbumName = null;
+var songCount = 0;
+
 
 function loadAlbum(albumName, albumCover, songs, item) {
 
+    songCount = 0;
     if(currentAlbumName!=albumName){
         // Show player
         document.getElementById('player').style.display = 'block';
@@ -13,10 +16,12 @@ function loadAlbum(albumName, albumCover, songs, item) {
         const songsContainer = document.getElementById('songs');
         songsContainer.innerHTML = ''; // Clear previous songs
         songs.forEach((song, index) => {
+            songCount++;
             const songDiv = document.createElement('div');
             songDiv.className = 'song';
             songDiv.onclick = () => loadSong(song,songDiv);
-            songDiv.innerHTML = `<div class="song-name">${song.name}</div>`;
+            var songTitle = songCount + ". " + song.name;
+            songDiv.innerHTML = `<div class="song-name">${songTitle}</div>`;
             songsContainer.appendChild(songDiv);
             songDiv.style.color= getRandomColor();
         });

@@ -9,11 +9,10 @@
   <link rel="stylesheet" href="styles/style.css">
   <style>
     .iframe-container {
-        border: dotted;
-        margin: 5px;
-        width: 100%;
-        min-height: 90vh;
-        object-fit: cover;
+      flex-basis: 100%;
+      height: 90vh;
+      display: inline-block;
+      object-fit: cover;
     }
     @media only screen and (max-width: 768px) {
       body {
@@ -22,8 +21,8 @@
       }
 
       .leftPanel{
-        display: inline-block;
-        margin: 5px;
+        justify-items: center;
+        background-color: #130727;
       }
     }
   </style>
@@ -31,53 +30,48 @@
 </head>
 
 <body>
-  <div style="border: none; display: flex">
-    <div id="leftPanel" class="leftPanel">
-      <hr>
+  <div style="border: none; display:flex; margin: 0;">
+
+    <div class="leftPanel">
       <div class="change">
-        <div class="change item" onclick="changeIframeContent('main.html',this)">
-          <img src = "assets/images/logos/zidigital-1.png" style=" max-width: 15vw; cursor: pointer" onclick="changeIframeContent('main.html',null)">
-          <img src = "assets/images/logos/zidigital-1.gif" style=" max-width: 15vw; cursor: pointer" onclick="changeIframeContent('main.html',null)">
+        <div class="change item"  onclick="changeIframeContent('main.html',this)">
+          <img src = "assets/images/logos/zidigital-1.png" style=" width: 100%; min-width: 70px;" onclick="changeIframeContent('main.html',null)">
+          <img src = "assets/images/logos/zidigital-1.gif" style=" width: 100%; min-width: 70px;" onclick="changeIframeContent('main.html',null)">
         </div>
       </div>
 
-
       <hr>
-      <div style="text-align: right">
-      <button style="background: transparent;color: #cba1ff" onclick="changeIframeContent('main.html',null)">Home</button>
-      </div>
-      <hr>
-      <div class="change item folder" onclick="changeIframeContent('resume.html',this)">
-        <img src="assets/images/logos/resume_1.png" class="icon" style="width: 30px;">
-        <img src="assets/images/logos/resume_2.png" class="icon" style="width: 30px;">
-        <p>RESUME</p>
-      </div>
       <!-- folders -->
       <div class="change item folder" onclick="changeIframeContent('games.html',this)">
         <img src="assets/images/logos/folder_closed.png" class="icon" alt="Closed Folder">
         <img src="assets/images/logos/folder_open.png" class="icon" alt="Open Folder">
         <p>GAMES</p>
       </div>
-    
+
       <div class="change item folder" onclick="changeIframeContent('art/index.html',this)">
         <img src="assets/images/logos/folder_closed.png" class="icon" alt="Closed Folder">
         <img src="assets/images/logos/folder_open.png" class="icon" alt="Drawing Animation">
         <p>ART</p>
       </div>
-    
+
       <div class="change item folder" onclick="changeIframeContent('music.html',this)">
         <img src="assets/images/logos/folder_closed.png" class="icon" alt="Closed Folder">
         <img src="assets/images/logos/folder_open.png" class="icon" alt="Music Animation">
         <p>MUSIC</p>
       </div>
 
+      <div class="change item folder" onclick="changeIframeContent('resume.html',this)">
+        <img src="assets/images/logos/resume_1.png" class="icon" >
+        <img src="assets/images/logos/resume_2.png" class="icon" >
+        <p>RESUME</p>
+      </div>
 
     </div>
 
-    <iframe id="contentIframe" src="main.html" class="iframe-container" style="background-color: mintcream;" title="Content Frame">
+    <iframe id="contentIframe" src="main.html" class="iframe-container" title="Content Frame">
     </iframe>
 
-  
+
   </div>
 
   <div>
