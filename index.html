@@ -34,31 +34,38 @@
   <div style="border: none; display: flex">
     <div id="leftPanel" class="leftPanel">
       <hr>
-      <img src = "assets/images/logos/zidigital.gif" style=" max-width: 15vw; cursor: pointer" onclick="changeIframeContent('main.html',null)">
+      <div class="change">
+        <div class="change item" onclick="changeIframeContent('main.html',this)">
+          <img src = "assets/images/logos/zidigital-1.png" style=" max-width: 15vw; cursor: pointer" onclick="changeIframeContent('main.html',null)">
+          <img src = "assets/images/logos/zidigital-1.gif" style=" max-width: 15vw; cursor: pointer" onclick="changeIframeContent('main.html',null)">
+        </div>
+      </div>
+
+
       <hr>
       <div style="text-align: right">
       <button style="background: transparent;color: #cba1ff" onclick="changeIframeContent('main.html',null)">Home</button>
       </div>
       <hr>
-      <div class="change item" onclick="changeIframeContent('resume.html',this)">
+      <div class="change item folder" onclick="changeIframeContent('resume.html',this)">
         <img src="assets/images/logos/resume_1.png" class="icon" style="width: 30px;">
         <img src="assets/images/logos/resume_2.png" class="icon" style="width: 30px;">
         <p>RESUME</p>
       </div>
       <!-- folders -->
-      <div class="change item" onclick="changeIframeContent('games.html',this)">
+      <div class="change item folder" onclick="changeIframeContent('games.html',this)">
         <img src="assets/images/logos/folder_closed.png" class="icon" alt="Closed Folder">
         <img src="assets/images/logos/folder_open.png" class="icon" alt="Open Folder">
         <p>GAMES</p>
       </div>
     
-      <div class="change item" onclick="changeIframeContent('art/index.html',this)">
+      <div class="change item folder" onclick="changeIframeContent('art/index.html',this)">
         <img src="assets/images/logos/folder_closed.png" class="icon" alt="Closed Folder">
         <img src="assets/images/logos/folder_open.png" class="icon" alt="Drawing Animation">
         <p>ART</p>
       </div>
     
-      <div class="change item" onclick="changeIframeContent('music.html',this)">
+      <div class="change item folder" onclick="changeIframeContent('music.html',this)">
         <img src="assets/images/logos/folder_closed.png" class="icon" alt="Closed Folder">
         <img src="assets/images/logos/folder_open.png" class="icon" alt="Music Animation">
         <p>MUSIC</p>

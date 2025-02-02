@@ -1,23 +1,18 @@
 let currentlyOpenedFolder = null;
-let homePageSrc = 'main.html';
-function changeIframeContent(page,clickedElement) {
+
+function changeIframeContent(page, clickedElement) {
     document.getElementById('contentIframe').src = page;
 
-    if(clickedElement==null)return;
+    if (!clickedElement) return;
 
-    // Close the previously opened folder, if any
+    // Close previously opened folder
     if (currentlyOpenedFolder) {
-    currentlyOpenedFolder.querySelector('img:nth-child(1)').style.display = 'inline-block';
-    currentlyOpenedFolder.querySelector('img:nth-child(2)').style.display = 'none';
+        currentlyOpenedFolder.classList.remove('open');
     }
 
     // Open the clicked folder
-    const firstImg = clickedElement.querySelector('img:nth-child(1)');
-    const secondImg = clickedElement.querySelector('img:nth-child(2)');
-    firstImg.style.display = 'none';
-    secondImg.style.display = 'inline-block';
-
-    // Set the clicked folder as the currently opened one
-    currentlyOpenedFolder = clickedElement;
+    if (clickedElement.classList.contains('folder')) {
+        clickedElement.classList.add('open');
+        currentlyOpenedFolder = clickedElement;
+    }
 }
-

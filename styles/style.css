@@ -37,6 +37,29 @@ body {
   z-index: -1;
 }
 
+
+/* Initially hide the second image */
+.folder img:nth-child(2) {
+  display: none;
+}
+
+/* Keep the hover effect */
+.folder:hover img:nth-child(1) {
+  display: none;
+}
+.folder:hover img:nth-child(2) {
+  display: inline-block;
+}
+
+/* When a folder is clicked, apply the open class */
+.folder.open img:nth-child(1) {
+  display: none;
+}
+.folder.open img:nth-child(2) {
+  display: inline-block;
+}
+
+
 .change img:nth-child(2){display:none;}
 .change:hover img:first-child{display:none;}
 .change:hover img:nth-child(2){display:inline-block;}
