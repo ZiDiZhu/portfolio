@@ -19,5 +19,7 @@ function changeIframeContent(page, clickedElement) {
     if (clickedElement.classList.contains('folder')) {
         clickedElement.classList.add('open');
         currentlyOpenedFolder = clickedElement;
+    }else {
+        currentlyOpenedFolder = null;
     }
 }

@@ -12,6 +12,10 @@ a:visited {
     color: #cba1ff;
 }
 
+a:hover {
+    color: #88ff8c;
+}
+
 .album {
     display: inline-block;
     width: 150px;

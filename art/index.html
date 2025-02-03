@@ -4,7 +4,6 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Zi Di's Art</title>
     <link rel = "stylesheet" href="../styles/style.css">
-    <script src="../scripts/iframeChanger.js"></script>
     <style>
         body {
             color: #f5c7f7;
@@ -13,110 +12,65 @@
             background-size: cover; /* Cover the entire page */
             background-position: center; /* Center the background image */
             background-attachment: fixed; /* Fixed background (doesn't scroll with the page) */
-
         }
 
         .iframe-container {
-
             position: fixed;
             justify-content: center;
             align-items: center;
-            width: 78vw;
-            height: 100vh; /* Adjust the height as needed */
+            width: 99vw;
+            height: 98vh; /* Adjust the height as needed */
             overflow: hidden;
         }
-
-        .rightrow{
-            position: fixed;
-            top: 0;
-            right: 0;
-            border: 3px solid #f5c7f7;
-            width: 20vw;
-            background-color: rgba(255, 212, 232, 0.25);
+        .category{
+            margin-left: 10px;
         }
-
-        .foldericon {
+        .category:hover{
             cursor: pointer;
-            display:inline-flex;
-            align-items: flex-start;
-        }
-
-        .foldericon :hover{
-            color: #b9ff13;
-        }
-
-        #randomArtLink {
-            cursor: pointer;
-            color: black;
-            text-align: center;
-            width: 100px;
-            font-size: 10px;
-            font-family: 'Courier New', Courier, monospace;
-            text-decoration: none;
-            background-color: fuchsia;
-            padding: 2px 2px;
-            border-radius: 10px;
-            margin: 10px;
+            text-decoration: underline;
         }
 
     </style>
 </head>
 <body>
 
+<!--folders-->
+<div style="top: 0;position: sticky;background-color: #302c37;">
+    <div class = "category" style="display: inline-block" id="randomArtLink">
+        <h3>RANDOM</h3>
+    </div>
 
-    <iframe id="contentIframe" src="concept.html" class="iframe-container" title="Content Frame"></iframe>
-    <!--folders-->
+    <div class = "category" style="display: inline-block" onclick="changeIframeContent('gifs.html',this)">
+        <h3>GIFS</h3>
+    </div>
 
-    <div class="rightrow">
+    <div class = "category" style="display: inline-block" onclick="changeIframeContent('3D.html',this)">
+        <h3>3D</h3>
+    </div>
 
-        <div class = "change foldericon" id="randomArtLink">
-            <img src="../assets/images/logos/yip_drawing.png" style="width: 120px;">
-            <img src="gifs/yip-drawing.gif" style="width: 120px;">
-            <h3>RANDOM</h3>
-        </div>
+    <div class = "category" style="display: inline-block" onclick="changeIframeContent('concept.html',this)">
+        <h3>CONCEPT ART</h3>
+    </div>
 
-        <div class = "change foldericon" onclick="changeIframeContent('gifs.html',this)">
-            <img src="../assets/images/logos/folder_closed.png" >
-            <img src="../assets/images/logos/folder_open.png" >
-            <h3>GIFS</h3>
-        </div>
+    <div class = "category" style="display: inline-block" onclick="changeIframeContent('sketches.html',this)">
+        <h3>SKETCHES</h3>
+    </div>
 
-        <div class = "change foldericon" onclick="changeIframeContent('sketches.html',this)">
-            <img src="../assets/images/logos/folder_closed.png" >
-            <img src="../assets/images/logos/folder_open.png" >
-            <h3>SKETCHES</h3>
-        </div>
-
-        <div class = "change foldericon" onclick="changeIframeContent('concept.html',this)">
-            <img src="../assets/images/logos/folder_closed.png" >
-            <img src="../assets/images/logos/folder_open.png" >
-            <h3>CONCEPT ART</h3>
-        </div>
-
-        <div class = "change foldericon" onclick="changeIframeContent('characters.html',this)">
-            <img src="../assets/images/logos/folder_closed.png" >
-            <img src="../assets/images/logos/folder_open.png" >
-            <h3>OCs</h3>
-        </div>
-
-        <div class = "change foldericon" onclick="changeIframeContent('3D.html',this)">
-            <img src="../assets/images/logos/folder_closed.png" >
-            <img src="../assets/images/logos/folder_open.png" >
-            <h3>3D</h3>
-        </div>
-
-        <div class = "change foldericon" onclick="changeIframeContent('gameart.html',this)">
-            <img src="../assets/images/logos/folder_closed.png" >
-            <img src="../assets/images/logos/folder_open.png" >
-            <h3>GAME ART</h3>
-        </div>
-
-
+    <div class = "category" style="display: inline-block" onclick="changeIframeContent('characters.html',this)">
+        <h3>CHARACTERS</h3>
     </div>
 
 
 
+</div>
+
+<iframe id="contentIframe" src="concept.html" class="iframe-container" title="Content Frame"></iframe>
+
     <script>
+
+        var selectedColor = '#b9ff13';
+        var normalColor = '#f5c7f7';
+
         document.getElementById('randomArtLink').addEventListener('click', function() {
             var links = [
                 '3D.html',
@@ -133,6 +87,17 @@
             // Redirect the browser to the randomly selected link
             changeIframeContent(links[randomIndex]);
         });
+
+        function changeIframeContent(link,item){
+
+            var category = document.getElementsByClassName('category');
+            for (var i = 0; i < category.length; i++) {
+                category[i].style.color = normalColor;
+            }
+
+            document.getElementById('contentIframe').src = link;
+            item.style.color = selectedColor;
+        }
 
     </script>
 </body>
