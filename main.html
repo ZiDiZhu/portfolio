@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Zidigital</title>
   <link rel="stylesheet" href="styles/imagesGallery.css">
+  <link rel="stylesheet" href="styles/style.css">
   <script src="scripts/imageGallery.js"></script>
 
   <style>
@@ -11,6 +12,7 @@
       text-align: center;
       font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
       background-color: black;
+      background-image: none;
       color: #e8dcff;
     }
     a{
@@ -25,20 +27,19 @@
 
 <p style="font-size: smaller">Welcome to the Zi-Dimension</p>
 
-<div style="border: dotted; text-align: right; display: inline-block">
+<div class="change">
+  <div class="change item"  onclick="changeIframeContent('main.html',this)">
+    <img src = "assets/images/logos/zidigital-1.png" onclick="changeIframeContent('main.html',null)">
+    <img src = "assets/images/logos/zidigital-1.gif" onclick="changeIframeContent('main.html',null)">
+  </div>
+</div>
+<p>Contact: zidizhu[at]proton[dot]me</p>
+
+<div style="border: dotted; text-align: right; display: inline-block;  background-image: url('assets/images/resources/star_rain.gif');">
 
   <div style="display: inline-block">
     <h1>Zi Di Zhu</h1>
     <p>creative developer</p>
-    <h2>Affiliations</h2>
-    <p style="display: inline">Game Designer and Developer @ </p>
-    <h3 style="display: inline"><a style="color: #B9FF13FF" href="https://diver2studio.github.io/Website/">Diver 2 Studio</a></h3>
-    <br>
-    <p style="display: inline">Music Composer @</p>
-    <h3 style="display: inline"><a style="color: #B9FF13FF" href="https://zidizhu.github.io/pubcrawl/">Pub Crawl</a></h3>
-    <br>
-    <p style="display: inline">Event Organizer @</p>
-    <h3 style="display: inline"><a style="color: #B9FF13FF" href="https://kokolo-collective.github.io/events.html">Kokolo Game-Art Collective</a></h3>
   </div>
 
   <div class="gallery-container">
@@ -48,34 +49,6 @@
 </div>
 
 
-
-<h2><a href="games.html">GAMES</a></h2>
-<p style="display: inline">2024 / </p>
-<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://z-digital.itch.io/boat-game" target="_blank">Boat Game</a></h3>
-<p style="display: inline"> / </p>
-<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://z-digital.itch.io/playground" target="_blank">Clone's Playground</a></h3>
-<br><br>
-<p style="display: inline"> 2023 / </p>
-<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://z-digital.itch.io/catballz" target="_blank">CatLander</a></h3>
-<p style="display: inline">(collab)</p>
-<br><br>
-<p style="display: inline"> 2022 / </p>
-<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://z-digital.itch.io/demo-detailed-cooking-sim" target="_blank">Egg Game</a></h3>
-<p style="display: inline"> / </p>
-<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://george540.itch.io/snowfolie" target="_blank">Snowfolie</a></h3>
-<p style="display: inline">(collab) / </p>
-<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://kristiankurk.itch.io/interview" target="_blank">Interview</a></h3>
-<p style="display: inline">(collab) </p>
-<br><br>
-<p style="display: inline"> 2021 / </p>
-<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://zidizhu.github.io/cart263/projects/project2-fruitjam-prototype/" target="_blank">Fruits Jam</a></h3>
-<p style="display: inline"> / </p>
-<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://z-digital.itch.io/human-error" target="_blank">Human Error</a></h3>
-<br><br>
-<p style="display: inline"> 2020 / </p>
-<h3 style="display: inline"><a style="color: #B9FF13FF" href="https://zidizhu.github.io/cart253/projects/project2/prototype/" target="_blank">Plural Platformers</a></h3>
-
-<br>
 <h2>Tools</h2>
 <h3 style="display: inline"><a style="color: #B9FF13FF" href="https://zidizhu.github.io/p5painter/index.html" target="_blank">P5.Paint</a></h3>
 <p style="display: inline">a minimal painting app</p>
@@ -83,8 +56,7 @@
 <h3 style="display: inline"><a style="color: #B9FF13FF" href="projects/colorwheel.html">Colorwheel</a></h3>
 <p style="display: inline">a digital bootleg of the classic color reference tool</p>
 <br><br>
-<h3 style="display: inline; text-decoration: line-through"><a style="color: #a0a69b" href="#">Google Calendar Summary</a></h3>
-<p style="display: inline">a summarizing tool for google calendar (under maintenance)</p>
+
 <!--<hr>-->
 <!--<p>Resume: <a href="resume.html">en</a> / <a href="cv/pdf/ZiDiZhu_developer_fr.pdf">fr</a> <a href="https://www.linkedin.com/in/zidizhu/" target="_blank" style="color: #2196F3">LinkedIn</a> </p>-->
 

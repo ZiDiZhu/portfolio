@@ -10,7 +10,8 @@ body {
 .leftPanel{
   width: max-content;
   max-width: 15vw;
-  margin: 5px;
+  margin: 0px;
+  text-align: right;
 }
 
 .clickable{
@@ -74,14 +75,15 @@ body {
 }
 
 /* Social media link background colors */
-.social-link.itchio { background-color: coral; }
-.social-link.instagram { background-color: hotpink; }
-.social-link.artstation { background-color: blue; }
-.social-link.github { background-color: black; }
-.social-link.soundcloud { background-color: orange; }
-.social-link.youtube { background-color: red; }
-.social-link.bluesky{ background-color: #00ccff;}
-.social-link.bilibili{ background-color: #2978ff;}
+.itchio { background-color: coral; }
+.instagram { background-color: hotpink; }
+.artstation { background-color: blue; }
+.github { background-color: black; }
+.soundcloud { background-color: orange; }
+.youtube { background-color: red; }
+.bluesky{ background-color: #00ccff;}
+.bilibili{ background-color: #2978ff;}
+.linkedin{ background-color: #0077b5;}
 
 /* Social media link states */
 a:link, .social-link:link {
@@ -106,7 +108,7 @@ a:hover, .social-link:hover {
 
 .social-links {
   padding: 0;
-  margin: 10px;
+  margin: 0px;
 }
 
 .social-links li {

@@ -20,38 +20,4 @@
   
 }
 
-/* Keyframes for fade-in and fade-out */
-@keyframes fade {
-  0% { opacity: 0; }
-  5% { opacity: 1; }
-  95% { opacity: 1; }
-  100% { opacity: 0; }
-}
 
-/* Apply the animation to the images */
-.gallery-container img {
-  animation: 7s fade infinite; 
-}
-
-/* Navigation buttons styling */
-.nav-buttons {
-  width: 100%; /* Full width */
-  margin: 10px;
-}
-  
-.nav-buttons button {
-  background-color: #42FF00; /* Button background color */
-  padding: 10px 20px; /* Padding around text */
-  border: none; /* Remove default border */
-  color: black; /* Text color */
-  text-align: center; /* Center text inside button */
-  text-decoration: none; /* Remove underline */
-  font-size: 16px; /* Font size */
-  cursor: pointer; /* Pointer cursor on hover */
-  border-radius: 5px; /* Optional rounded corners */
-  margin-right: 10px; /* Space between buttons */
-}
-
-.nav-buttons button:hover {
-  background-color: #33cc33; /* Darker green on hover */
-}
